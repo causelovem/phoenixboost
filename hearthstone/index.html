@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hearthstone bosting service | Cheap and fast | PhoenixBoost</title>
+        <link rel="stylesheet" href="styleHS.css">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="../fonts/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="mainPage">
+            <img class="background" src="img/taverna.png">
+            <div class="nav" id="topNav">
+                <div class="button" id="faqButton">
+                    FAQ
+                </div>
+                <div class="button" id="contactsButton">
+                    Contacts
+                </div>
+                <div class="button" href=".decks">
+                    Decks
+                </div>
+
+                <img class="logo" src="img/logon.png" onclick="return location.href = '../'">
+                
+                <div class="button" id="langButton">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <ul>
+                        <li id="eng" onclick="return location.href = '../hearthstone'">ENG</li>
+                        <li id="rus" onclick="return location.href = '../hearthstone/ru'">RUS</li>
+                    </ul>
+                </div>
+                <div class="button" id="currencyButton">
+                    <p id="currency"><i class="fa fa-usd" aria-hidden="true"></i></p>
+                    <ul>
+                        <li id="usd"><i class="fa fa-usd" aria-hidden="true"></i></li>
+                        <li id="eur"><i class="fa fa-eur" aria-hidden="true"></i></li>
+                        <li id="rub"><i class="fa fa-rub" aria-hidden="true"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="transparentLayer">
+                
+            </div>
+
+            <div class="contactsFAQ" id="contacts">
+                    <p id="contactHeader">How to contact?</p>
+                <ul>
+                    <li id="question"> e-mail
+                        <ul>
+                            <li id="answer"> support@phoenixboost.com</li>
+                        </ul>
+                    </li>
+                    <li id="question"> skype
+                        <ul>
+                            <li id="answer"> phoenixboost support</li>
+                        </ul>
+                    </li>
+                    <!-- <li id="question"> discord
+                        <ul>
+                            <li id="answer"> phoenixboost</li>
+                        </ul>
+                    </li> -->
+
+                    <p id="contactHeader">How to pay?</p>
+                    <li id="question"> PayPal, Yandex.Money, QIWI
+                        <ul>
+                            <li id="answer"> We will provide you with all payment information after confirming the order.</li>
+                        </ul>
+                    </li>
+
+                    <p id="contactHeader">If you find some bugs...</p>
+                    <li id="question"> Contact us, please, via email
+                        <ul>
+                            <li id="answer"> support@phoenixboost.com</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactsFAQ" id="faq">
+                <ul>
+                    <li id="question"> Is it safe?
+                        <ul>
+                            <li id="answer"> Yes, it is completely safe: we don't use bots or any other program. We require the information that is needed just to log in. Never tell anyone your secret question!</li>
+                        </ul>
+                    </li>
+                    <li id="question"> How much time will my boost require to be complete?
+                        <ul>
+                            <li id="answer"> It depends on a lot of things: the state of current meta, luck involved and whether it is a beginning or end of the season. But it takes approximately week and a half to finish a boost. </li>
+                        </ul>
+                    </li>
+                    <li id="question"> Should I have any deck on my account?
+                        <ul>
+                            <li id="answer"> Yes, you need to have at least one deck from our website for Legend boost.</li>
+                        </ul>
+                    </li>
+                    <li id="question"> How and when can I pay?
+                        <ul>
+                            <li id="answer"> We don't want you to pay and wait for your boost. So you pay only when the booster contacts you. You can pay in any of the following ways: PayPal, Yandex.Money, QIWI</li>
+                        </ul>
+                    </li>
+                    <li id="question"> Will the booster communicate with my friends?
+                        <ul>
+                            <li id="answer"> No, the booster will not communicate with your friends. Also the booster will not add any person to your friend list. </li>
+                        </ul>
+                    </li>
+                    <li id="question"> Can I play other games on my Battle.net?
+                        <ul>
+                            <li id="answer">You shouldn't log in as it can disconnect the booster. However, if you see that the booster is offline, you can go ahead and play even Hearthstone (except ladder).</li>
+                        </ul>
+                    </li>
+                    <li id="question"> On what servers is the service available?
+                        <ul>
+                            <li id="answer">Service is available on all servers.</li>
+                        </ul>
+                    </li>
+                    <li id="question"> How do I contact you if my questions haven't been answered?
+                        <ul>
+                            <li id="answer">Fell free to contact us in any of the following ways: email support@phoenixboost.com or skype phoenixboost support.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainBlock">
+                <img class="hs" src="img/HSsmall.png">
+                <div class="rankBoost">
+                    RANK BOOST
+                </div>
+
+                <div class="board board1">
+                    <div class="rankText" id="rankText1">
+                        Current rank
+                    </div>
+                    <div class="rankText" id="rankText2">
+                        Desired rank
+                    </div>
+
+                    <div class="rankImg rankImg1">
+                        <img src="img/ranks/25.png" id="leftRank25">
+                        <img src="img/ranks/24.png" id="leftRank24">
+                        <img src="img/ranks/23.png" id="leftRank23">
+                        <img src="img/ranks/22.png" id="leftRank22">
+                        <img src="img/ranks/21.png" id="leftRank21">
+                        <img src="img/ranks/20.png" id="leftRank20">
+                        <img src="img/ranks/19.png" id="leftRank19">
+                        <img src="img/ranks/18.png" id="leftRank18">
+                        <img src="img/ranks/17.png" id="leftRank17">
+                        <img src="img/ranks/16.png" id="leftRank16">
+                        <img src="img/ranks/15.png" id="leftRank15">
+                        <img src="img/ranks/14.png" id="leftRank14">
+                        <img src="img/ranks/13.png" id="leftRank13">
+                        <img src="img/ranks/12.png" id="leftRank12">
+                        <img src="img/ranks/11.png" id="leftRank11">
+                        <img src="img/ranks/10.png" id="leftRank10">
+                        <img src="img/ranks/9.png" id="leftRank9">
+                        <img src="img/ranks/8.png" id="leftRank8">
+                        <img src="img/ranks/7.png" id="leftRank7">
+                        <img src="img/ranks/6.png" id="leftRank6">
+                        <img src="img/ranks/5.png" id="leftRank5">
+                        <img src="img/ranks/4.png" id="leftRank4">
+                        <img src="img/ranks/3.png" id="leftRank3">
+                        <img src="img/ranks/2.png" id="leftRank2">
+                        <img src="img/ranks/1.png" id="leftRank1">
+
+                        <div class="triangleUp" id="leftUp">
+                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="triangleDown" id="leftDown">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="rankImg rankImg2">
+                        <img src="img/ranks/24.png" id="rightRank24">
+                        <img src="img/ranks/23.png" id="rightRank23">
+                        <img src="img/ranks/22.png" id="rightRank22">
+                        <img src="img/ranks/21.png" id="rightRank21">
+                        <img src="img/ranks/20.png" id="rightRank20">
+                        <img src="img/ranks/19.png" id="rightRank19">
+                        <img src="img/ranks/18.png" id="rightRank18">
+                        <img src="img/ranks/17.png" id="rightRank17">
+                        <img src="img/ranks/16.png" id="rightRank16">
+                        <img src="img/ranks/15.png" id="rightRank15">
+                        <img src="img/ranks/14.png" id="rightRank14">
+                        <img src="img/ranks/13.png" id="rightRank13">
+                        <img src="img/ranks/12.png" id="rightRank12">
+                        <img src="img/ranks/11.png" id="rightRank11">
+                        <img src="img/ranks/10.png" id="rightRank10">
+                        <img src="img/ranks/9.png" id="rightRank9">
+                        <img src="img/ranks/8.png" id="rightRank8">
+                        <img src="img/ranks/7.png" id="rightRank7">
+                        <img src="img/ranks/6.png" id="rightRank6">
+                        <img src="img/ranks/5.png" id="rightRank5">
+                        <img src="img/ranks/4.png" id="rightRank4">
+                        <img src="img/ranks/3.png" id="rightRank3">
+                        <img src="img/ranks/2.png" id="rightRank2">
+                        <img src="img/ranks/1.png" id="rightRank1"> 
+                        <img src="img/ranks/0.png" id="rightRank0">
+
+                        <div class="triangleUp" id="rightUp">
+                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="triangleDown" id="rightDown">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <input class="inpRank" id="curRank" name="curRank" type="text" onchange="displayLeftPic(this.value)" maxlength="2" placeholder="25" form="sendForm">
+
+                    <input class="inpRank" id="disRank" name="disRank" type="text" onchange="displayRightPic(this.value)" maxlength="2" placeholder="24" form="sendForm">
+
+                    <select id="server" name="server" onchange="checkServer(this.value)" form="sendForm">
+                        <option value="server" hidden>Server</option>
+                        <option value="America">America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                    </select>
+                    <p class="checkReqiured" id="checkServer">Choose a server!</p>
+
+                    <div class="price" id="boostPrice">
+                        1$
+                    </div>
+                    <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
+
+                    <div class="formButton" id="orderButton">
+                        order
+                    </div>
+                </div>
+
+                <div class="board board2">
+                    <div class="orderText" id="orderText0">
+                        Fill in the form, please!
+                    </div>
+
+                    <form id="sendForm" method="post" name="sendForm" action="sendHSeng.php" onsubmit="return false;">
+                        <p class="formHeader" id="formHeader1">E-mail*</p> <input class="inpData" id="inpEmail" type="text" name="email" onchange="checkEmail(this.value)" placeholder="Enter your E-mail">
+
+                        <p class="formHeader" id="formHeader2">Full name*</p> <input class="inpData" id="inpName" type="text" name="fullName" onchange="checkFullName(this.value)" placeholder="Enter your Full Name">
+
+                        <p class="formHeader" id="formHeader3">Message</p>
+                        <textarea class="inpData" id="inpMessage" type="text" name="message" rows="2" placeholder="Enter your Message"></textarea>
+
+                        <div class="formButton" id="purchaseButton">
+                            purchase
+                        </div>
+                    </form>
+
+                    <p class="checkReqiured" id="checkEmail">Enter your e-mail!</p>
+                    <p class="checkReqiured" id="checkEmailValidation">Incorrect e-mail has been entered!</p>
+                    <p class="checkReqiured" id="checkFullName">Enter your Full name!</p>
+
+                    <div class="formButton" id="backButton1">
+                        back
+                    </div>
+                </div>
+
+                <div class="board board3">
+
+                    <p class="orderText" id="orderText2">
+                        Here is the final information about the client
+                    </p>
+
+                    <p class="orderText" id="orderText3">
+                        Here is the final information about the boost
+                    </p>
+
+                    <p class="orderText" id="orderText4">
+                        We will contact you as soon as one of the boosters can accept your order! The order information will be sent to you by e-mail.
+                    </p>
+
+                    <div class="formButton" id="backButton2">
+                        back
+                    </div>
+
+                    <input class="formButton" id="submitButton" type="button" value="submit" form="sendForm" onclick="document.forms['sendForm'].submit();">
+                </div>
+
+                <div class="decks">
+                    <div class="codeHeader">
+                        DECK CODE:
+                    </div>
+                    <div id="code">
+                        Here is the code of the deck
+                    </div>
+
+                    <!-- <script>
+                        new Clipboard('.copyCode');
+                    </script>
+                    <input class="code" id="invisibleCode" type="text" value="code">
+                    <button class="copyCode" data-clipboard-target="#invisibleCode">copy deck</button> -->
+
+                    <div class="deckPlace">
+                        <img src="img/decks/mage_secret.png" id="deck0">
+                        <img src="img/decks/mage_valet.png" id="deck1">
+                        <img src="img/decks/sham_face.png" id="deck2">
+                    </div>
+
+                    <div class="triangleRight" id="rightDeck">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="triangleLeft" id="leftDeck">
+                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav" id="bottomNav">
+                <p class="futterHeaders futterEmailHeader">e-mail
+                    <p class="futterText futterEmail">support@phoenixboost.com</p>
+                </p>
+
+                <p class="futterHeaders futterSkypeHeader">skype
+                    <p class="futterText futterSkype">phoenixboost support</p>
+                </p>
+                
+                <!-- <p class="futterHeaders futterDiscordHeader">discord
+                    <p class="futterText futterDiscord">phoenixboost</p>
+                </p> -->
+                
+                <p class="rights">(c) 2017 Phoenixboost. All rights reserved.</p>
+
+                <a class="homeHref" href="http://www.phoenixboost.com/">home</a>
+                <a class="owHref" href="http://www.phoenixboost.com/overwatch">overwatch</a>
+            </div>
+
+        </div>
+        
+        <script src="scriptHSeng.js"></script>
+    </body>
+
+</html>

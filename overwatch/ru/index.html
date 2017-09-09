@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Буст в Overwatch | Дешево и быстро | PhoenixBoost</title>
+        <link rel="stylesheet" href="../styleOW.css">
+        <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="../../fonts/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="mainPage">
+            <img class="background" src="../img/background.jpg">
+            <div class="nav" id="topNav">
+                <div class="button" id="faqButton">
+                    FAQ
+                </div>
+                <div class="button" id="contactsButton">
+                    КОНТАКТЫ
+                </div>
+                <div class="button" id="twitchButton" href="#twitchBoard">
+                    Twitch
+                </div>
+
+                <img class="logo" src="../img/logon.png" onclick="return location.href = '../../'">
+
+                <div class="button" id="langButton">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <ul>
+                        <li id="eng" onclick="return location.href = '../../overwatch'">ENG</li>
+                        <li id="rus" onclick="return location.href = '../../overwatch/ru'">RUS</li>
+                    </ul>
+                </div>
+                <div class="button" id="currencyButton">
+                    <p id="currency"><i class="fa fa-usd" aria-hidden="true"></i></p>
+                    <ul>
+                        <li id="usd"><i class="fa fa-usd" aria-hidden="true"></i></li>
+                        <li id="eur"><i class="fa fa-eur" aria-hidden="true"></i></li>
+                        <li id="rub"><i class="fa fa-rub" aria-hidden="true"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="transparentLayer">
+                
+            </div>
+
+            <div class="contactsFAQ" id="contacts">
+                    <p id="contactHeader">КАК СВЯЗАТЬСЯ?</p>
+                <ul>
+                    <li id="question"> e-mail
+                        <ul>
+                            <li id="answer"> support@phoenixboost.com</li>
+                        </ul>
+                    </li>
+                    <li id="question"> skype
+                        <ul>
+                            <li id="answer"> phoenixboost support</li>
+                        </ul>
+                    </li>
+                    <!-- <li id="question"> discord
+                        <ul>
+                            <li id="answer"> phoenixboost</li>
+                        </ul>
+                    </li> -->
+
+                    <p id="contactHeader">КАК ЗАПЛАТИТЬ?</p>
+                    <li id="question"> PayPal, Yandex.Money, QIWI
+                        <ul>
+                            <li id="answer"> МЫ СООБЩИМ ВАМ ВСЮ ПЛАТЁЖНУЮ ИНФОРМАЦИЮ ПОСЛЕ ПОДТВЕРЖДЕНИЯ ЗАКАЗА.</li>
+                        </ul>
+                    </li>
+
+                    <p id="contactHeader">ЕСЛИ ВЫ НАШЛИ КАКИЕ-ТО БАГИ...</p>
+                    <li id="question"> СВЯЖИТЕСЬ, ПОЖАЛУЙСТА, С НАМИ ПО ЭЛЕКТРОННОЙ ПОЧТЕ
+                        <ul>
+                            <li id="answer"> support@phoenixboost.com</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactsFAQ" id="faq">
+                <ul>
+                    <li id="question"> ЭТО БЕЗОПАСНО?
+                        <ul>
+                            <li id="answer"> ДА, ЭТО АБСОЛЮТНО БЕЗОПАСНО: МЫ НЕ ИСПОЛЬЗУЕМ БОТОВ ИЛИ КАКИЕ-ЛИБО ДРУГИЕ ПРОГРАММЫ. НАМ НУЖНА ИНФОРМАЦИЯ, КОТОРАЯ НЕОБХОДИМА ТОЛЬКО ДЛЯ ВХОДА. НИКОГДА НЕ СООБЩАЙТЕ НИКОМУ ВАШ СЕКРЕТНЫЙ ВОПРОС!</li>
+                        </ul>
+                    </li>
+                    <li id="question"> СКОЛЬКО ВРЕМЕНИ ПОТРЕБУЕТСЯ ДЛЯ МОЕГО БУСТА?
+                        <ul>
+                            <li id="answer"> НАМ ТРЕБУЕТСЯ ПРИМЕРНО 3-5 ЧАСОВ, ЧТОБЫ ЗАКОНЧИТЬ БУСТ. </li>
+                        </ul>
+                    </li>
+                    <li id="question"> КАК И КОГДА Я МОГУ ЗАПЛАТИТЬ?
+                        <ul>
+                            <li id="answer"> МЫ НЕ ХОТИМ, ЧТОБЫ ВЫ ПЛАТИЛИ И ЖДАЛИ СВОЕГО БУСТА. ТАКИМ ОБРАЗОМ, ВЫ ПЛАТИТЕ ТОЛЬКО ТОГДА, КОГДА БУСТЕР СВЯЗЫВАЕТСЯ С ВАМИ. ВЫ МОЖЕТЕ ОПЛАТИТЬ ЛЮБЫМ ИЗ ДОСТУПНЫХ СПОСОБОВ: PayPal, Yandex.Money, QIWI</li>
+                        </ul>
+                    </li>
+                    <li id="question"> БУДЕТ ЛИ БУСТЕР ОБЩАТЬСЯ С МОИМИ ДРУЗЬЯМИ?
+                        <ul>
+                            <li id="answer"> НЕТ, БУСТЕР НЕ БУДЕТ ПИСАТЬ И ОБЩАТЬСЯ С ДРУЗЬЯМИ. ТАКЖЕ БУСТЕР НЕ БУДЕТ ДОБАВЛЯТЬ НИ ОДНОГО ЧЕЛОВЕКА В ВАШ СПИСОК ДРУЗЕЙ. ЕСЛИ ЭТО СЕРЬЕЗНАЯ ПРОБЛЕМА, МЫ МОЖЕМ ИЗМЕНИТЬ РЕГИОН, ЧТОБЫ СПИСОК ВАШИХ ДРУЗЕЙ БЫЛ ПУСТ, И ОНИ НЕ СМОГУТ УВИДЕТЬ, ЧТО ВЫ В СЕТИ.</li>
+                        </ul>
+                    </li>
+                    <li id="question"> МОГУ ЛИ Я ИГРАТЬ В ДРУГИЕ ИГРЫ НА СВОЕМ Battle.net?
+                        <ul>
+                            <li id="answer">ВЫ НЕ ДОЛЖНЫ ЗАХОДИТЬ НА СВОЙ АККАУНТ, ТАК КАК ЭТО МОЖЕТ ОТКЛЮЧИТЬ БУСТЕРА. ОДНАКО, ЕСЛИ ВЫ ВИДИТЕ, ЧТО БУСТЕР НАХОДИТСЯ ОФЛАЙН, ВЫ МОЖЕТЕ ИГРАТЬ, ДАЖЕ В Overwatch (КРОМЕ РЕЙТИНГОВЫХ ИГР).</li>
+                        </ul>
+                    </li>
+                    <li id="question"> НА КАКИХ СЕРВЕРАХ ДОСТУПЕН БУСТ?
+                        <ul>
+                            <li id="answer">БУСТ ДОСТУПЕН НА ВСЕХ СЕРВЕРАХ.</li>
+                        </ul>
+                    </li>
+                    <li id="question"> НА КАКИХ ПЛАТФОРМАХ ДОСТУПЕН БУСТ?
+                        <ul>
+                            <li id="answer">БУСТ ДОСТУПЕН ТОЛЬКО НА ПК.</li>
+                        </ul>
+                    </li>
+                    <li id="question"> КАК Я МОГУ СВЯЗАТЬСЯ С ВАМИ, ЕСЛИ Я НЕ НАШЁЛ ОТВЕТ НА СВОЙ ВОПРОС?
+                        <ul>
+                            <li id="answer">НЕ СТЕСНЯЙТЕСЬ ОБРАЩАТЬСЯ К НАМ ЧЕРЕЗ ЛЮБЫЕ ДОСТУПНЫЕ СПОСОБЫ: email support@phoenixboost.com ИЛИ skype phoenixboost support.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainBlock">
+                <img class="ow" src="../img/OWsmall.png">
+                <div class="rankBoost" id="rankBoost">
+                    БУСТ РАНГА
+                </div>
+                <div class="placements" id="placements">
+                    КАЛИБРОВКА
+                </div>
+                <div class="antiDecay" id="antiDecay">
+                    ANTI-DECAY
+                </div>
+
+                <div class="changeBoost" id="leftChange">
+                    <p id="changeBoostTextLeft">anti-decay</p>
+                </div>
+                <div class="changeBoost" id="rightChange">
+                    <p id="changeBoostTextRight">КАЛИБРОВКА</p>
+                </div>
+                <input class="inpData" id="invisibleBoostType" type="hidden" name="boostType" form="sendForm" value="rank boost">
+
+                <div class="board rankBoard">
+                    <div class="rankText" id="rankText1">
+                        ТЕКУЩИЙ РАНГ
+                    </div>
+                    <div class="rankText" id="rankText2">
+                        ЖЕЛАЕМЫЙ РАНГ
+                    </div>
+
+                    <div class="rankImg rankImg1">
+                        <img class="rankImgLeft" src="../img/ranks/8.png" id="leftRank8">
+                        <img class="rankImgLeft" src="../img/ranks/7.png" id="leftRank7">
+                        <img class="rankImgLeft" src="../img/ranks/6.png" id="leftRank6">
+                        <img class="rankImgLeft" src="../img/ranks/5.png" id="leftRank5">
+                        <img class="rankImgLeft" src="../img/ranks/4.png" id="leftRank4">
+                        <img class="rankImgLeft" src="../img/ranks/3.png" id="leftRank3">
+                        <img class="rankImgLeft" src="../img/ranks/2.png" id="leftRank2">
+                        <img class="rankImgLeft" src="../img/ranks/1.png" id="leftRank1">
+
+                        <div class="triangleUp" id="leftUp">
+                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="triangleDown" id="leftDown">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="rankImg rankImg2">
+                        <img class="rankImgRight" src="../img/ranks/8.png" id="rightRank8">
+                        <img class="rankImgRight" src="../img/ranks/7.png" id="rightRank7">
+                        <img class="rankImgRight" src="../img/ranks/6.png" id="rightRank6">
+                        <img class="rankImgRight" src="../img/ranks/5.png" id="rightRank5">
+                        <img class="rankImgRight" src="../img/ranks/4.png" id="rightRank4">
+                        <img class="rankImgRight" src="../img/ranks/3.png" id="rightRank3">
+                        <img class="rankImgRight" src="../img/ranks/2.png" id="rightRank2">
+                        <img class="rankImgRight" src="../img/ranks/1.png" id="rightRank1"> 
+
+                        <div class="triangleUp" id="rightUp">
+                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="triangleDown" id="rightDown">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <input class="inpRank" id="curSR" name="curRank" type="text" onchange="displayLeftPic(this.value)" maxlength="4" placeholder="1" form="sendForm">
+
+                    <input class="inpRank" id="disSR" name="disRank" type="text" onchange="displayRightPic(this.value)" maxlength="4" placeholder="50" form="sendForm">
+
+                    <div class="divSoloDuo">
+                        <input type="checkbox" id="soloDuo"><label for="soloDuo">DUO</label>
+                    </div>
+                    <input class="inpData" id="invisibleSoloDuo" type="hidden" name="soloDuo" form="sendForm" value="Solo">
+
+                    <div class="price" id="boostPrice">
+                        1$
+                    </div>
+                    <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
+
+                    <div class="formButton" id="rankOrderButton">
+                        ЗАКАЗАТЬ
+                    </div>
+                </div>
+
+                <div class="board placementsBoard">
+                    <select id="prevRank" name="prevRank" onchange="checkPrevRank(this.value)" form="sendForm">
+                        <option value="prevRank" hidden>БЫЛ ЛИ У ВАС РАНГ В ПРОШЛОМ СЕЗОНЕ?</option>
+                        <option value="yes">ДА</option>
+                        <option value="no">НЕТ</option>
+                    </select>
+
+                    <div class="placementsPrevImg" id="placementsPrevImg">
+                        <div id="lowRank">
+                            <img id="placementsPrev1" src="../img/ranks/1.png">
+                            <img id="placementsPrev2" src="../img/ranks/2.png">
+                            <img id="placementsPrev3" src="../img/ranks/3.png">
+                            <img id="placementsPrev4" src="../img/ranks/4.png">
+                        </div>
+                        <img id="placementsPrev5" src="../img/ranks/5.png">
+                        <img id="placementsPrev6" src="../img/ranks/6.png">
+                        <img id="placementsPrev7" src="../img/ranks/7.png">
+                    </div>
+                    <div class="placementsFreshImg" id="placementsFreshImg">
+                        <img id="placementsFresh5" src="../img/ranks/5.png">
+                        <img id="placementsFresh6" src="../img/ranks/6.png">
+                    </div>
+                    <input class="inpData" id="invisiblePlacementsRank" type="hidden" name="placementsRank" form="sendForm" value="diamond">
+
+                    <div class="price" id="placementsPrice">
+                        25$
+                    </div>
+                    <p class="perNGames" id="placementsGames">ЗА 10 ИГР</p>
+
+                    <div class="formButton" id="placementsOrderButton">
+                        ЗАКАЗАТЬ
+                    </div>
+                </div>
+
+                <div class="board antiDecayBoard">
+                    <div class="antiDecayText">ВЫБЕРЕТЕ ТЕКУЩИЙ РАНГ!</div>
+
+                    <div class="antiDecayImg">
+                        <img id="antiDecay5" src="../img/ranks/5.png">
+                        <img id="antiDecay6" src="../img/ranks/6.png">
+                        <img id="antiDecay7" src="../img/ranks/7.png">
+                    </div>
+                    <input class="inpData" id="invisibleAntiDecayRank" type="hidden" name="antiDecayRank" form="sendForm" value="master">
+
+                    <div class="price" id="antiDecayPrice">
+                        15$
+                    </div>
+                    <p class="perNGames" id="antiDecayGames">ЗА 7 ИГР</p>
+
+                    <div class="formButton" id="antiDecayOrderButton">
+                        ЗАКАЗАТЬ
+                    </div>
+                </div>
+
+                <div class="board orderBoard">
+                    <div class="orderText" id="orderText0">
+                        ЗАПОЛНИТЕ, ПОЖАЛУЙСТА, ФОРМУ!
+                    </div>
+
+                    <form id="sendForm" method="post" name="sendForm" action="sendOWru.php" onsubmit="return false;">
+                        <p class="formHeader" id="formHeader1">E-mail*</p> <input class="inpData" id="inpEmail" type="text" name="email" onchange="checkEmail(this.value)" placeholder="ВВЕДИТЕ ВАШ E-mail">
+
+                        <p class="formHeader" id="formHeader2">ФИО*</p> <input class="inpData" id="inpName" type="text" name="fullName" onchange="checkFullName(this.value)" placeholder="ВВЕДИТЕ ВАШИ ФИО">
+
+                        <p class="formHeader" id="formHeader3">СООБЩЕНИЕ</p>
+                        <textarea class="inpData" id="inpMessage" type="text" name="message" rows="2" placeholder="ВВЕДИТЕ ВАШЕ СООБЩЕНИЕ"></textarea>
+
+                        <div class="formButton" id="purchaseButton">
+                            КУПИТЬ
+                        </div>
+                    </form>
+
+                    <p class="checkReqiured" id="checkEmail">ВВЕДИТЕ e-mail!</p>
+                    <p class="checkReqiured" id="checkEmailValidation">ВВЕДЁН НЕ ПРАВИЛЬНЫЙ e-mail!</p>
+                    <p class="checkReqiured" id="checkFullName">ВВЕДИТЕ ИМЯ!</p>
+
+                    <div class="formButton" id="backButton1">
+                        НАЗАД
+                    </div>
+                </div>
+
+                <div class="board submitBoard">
+
+                    <p class="orderText" id="orderText2">
+                        ЗДЕСЬ БУДЕТ КОНЕЧНАЯ ИНФОРМАЦИЯ О КЛИЕНТЕ
+                    </p>
+
+                    <p class="orderText" id="orderText3">
+                        ЗДЕСЬ БУДЕТ КОНЕЧНАЯ ИНФОРМАЦИЯ О БУСТЕ
+                    </p>
+
+                    <p class="orderText" id="orderText4">
+                        МЫ СВЯЖЕМСЯ С ВАМИ, КАК ТОЛЬКО ОДИН ИЗ БУСТЕРОВ СМОЖЕТ ПРИНЯТЬ ВАШ ЗАКАЗ! ИНФОРМАЦИЯ О ЗАКАЗЕ БУДЕТ ОТПРАВЛЕНА ВАМ НА ПОЧТУ.
+                    </p>
+
+                    <div class="formButton" id="backButton2">
+                        НАЗАД
+                    </div>
+
+                    <input class="formButton" id="submitButton" type="button" value="ОТПРАВИТЬ" form="sendForm" onclick="document.forms['sendForm'].submit();">
+                </div>
+
+                <div class="board" id="twitchBoard">
+                    <p class="twitchText">НАШ СТРИМ</p>
+
+                    <iframe id="twitch" src="https://player.twitch.tv/?channel=reboot2h&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+
+                    <!-- <iframe id="twitch" src="https://player.twitch.tv/?stream=25883421216&channelId=17409351&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no"></iframe> -->
+                </div>
+            </div>
+
+            <div class="nav" id="bottomNav">
+                <p class="futterHeaders futterEmailHeader">e-mail
+                    <p class="futterText futterEmail">support@phoenixboost.com</p>
+                </p>
+
+                <p class="futterHeaders futterSkypeHeader">skype
+                    <p class="futterText futterSkype">phoenixboost support</p>
+                </p>
+                
+                <!-- <p class="futterHeaders futterDiscordHeader">discord
+                    <p class="futterText futterDiscord">phoenixboost</p>
+                </p> -->
+                
+                <p class="rights">(c) 2017 Phoenixboost. All rights reserved.</p>
+
+                <a class="homeHref" href="http://www.phoenixboost.com/">ДОМОЙ</a>
+                <a class="owHref" href="http://www.phoenixboost.com/hearthstone">hearthstone</a>
+            </div>
+
+        </div>
+        
+        <script src="scriptOWru.js"></script>
+    </body>
+
+</html>

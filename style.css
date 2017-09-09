@@ -1,0 +1,156 @@
+/* style reset */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+  list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+/*-------------*/
+
+body
+{
+  cursor: default;
+}
+
+.nav
+{
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 5px #000;
+  width: 100%;
+  height: 65px;
+  z-index: 1;
+  position: absolute;
+}
+
+.logo
+{
+  position: absolute;
+  display: block;
+  left: calc(50% - 97.5px);
+}
+
+.owBox
+{
+  height: calc(100% - 65px);
+  width: 50%;
+  background-color: #BEE7FB;
+  position: absolute;
+  top: 65px;
+  left: 0;
+}
+
+.hsBox
+{
+  height: calc(100% - 65px);
+  width: 50%;
+  background-color: #7B4B23;
+  position: absolute;
+  top: 65px;
+  right: 0;
+}
+
+.owBox:hover
+{
+  background-color: #6FCEF5;
+}
+
+.owBox:hover img
+{
+  filter: drop-shadow(0 0 25px rgba(68, 108, 179, 1));
+}
+
+.hsBox:hover
+{
+  background-color: #572A00;
+}
+
+.hsBox:hover img
+{
+  filter: drop-shadow(0 0 25px rgba(150, 40, 27, 1));
+}
+
+.center
+{
+  width: 100%;
+  height: 50%;
+  top: 25%;
+  position: relative;
+}
+
+.ow
+{
+  position: absolute;
+  width: 94%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.hs
+{
+  position: absolute;
+  width: 90%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1024px)
+{
+  .owBox
+  {
+    height: calc(50% - 32.5px);
+    width: 100%;
+    top: 65px;
+  }
+
+  .hsBox
+  {
+    height: calc(50% - 32.5px);
+    width: 100%;
+    top: calc(50% + 32.5px);
+  }
+}
