@@ -4,15 +4,15 @@ function countPrice()
 
     for (var i = curRank - 1; i >= disRank; i--)
     {
-        if (Number(i) <= 0) price += 10 * coef;
+        if (Number(i) <= 0) price += 14 * coef;
         else
-        if (Number(i) <= 4) price += 7 * coef;
+        if (Number(i) <= 4) price += 9.5 * coef;
         else
-        if (Number(i) <= 9) price += 5 * coef;
+        if (Number(i) <= 9) price += 4.5 * coef;
         else
-        if (Number(i) <= 14) price += 4 * coef;
+        if (Number(i) <= 14) price += 3 * coef;
         else
-        if (Number(i) <= 19) price += 2 * coef;
+        if (Number(i) <= 19) price += 1.7 * coef;
         else
         if (Number(i) <= 25) price += 1 * coef;
     }
