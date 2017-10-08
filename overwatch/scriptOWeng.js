@@ -744,9 +744,29 @@ $(document).ready(function()
         currency = "usd";
         document.getElementById('currency').innerHTML = '<i class="fa fa-usd" aria-hidden="true"></i>';
 
-        countRankPrice();
-        countAntiDecayPrice();
-        countPlacementsPrice();
+        if (boostTypeMas[curType] == "rank boost")
+        {
+            countAntiDecayPrice();
+            countPlacementsPrice();
+
+            countRankPrice();
+        }
+        else
+        if (boostTypeMas[curType] == "placements")
+        {
+            countAntiDecayPrice();
+            countRankPrice();
+
+            countPlacementsPrice();
+        }
+        else
+        if (boostTypeMas[curType] == "anti-decay")
+        {
+            countPlacementsPrice();
+            countRankPrice();
+
+            countAntiDecayPrice();
+        }
     });
 });
 
@@ -758,9 +778,29 @@ $(document).ready(function()
         currency = "eur";
         document.getElementById('currency').innerHTML = '<i class="fa fa-eur" aria-hidden="true"></i>';
 
-        countRankPrice();
-        countAntiDecayPrice();
-        countPlacementsPrice();
+        if (boostTypeMas[curType] == "rank boost")
+        {
+            countAntiDecayPrice();
+            countPlacementsPrice();
+
+            countRankPrice();
+        }
+        else
+        if (boostTypeMas[curType] == "placements")
+        {
+            countAntiDecayPrice();
+            countRankPrice();
+
+            countPlacementsPrice();
+        }
+        else
+        if (boostTypeMas[curType] == "anti-decay")
+        {
+            countPlacementsPrice();
+            countRankPrice();
+
+            countAntiDecayPrice();
+        }
     });
 });
 
@@ -772,9 +812,29 @@ $(document).ready(function()
         currency = "rub";
         document.getElementById('currency').innerHTML = '<i class="fa fa-rub" aria-hidden="true"></i>';
 
-        countRankPrice();
-        countAntiDecayPrice();
-        countPlacementsPrice();
+        if (boostTypeMas[curType] == "rank boost")
+        {
+            countAntiDecayPrice();
+            countPlacementsPrice();
+
+            countRankPrice();
+        }
+        else
+        if (boostTypeMas[curType] == "placements")
+        {
+            countAntiDecayPrice();
+            countRankPrice();
+
+            countPlacementsPrice();
+        }
+        else
+        if (boostTypeMas[curType] == "anti-decay")
+        {
+            countPlacementsPrice();
+            countRankPrice();
+
+            countAntiDecayPrice();
+        }
     });
 });
 
