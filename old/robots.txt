@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+sitemap: https://www.phoenixboost.com/sitemap.xml
+Host: https://www.phoenixboost.com

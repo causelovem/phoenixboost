@@ -1,0 +1,743 @@
+@font-face 
+{
+    font-family: GUERRILLA;
+    src: url(../fonts/GUERRILLA-Normal.otf);
+}
+
+@font-face 
+{
+    font-family: Swistblnk;
+    src: url(../fonts/SwistblnkBanthers.ttf);
+}
+
+/* style reset */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+  list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+/*-------------*/
+
+body
+{
+  font-family: GUERRILLA;
+  cursor: default;
+}
+
+.mainPage
+{
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.background
+{
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  z-index: -1;
+  position: fixed;
+}
+
+.nav
+{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 65px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+#topNav
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#bottomNav
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.logo
+{
+  position: absolute;
+  display: block;
+  left: calc(50% - 97.5px);
+}
+
+.transparentLayer
+{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.contactsFAQ
+{
+  position: fixed;
+  right: 0;
+  margin-right: -17px;
+  top: 85px;
+  width: 27%;
+  height: 70%;
+  padding: 20px 50px;
+  color: #FFF;
+  font-size: 2em;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  overflow-x: hidden;
+  z-index: 6;
+  display: none;
+}
+
+#contactHeader
+{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#answer
+{
+  color: rgba(242, 179, 49, 1);
+  padding-bottom: 20px;
+}
+
+.button
+{
+  text-align: center;
+  float: right;
+  color: #FFF;
+  transition: all 0.3s;
+  line-height: 65px;
+  font-size: 2em;
+  padding: 0 40px;
+}
+
+.button:hover
+{
+  background-color: rgba(242, 179, 49, 0.6);
+  color: #000;
+}
+
+#langButton, #currencyButton
+{
+  float: left;
+  padding: 0 25px;
+  position: relative;
+  list-style-type: none;
+}
+
+#langButton ul, #currencyButton ul
+{
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  left: 0;
+  color: #FFF;
+  text-align: center;
+}
+
+#langButton:hover ul, #currencyButton:hover ul
+{
+  display: block;
+}
+
+#langButton li:hover, #currencyButton li:hover
+{
+  background-color: rgba(242, 179, 49, 0.6);
+  color: #000;
+  transition: all 0.3s;
+}
+
+.mainBlock
+{
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 65px;
+}
+
+.hs
+{
+  width: 700px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+}
+
+.rankBoost
+{
+  font-family: Swistblnk;
+  font-size: 8em;
+  text-align: center;
+  line-height: 150px;
+  color: #FFFACD;
+
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.board
+{
+  width: 650px;
+  height: 410px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: url(img/doska.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.board2
+{
+  display: none;
+}
+
+.board3
+{
+  display: none;
+}
+
+.rankText
+{
+  font-size: 1.8em;
+  color: #FFF;
+  position: absolute;
+  top: 35px;
+  text-shadow: 0 0 5px #000;
+}
+
+#rankText1
+{
+  left: 45px;
+}
+
+#rankText2
+{
+  right: 45px;
+}
+
+#server
+{
+  display: block;
+  position: absolute;
+  top: 140px;
+  left: 240px;
+  font-size: 2em;
+  width: 170px;
+  text-align: center;
+}
+
+.rankImg
+{
+  position: absolute;
+  height: 130px;
+  width: 150px;
+  top: 100px;
+}
+
+.rankImg img
+{
+  position: absolute;
+}
+
+.rankImg1
+{
+  left: 70px;
+}
+
+.rankImg2
+{
+  right: 70px;
+}
+
+.rankImg2 img
+{
+  right: 0;
+}
+
+.triangleUp
+{
+  position: absolute;
+  font-size: 3em;
+  color: #FFF;
+}
+
+.triangleUp:hover
+{
+  color: #DDD;
+}
+
+.triangleUp:active
+{
+  color: #999;
+}
+
+.triangleDown
+{
+  position: absolute;
+  font-size: 3em;
+  color: #FFF;
+}
+
+.triangleDown:hover
+{
+  color: #DDD;
+}
+
+.triangleDown:active
+{
+  color: #999;
+}
+
+#leftUp
+{
+  right: 3px;
+  top: 10px;
+}
+
+#rightUp
+{
+  left: 3px;
+  top: 10px;
+}
+
+#leftDown
+{
+  right: 3px;
+  bottom: 20px;
+}
+
+#rightDown
+{
+  left: 3px;
+  bottom: 20px;
+}
+
+.inpRank
+{
+  position: absolute;
+  bottom: 120px;
+  font-size: 2em;
+  text-align: center;
+  width: 95px;
+}
+
+#curRank
+{
+  left: 75px;
+}
+
+#disRank
+{
+  right: 75px;
+}
+
+.price
+{
+  position: absolute;
+  font-size: 4em;
+  text-align: center;
+  color: black;
+  bottom: 130px;
+  left: 220px;
+  width: 210px;
+}
+
+.formButton
+{
+  font-family: GUERRILLA;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  color: #FFF;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 100px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: all 0.2s;
+}
+
+.formButton:hover
+{
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+
+.formButton:active
+{
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+#orderButton, #purchaseButton, #submitButton
+{
+  font-size: 2.5em;
+  bottom: 30px;
+  left: 225px;
+  height: 50px;
+  line-height: 50px;
+  width: 200px;
+  padding-bottom: 7px;
+}
+
+#submitButton
+{
+  padding-bottom: 57px;
+}
+
+#backButton1, #backButton2
+{
+  font-size: 1.5em;
+  bottom: 40px;
+  left: 40px;
+  height: 30px;
+  line-height: 30px;
+  width: 100px;
+  padding-bottom: 5px;
+}
+
+.orderText
+{
+  position: absolute;
+  font-size: 1.8em;
+  color: #FFF;
+  top: 20px;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+  width: 630px;
+  left: 10px;
+}
+
+#orderText2
+{
+  top: 30px;
+}
+
+#orderText3
+{
+  top: 110px;
+}
+
+#orderText4
+{
+  top: 190px;
+}
+
+.formHeader
+{
+  position: absolute;
+  font-size: 1.8em;
+  color: #FFF;
+  text-align: center;
+  left: 50px;
+  text-shadow: 0 0 5px #000;
+}
+
+#formHeader1, #inpEmail
+{
+  top: 70px;
+}
+
+#formHeader2, #inpName
+{
+  top: 145px;
+}
+
+#formHeader3
+{
+  top: 230px;
+}
+
+#inpMessage
+{
+  top: 215px;
+  resize: none;
+}
+
+.inpData
+{
+  position: absolute;
+  text-align: center;
+  font-size: 1.8em;
+  left: 210px;
+  width: 400px;
+}
+
+.inpRank, .inpData, #server
+{
+  font-family: GUERRILLA;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+}
+
+.inpRank:focus, .inpData:focus, #server:focus
+{
+  background-color: rgba(242, 179, 49, 0.5);
+  box-shadow: 0 0 5px 5px rgba(242, 179, 49, 1);
+}
+
+.inpRank:hover, .inpData:hover, #server:hover
+{
+  box-shadow: 0 0 5px 5px rgba(242, 179, 49, 1);
+}
+
+.decks
+{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 800px;
+  height: 550px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 60px;
+}
+
+.deckPlace
+{
+  position: absolute;
+  background-color: #FFF;
+  width: 650px;
+  height: 430px;
+  left: 75px;
+  top: 100px;
+  border-radius: 20px;
+}
+
+.deckPlace img
+{
+  position: absolute;
+  width: 650px;
+  height: 430px;
+}
+
+.codeHeader
+{
+  position: absolute;
+  font-size: 1.8em;
+  color: #FFF;
+  text-align: center;
+  width: inherit;
+  top: 10px;
+}
+
+#code
+{
+  position: absolute;
+  font-size: 1.2em;
+  color: #FFF;
+  text-align: center;
+  width: inherit;
+  top: 50px;
+}
+
+.triangleRight
+{
+  position: absolute;
+  top: 275px;
+  right: 30px;
+  font-size: 5em;
+  color: #FFF;
+}
+
+.triangleRight:hover
+{
+  color: #DDD;
+}
+
+.triangleRight:active
+{
+  color: #999;
+}
+
+.triangleLeft
+{
+  position: absolute;
+  top: 275px;
+  left: 30px;
+  font-size: 5em;
+  color: #FFF;
+}
+
+.triangleLeft:hover
+{
+  color: #DDD;
+}
+
+.triangleLeft:active
+{
+  color: #999;
+}
+
+.checkReqiured
+{
+  display: block;
+  position: absolute;
+  font-size: 1.4em;
+  text-align: center;
+  width: 310px;
+  color: rgba(207, 0, 15, 1);
+  text-shadow: 0 0 2px #FFF;
+}
+
+#checkServer
+{
+  top: 182px;
+  left: 170px;
+  display: none;
+}
+
+#checkEmail
+{
+  top: 112px;
+  left: 255px;
+  display: none;
+}
+
+#checkEmailValidation
+{
+  top: 112px;
+  left: 255px;
+  display: none;
+}
+
+#checkFullName
+{
+  top: 187px;
+  left: 255px;
+  display: none;
+}
+
+.futterHeaders
+{
+  position: absolute;
+  color: #FFF;
+  width: 190px;
+  top: 10px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.futterEmailHeader, .futterEmail
+{
+  left: 10px;
+}
+
+.futterSkypeHeader, .futterSkype
+{
+  left: 250px
+}
+
+/*.futterDiscordHeader, .futterDiscord
+{
+  left: 340px
+}*/
+
+.futterText
+{
+  position: absolute;
+  top: 30px;
+  width: 190px;
+  text-align: center;
+  font-size: 1.2em;
+  color: rgba(242, 179, 49, 1);
+}
+
+.rights
+{
+  position: absolute;
+  color: #FFF;
+  bottom: 10px;
+  left: calc(50% - 150px);
+  width: 300px;
+  text-align: center;
+}
+
+.homeHref
+{
+  position: absolute;
+  color: #FFF;
+  top: 10px;
+  width: 190px;
+  text-align: center;
+  right: 10px;
+  font-size: 1.2em;
+}
+
+.owHref
+{
+  position: absolute;
+  color: #FFF;
+  top: 35px;
+  width: 190px;
+  text-align: center;
+  right: 10px;
+  font-size: 1.2em;
+}
+
+/*#copy
+{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}*/
