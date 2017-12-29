@@ -37,6 +37,7 @@ function checkFullName()
 }
 /*******/
 
+
 /*RANKBOOST*/
 function countRankPrice()
 {
@@ -181,11 +182,11 @@ function displayPic(sr)
             $("#rightRank" + disRank).css("display", "block");
         }
 
-        if ((curSR >= 3500) && ($('#soloDuo').prop('checked')))
+        if ((curSR >= 3500) && (soloDuo = "duo"))
         {
             $("#leftRank" + curRank).css("display", "none");
 
-            $('#soloDuo').prop('checked', false);
+            soloDuo = "solo"
             document.getElementById('invisibleSoloDuo').value = "Solo";
             alert('Sorry, the duo boost service is available only up to 3500SR');
             curSR = 3450;
@@ -215,11 +216,11 @@ function displayPic(sr)
             $("#leftRank" + curRank).css("display", "block");
         }
 
-        if ((disSR > 3500) && ($('#soloDuo').prop('checked')))
+        if ((disSR > 3500) && ((soloDuo = "duo")))
         {
             $("#leftRank" + curRank).css("display", "none");
 
-            $('#soloDuo').prop('checked', false);
+            soloDuo = "solo"
             document.getElementById('invisibleSoloDuo').value = "Solo";
             alert('Sorry, the duo boost service is available only up to 3500SR');
             curSR = 3450;
@@ -237,6 +238,79 @@ function displayPic(sr)
     document.getElementById('disSR').value = disSR;
 
     countRankPrice();
+}
+/*******/
+
+
+/*PLACEMENT*/
+
+/*******/
+
+
+/*ANTIDECAY*/
+function countAntiDecayPrice()
+{
+    antiDecayPrice = 0;
+
+    if (document.getElementById('invisibleAntiDecayRank').value == "diamond")
+        antiDecayPrice = 15 * coef;
+    else
+    if (document.getElementById('invisibleAntiDecayRank').value == "master")
+        antiDecayPrice = 25 * coef;
+    else
+    if (document.getElementById('invisibleAntiDecayRank').value == "grand master")
+        antiDecayPrice = 35 * coef;
+
+    if (currency == "usd")
+    {
+        document.getElementById('antiDecayPrice').innerHTML = antiDecayPrice.toFixed(0) + "$";
+        document.getElementById('invisiblePrice').value = antiDecayPrice.toFixed(0) + " in dollars";
+    }
+    else
+    if (currency == "eur")
+    {
+        document.getElementById('antiDecayPrice').innerHTML = antiDecayPrice.toFixed(0) + "&euro;";
+        document.getElementById('invisiblePrice').value = antiDecayPrice.toFixed(0) + " in Euro";
+    }
+    else
+    if (currency == "rub")
+    {
+        document.getElementById('antiDecayPrice').innerHTML = antiDecayPrice.toFixed(0) + "&#8381;";
+        document.getElementById('invisiblePrice').value = antiDecayPrice.toFixed(0) + " in rubles";
+    }
+}
+
+function mouselogDecay(event) 
+{
+    if (event.type == "mouseover")
+    {
+        if (antidecay != event.target.id)
+            $('#' + event.target.id).css("filter", "drop-shadow(-3px -3px 0px #c2c2c2) drop-shadow(3px -3px 0px #c2c2c2) drop-shadow(-3px 3px 0px #c2c2c2) drop-shadow(3px 3px 0px #c2c2c2)");
+    }
+    else
+    if (event.type == "mouseout")
+    {
+        if (antidecay != event.target.id)
+            $('#' + event.target.id).css("filter", "none");
+    }
+    else
+    if (event.type == "click")
+    {
+        $('#' + antidecay).css("filter", "none");
+        antidecay = event.target.id;
+        $('#' + antidecay).css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
+    
+        if (antidecay == "antiDecayImg1")
+            document.getElementById('invisibleAntiDecayRank').value = "diamond"
+        else
+        if (antidecay == "antiDecayImg2")
+            document.getElementById('invisibleAntiDecayRank').value = "master"
+        else
+        if (antidecay == "antiDecayImg3")
+            document.getElementById('invisibleAntiDecayRank').value = "grand master"
+    }
+
+    countAntiDecayPrice()
 }
 /*******/
 
@@ -265,12 +339,26 @@ var soloDuo = "solo"
 document.getElementById('curSR').value = curSR;
 document.getElementById('disSR').value = disSR;
 
+document.getElementById('invisibleSoloDuo').value = "Solo";
+countRankPrice()
+
+// document.getElementById('invisiblePlacementsRank').value = "diamond";
+
+document.getElementById('invisibleAntiDecayRank').value = "master";
+countAntiDecayPrice()
+
 document.getElementById('email').value = "";
 document.getElementById('name').value = "";
 document.getElementById('message').value = "";
 
 // document.getElementById('faq').scrollTop = 0;
 // document.getElementById('contacts').scrollTop = 0;
+
+var antidecay = "antiDecayImg2";
+
+document.getElementById('invisibleAntiDecayRank').value = "master"
+$('#antiDecayImg2').css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
+
 
 $(document).ready(function(){ $('#leftUp').click(function() { displayLeftPic(Number(curSR) + 50); });});
 $(document).ready(function(){ $('#rightUp').click(function() { displayRightPic(Number(disSR) + 50); });});
@@ -285,6 +373,8 @@ $(document).ready(function()
         soloDuo = "solo"
         document.getElementById('invisibleSoloDuo').value = "Solo";
         $('.chosen').css("top", "0");
+        $('.duo').css("opacity", "0.6");
+        $('.solo').css("opacity", "1");
 
         countRankPrice();
     });
@@ -305,8 +395,9 @@ $(document).ready(function()
         {
             soloDuo = "duo"
             document.getElementById('invisibleSoloDuo').value = "Duo";
-            // $('.chosen').css("top", "none");
-            $('.chosen').css("bottom", "0");
+            $('.chosen').css("top", "30px");
+            $('.duo').css("opacity", "1");
+            $('.solo').css("opacity", "0.6");
         }
 
         countRankPrice();
@@ -339,3 +430,6 @@ $(document).ready(function()
         $('.cw1').css("display", "none");
     });
 });
+
+
+

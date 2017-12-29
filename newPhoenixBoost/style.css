@@ -481,12 +481,6 @@ input:focus
   background-color: #EFE9DC;
 }
 
-.antidecay .content
-{
-  height: 400px;
-  width: 100%;
-}
-
 .centerText
 {
 	text-align: center;
@@ -554,7 +548,7 @@ input:focus
   right: 0;
 }
 
-.rankBoostBlock .price
+.content .price
 {
   position: absolute;
   width: 100%;
@@ -685,8 +679,37 @@ input:focus
 
 .chosen
 {
-  border-radius: 1.5px;
-  transition: 0.3s all;
+  border-radius: 2px;
+  transition: 0.2s all;
   background-color: rgba(193,167,119,0.9);
   top: 0;
+}
+
+.antidecay .content
+{
+  height: 335px;
+  width: 100%;
+}
+
+.antiDecayBlock
+{
+  width: 360px;
+  height: 170px;
+  position: absolute;
+  left: calc(50% - 180px);
+  top: 60px;
+}
+
+.antiDecayImg
+{
+  width: 120px;
+  display: block;
+  float: right;
+  transition: 0.2s all;
+}
+
+#per5games
+{
+  bottom: -13px;
+  font-size: 18px;
 }
