@@ -25,14 +25,14 @@
                     какой я крутой. И они такие, блин, какой ты крутой.<br>
                     И все такие, блин, какой он крутой.
                 </div>
-                <div class="button medium title">ПОГНАЛИ</div>
+                <div class="button medium title" id="moreButton" onclick="goToBlockByID(id)" href=".service">ПОГНАЛИ</div>
             </div>
         </div>
         <div class="contentBlock service">
             <div class="blockTitle bold">СМОТРИ, ЧТО МОЖЕМ</div>
             <div class="content">
-                <div class="serviceBlock">
-                    <div class="costil"></div>
+                <div class="serviceBlock" id="serviceRank" onclick="goToBlockByID(id)" href=".rankBoost">
+                    <div class="hoverLineGrey"></div>
                     <div class="hoverLine hoverLineTop"></div>
                     <div class="hoverLine"></div>
                     <div class="blockTitle medium">RANK BOOST</div>
@@ -42,8 +42,8 @@
                         сидим и кайфуем от этого буста. 
                     </div>
                 </div>    
-                <div class="serviceBlock">
-                    <div class="costil"></div>
+                <div class="serviceBlock" id="servicePlacem" onclick="goToBlockByID(id)" href=".placements">
+                    <div class="hoverLineGrey"></div>
                     <div class="hoverLine hoverLineTop"></div>
                     <div class="hoverLine"></div>
                     <div class="blockTitle medium">PLACEMENTS</div>
@@ -53,8 +53,8 @@
                         Вот прям хлебом не корми, семь раз отмерь.
                     </div>
                 </div>    
-                <div class="serviceBlock">
-                    <div class="costil"></div>
+                <div class="serviceBlock" id="serviceDecay" onclick="goToBlockByID(id)" href=".antidecay">
+                    <div class="hoverLineGrey"></div>
                     <div class="hoverLine hoverLineTop"></div>
                     <div class="hoverLine"></div>
                     <div class="blockTitle medium">ANTI-DECAY</div>
@@ -71,6 +71,74 @@
             <div class="content">
                 <div class="centerText text regular">
                     В общем, ты тут такой выбираешь свой уровень и на какой хочешь, чтобы тебя забустили, и всё.
+                </div>
+                <div class="rankBoostBlock">
+                    <div class="curRank">
+                        <div class="rankText title medium">Current rank</div>
+                        <div class="rankImg">
+                            <img src="img/ranks/8.png" id="leftRank8">
+                            <img src="img/ranks/7.png" id="leftRank7">
+                            <img src="img/ranks/6.png" id="leftRank6">
+                            <img src="img/ranks/5.png" id="leftRank5">
+                            <img src="img/ranks/4.png" id="leftRank4">
+                            <img src="img/ranks/3.png" id="leftRank3">
+                            <img src="img/ranks/2.png" id="leftRank2">
+                            <img src="img/ranks/1.png" id="leftRank1">
+                        </div>
+
+                        <div class="arrows">
+                            <div class="arrowUp" id="leftUp">
+                                <img class="arrowUpImg" src="img/arrowUp.png">
+                                <img class="arrowUpImg hArrowUp" src="img/hArrowUp.png">
+                            </div>
+                            <div class="arrowDown" id="leftDown">
+                                <img class="arrowDownImg" src="img/arrowDown.png">
+                                <img class="arrowDownImg hArrowDown" src="img/hArrowDown.png">                           
+                            </div>
+                        </div>
+
+                        <input class="inpRank" id="curSR" name="curRank" type="text" onchange="displayLeftPic(this.value)" maxlength="4" placeholder="1" form="sendForm">
+
+                    </div>
+
+                    <div class="soloDuo">
+                        <div class="chosen"></div>
+                        <div class="solo title medium">SOLO</div>
+                        <div class="duo title medium">DUO</div>
+                    </div>
+                    <input class="inpData" id="invisibleSoloDuo" type="hidden" name="soloDuo" form="sendForm" value="Solo">
+
+                    <div class="disRank">
+                        <div class="rankText title medium">Desired rank</div>
+                        <div class="rankImg">
+                            <img src="img/ranks/8.png" id="rightRank8">
+                            <img src="img/ranks/7.png" id="rightRank7">
+                            <img src="img/ranks/6.png" id="rightRank6">
+                            <img src="img/ranks/5.png" id="rightRank5">
+                            <img src="img/ranks/4.png" id="rightRank4">
+                            <img src="img/ranks/3.png" id="rightRank3">
+                            <img src="img/ranks/2.png" id="rightRank2">
+                            <img src="img/ranks/1.png" id="rightRank1">
+                        </div>
+
+                        <div class="arrows">
+                            <div class="arrowUp" id="rightUp">
+                                <img class="arrowUpImg" src="img/arrowUp.png">
+                                <img class="arrowUpImg hArrowUp" src="img/hArrowUp.png">
+                            </div>
+                            <div class="arrowDown" id="rightDown">
+                                <img class="arrowDownImg" src="img/arrowDown.png">
+                                <img class="arrowDownImg hArrowDown" src="img/hArrowDown.png">                           
+                            </div>
+                        </div>
+
+                        <input class="inpRank" id="disSR" name="disRank" type="text" onchange="displayRightPic(this.value)" maxlength="4" placeholder="50" form="sendForm">
+
+                    </div>
+
+                    <div class="price medium" id="boostPrice">1$</div>
+
+                    <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
                 </div>
 
                 <div class="button centerButton medium title">НОРМАЛЬНО</div>
@@ -99,6 +167,12 @@
             </div>
         </div>
 
+
+
+
+
+
+
         <div class="contentBlock footer">
             <div class="content">
                 <div class="contacts text">
@@ -107,37 +181,38 @@
                     <div class="bold">Skype:&nbsp;</div>
                     <div class="regular">phoenixboost support</div>
                 </div>
-                <div class="rights text bold">© 2017 Phoenixboost. All rights reserved.</div>
             </div>
+            <div class="rights text bold">© 2017-2018 Phoenixboost. All rights reserved.</div>
         </div>
 
 
-
-        <div class="greyWall"></div>
+        <div class="transparentLayer"></div>
         <div class="contactWindow cw1">
             <div class="closeButton"><img src="img/closeButton.png"></div>
-
             <div class="text cWindowText">
                 Тут ещё немного. Типа, че как вообще.
             </div>
-            <div class="inpBlock inpb1">
-                <div class="text bold title">E-mail:</div>
-                <div class="inputOutBlock">
-                    <input id="email" class="iiii" type="email">
+
+            <form id="sendForm" method="post" name="sendForm" action="sendOWeng.php" onsubmit="return false;">
+                <div class="inpBlock inpb1">
+                    <div class="text bold title">E-mail:</div>
+                    <div class="inputOutBlock">
+                        <input id="email" class="inpData" type="email">
+                    </div>
                 </div>
-            </div>
-            <div class="inpBlock inpb1">
-                <div class="text bold title">Имя:</div>
-                <div class="inputOutBlock">
-                    <input id="name" class="iiii" type="text">
+                <div class="inpBlock inpb1">
+                    <div class="text bold title">Имя:</div>
+                    <div class="inputOutBlock">
+                        <input id="name" class="inpData" type="text">
+                    </div>
                 </div>
-            </div>
-            <div class="inpBlock inpb2">
-                <div class="text bold title">Сообщение:</div>
-                <div class="inputOutBlock">
-                    <textarea id="message" class="iiii" name="textarea"></textarea>
+                <div class="inpBlock inpb2">
+                    <div class="text bold title">Сообщение:</div>
+                    <div class="inputOutBlock">
+                        <textarea id="message" class="inpData" name="textarea"></textarea>
+                    </div>
                 </div>
-            </div>
+            </form>
 
             <div class="button centerButton medium title">ОТ ДУШИ</div>
         </div>
