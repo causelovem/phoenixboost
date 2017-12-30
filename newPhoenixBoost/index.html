@@ -141,7 +141,7 @@
                     <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
                 </div>
 
-                <div class="button centerButton medium title">НОРМАЛЬНО</div>
+                <div class="button centerButton medium title" id="buttonRank" onclick="processOrder(id)">НОРМАЛЬНО</div>
             </div>
         </div>
 
@@ -152,7 +152,29 @@
                     Это какая-то сложная хрень, я опять забыл, что это такое. Миша кучу раз рассказывал, но как-то не лезет.
                 </div>
 
-                <div class="button centerButton medium title">НОРМАЛЬНО</div>
+                <div class="placementsBlock">
+
+                    <div class="placements4block">
+                        <div class="placementsText medium text">У меня был ранг в прошлом сезоне</div>
+                        <img src="img/ranks/7.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon4">
+                        <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon3">
+                        <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon2">
+                        <img src="img/ranks/1-4.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon1">
+                    </div>
+
+                    <div class="placements1block"></div>
+
+                    <div class="placements2block">
+                        <div class="placementsText medium text">Вообще не было</div>
+                        <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon6">
+                        <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon5">
+                    </div>
+                    <div class="price medium" id="placementsPrice">20$</div>
+                    <div class="price bold" id="per5games">за 10 игр</div>
+
+                    <input class="inpData" id="invisiblePlacementsRank" type="hidden" name="placementsRank" form="sendForm" value="diamond">
+               </div>
+                <div class="button centerButton medium title" id="buttonPlacement" onclick="processOrder(id)">НОРМАЛЬНО</div>
             </div>
         </div>
 
@@ -173,7 +195,7 @@
                     <input class="inpData" id="invisibleAntiDecayRank" type="hidden" name="antiDecayRank" form="sendForm" value="master">
                 </div>
 
-                <div class="button centerButton medium title">НОРМАЛЬНО</div>
+                <div class="button centerButton medium title" id="buttonDecay" onclick="processOrder(id)">НОРМАЛЬНО</div>
             </div>
         </div>
 
@@ -207,19 +229,19 @@
                 <div class="inpBlock inpb1">
                     <div class="text bold title">E-mail:</div>
                     <div class="inputOutBlock">
-                        <input id="email" class="inpData" type="email">
+                        <input id="inpEmail" class="inpData" type="email" name="email" onchange="checkEmail(this.value)">
                     </div>
                 </div>
                 <div class="inpBlock inpb1">
                     <div class="text bold title">Имя:</div>
                     <div class="inputOutBlock">
-                        <input id="name" class="inpData" type="text">
+                        <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
                     </div>
                 </div>
                 <div class="inpBlock inpb2">
                     <div class="text bold title">Сообщение:</div>
                     <div class="inputOutBlock">
-                        <textarea id="message" class="inpData" name="textarea"></textarea>
+                        <textarea id="inpMessage" class="inpData" name="message"></textarea>
                     </div>
                 </div>
             </form>

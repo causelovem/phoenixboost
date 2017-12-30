@@ -11,29 +11,51 @@ function goToBlockByID(id)
 /*******/
 
 
+/*PROCESS ORDER*/
+function processOrder(id)
+{
+    if (id == "buttonRank")
+        countRankPrice()
+    else
+    if (id == "buttonPlacement")
+        countPlacementsPrice()
+    else
+    if (id == "buttonDecay")
+        countAntiDecayPrice()
+
+
+    $('.transparentLayer').css("display", "block");
+    $('.cw1').css("display", "block");
+}
+/*******/
+
+
 /*CHECKING EMAIL AND NAME*/
 function checkEmail()
 {
-    // if ($('#inpEmail').val() != '')
-    // {
-    //     $('#checkEmail').css("display", "none");
-    //     $('#inpEmail').css("box-shadow", "none");
-    // }
-
-    // if ($('#inpEmail').val().search(pattern) == 0)
-    // {
-    //     $('#checkEmailValidation').css("display", "none");
-    //     $('#inpEmail').css("box-shadow", "none");
-    // }
+    if ($('#inpEmail').val() == '')
+    {
+        // $('#checkEmail').css("display", "none");
+        // $('#inpEmail').css("box-shadow", "none");
+        alert("Фу не вводить емэил");
+    }
+    else
+    if ($('#inpEmail').val().search(pattern) != 0)
+    {
+        // $('#checkEmailValidation').css("display", "none");
+        // $('#inpEmail').css("box-shadow", "none");
+        alert("Фу вводить не правильный емэил");
+    }
 }
 
 function checkFullName()
 {
-    // if ($('#inpName').val() != '')
-    // {
-    //     $('#checkFullName').css("display", "none");
-    //     $('#inpName').css("box-shadow", "none");
-    // }
+    if ($('#inpName').val() == '')
+    {
+        // $('#checkFullName').css("display", "none");
+        // $('#inpName').css("box-shadow", "none");
+        alert("Фу не вводить имя");
+    }
 }
 /*******/
 
@@ -182,7 +204,7 @@ function displayPic(sr)
             $("#rightRank" + disRank).css("display", "block");
         }
 
-        if ((curSR >= 3500) && (soloDuo = "duo"))
+        if ((curSR >= 3500) && (soloDuo == "duo"))
         {
             $("#leftRank" + curRank).css("display", "none");
 
@@ -216,7 +238,7 @@ function displayPic(sr)
             $("#leftRank" + curRank).css("display", "block");
         }
 
-        if ((disSR > 3500) && ((soloDuo = "duo")))
+        if ((disSR > 3500) && ((soloDuo == "duo")))
         {
             $("#leftRank" + curRank).css("display", "none");
 
@@ -243,7 +265,87 @@ function displayPic(sr)
 
 
 /*PLACEMENT*/
+function countPlacementsPrice()
+{
+    placementsPrice = 0;
 
+    if (document.getElementById('invisiblePlacementsRank').value == "low rank")
+        placementsPrice = 15 * coef;
+    else
+    if (document.getElementById('invisiblePlacementsRank').value == "diamond")
+        placementsPrice = 20 * coef;
+    else
+    if (document.getElementById('invisiblePlacementsRank').value == "master")
+        placementsPrice = 30 * coef;
+    else
+    if (document.getElementById('invisiblePlacementsRank').value == "grand master")
+        placementsPrice = 45 * coef;
+    else
+    if (document.getElementById('invisiblePlacementsRank').value == "fresh diamond")
+        placementsPrice = 20 * coef;
+    else
+    if (document.getElementById('invisiblePlacementsRank').value == "fresh master")
+        placementsPrice = 30 * coef;
+
+    if (currency == "usd")
+    {
+        document.getElementById('placementsPrice').innerHTML = placementsPrice.toFixed(0) + "$";
+        document.getElementById('invisiblePrice').value = placementsPrice.toFixed(0) + " in dollars";
+    }
+    else
+    if (currency == "eur")
+    {
+        document.getElementById('placementsPrice').innerHTML = placementsPrice.toFixed(0) + "&euro;";
+        document.getElementById('invisiblePrice').value = placementsPrice.toFixed(0) + " in Euro";
+    }
+    else
+    if (currency == "rub")
+    {
+        document.getElementById('placementsPrice').innerHTML = placementsPrice.toFixed(0) + "&#8381;";
+        document.getElementById('invisiblePrice').value = placementsPrice.toFixed(0) + " in rubles";
+    }
+}
+function mouselogPlacements(event) 
+{
+    if (event.type == "mouseover")
+    {
+        if (placements != event.target.id)
+            $('#' + event.target.id).css("filter", "drop-shadow(-3px -3px 0px #c2c2c2) drop-shadow(3px -3px 0px #c2c2c2) drop-shadow(-3px 3px 0px #c2c2c2) drop-shadow(3px 3px 0px #c2c2c2)");
+    }
+    else
+    if (event.type == "mouseout")
+    {
+        if (placements != event.target.id)
+            $('#' + event.target.id).css("filter", "none");
+    }
+    else
+    if (event.type == "click")
+    {
+        $('#' + placements).css("filter", "none");
+        placements = event.target.id;
+        $('#' + placements).css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
+        
+        if (placements == "placementIcon1")
+            document.getElementById('invisiblePlacementsRank').value = "low rank"
+        else
+        if (placements == "placementIcon2")
+            document.getElementById('invisiblePlacementsRank').value = "diamond"
+        else
+        if (placements == "placementIcon3")
+            document.getElementById('invisiblePlacementsRank').value = "master"
+        else
+        if (placements == "placementIcon4")
+            document.getElementById('invisiblePlacementsRank').value = "grand master"
+        else
+        if (placements == "placementIcon5")
+            document.getElementById('invisiblePlacementsRank').value = "fresh diamond"
+        else
+        if (placements == "placementIcon6")
+            document.getElementById('invisiblePlacementsRank').value = "fresh master"
+    }
+
+    countPlacementsPrice();
+}
 /*******/
 
 
@@ -315,6 +417,10 @@ function mouselogDecay(event)
 /*******/
 
 
+var img = Math.floor(Math.random() * 4) + 1;
+$('.main').css("background-image", "url('img/bg" + img + ".jpg')");
+
+
 for (var i = 2; i < 9; i++)
 {
     $("#leftRank" + i).css("display", "none");
@@ -334,30 +440,31 @@ var coef = 1;
 var usdCoef = 1, eurCoef = 0.84, rubCoef = 58.5;
 var currency = "usd";
 
-var soloDuo = "solo"
+var soloDuo = "solo";
 
 document.getElementById('curSR').value = curSR;
 document.getElementById('disSR').value = disSR;
 
 document.getElementById('invisibleSoloDuo').value = "Solo";
-countRankPrice()
+countRankPrice();
 
-// document.getElementById('invisiblePlacementsRank').value = "diamond";
+var placements = "placementIcon2";
+document.getElementById('invisiblePlacementsRank').value = "diamond";
+$('#placementIcon2').css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
+countPlacementsPrice();
 
+var antidecay = "antiDecayImg2";
 document.getElementById('invisibleAntiDecayRank').value = "master";
-countAntiDecayPrice()
+$('#antiDecayImg2').css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
+countAntiDecayPrice();
 
-document.getElementById('email').value = "";
-document.getElementById('name').value = "";
-document.getElementById('message').value = "";
+document.getElementById('inpEmail').value = "";
+document.getElementById('inpName').value = "";
+document.getElementById('inpMessage').value = "";
 
 // document.getElementById('faq').scrollTop = 0;
 // document.getElementById('contacts').scrollTop = 0;
 
-var antidecay = "antiDecayImg2";
-
-document.getElementById('invisibleAntiDecayRank').value = "master"
-$('#antiDecayImg2').css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
 
 
 $(document).ready(function(){ $('#leftUp').click(function() { displayLeftPic(Number(curSR) + 50); });});
@@ -379,6 +486,7 @@ $(document).ready(function()
         countRankPrice();
     });
 });
+
 
 $(document).ready(function()
 {
@@ -406,15 +514,6 @@ $(document).ready(function()
 
 $(document).ready(function()
 {
-    $('.centerButton').click(function()
-    {
-        $('.transparentLayer').css("display", "block");
-        $('.cw1').css("display", "block");
-    });
-});
-
-$(document).ready(function()
-{
     $('.closeButton').click(function()
     {
         $('.transparentLayer').css("display", "none");
@@ -430,6 +529,5 @@ $(document).ready(function()
         $('.cw1').css("display", "none");
     });
 });
-
 
 

@@ -173,13 +173,21 @@ body
   background-color: #C33C3C;
 }
 
+/*randImg
+{
+  --val: img/bg3.jpg;
+}*/
+
 .main 
 {
+  /*--randd: calc(random(3));*/
+  /*--path: "img/bg" + var(--randd) + ".jpg";*/
   width: 100%;
   max-width: 1920px;
   height: 650px;
   margin: 0 auto;
   background-image: url("img/bg3.jpg");
+  /*background-image: src(var(--val));*/
   background-size: cover;
   background-position: center;
 }
@@ -470,17 +478,6 @@ input:focus
 	width: 100%;
 }
 
-.placements .content
-{
-  width: 100%;
-  height: 400px;
-}
-
-.placements
-{
-  background-color: #EFE9DC;
-}
-
 .centerText
 {
 	text-align: center;
@@ -713,3 +710,72 @@ input:focus
   bottom: -13px;
   font-size: 18px;
 }
+
+.placements .content
+{
+  width: 100%;
+  height: 370px;
+}
+
+.placements
+{
+  background-color: #EFE9DC;
+}
+
+.placementsBlock
+{
+  height: 205px;
+  width: 800px;
+  position: absolute;
+  left: calc(50% - 400px);
+  top: 60px; 
+}
+
+.placements1block
+{
+  height: 100%;
+  width: 80px;
+  float: left;
+}
+
+.placements4block
+{
+  height: 100%;
+  width: 480px;
+  float: left;
+}
+
+.placements2block
+{
+  height: 100%;
+  width: 240px;
+  float: left;
+}
+
+.placements1block:after
+{
+  content: " ";
+  height: 75%;
+  width: 1px;
+  position: absolute;
+  background-color: #3A3A3A;
+  left: calc(50% - 0.5px);
+}
+
+.placementsText
+{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+
+.placements img 
+{
+  width: 120px;
+  display: block;
+  float: right;
+  transition: 0.2s all;
+}
+
