@@ -173,21 +173,13 @@ body
   background-color: #C33C3C;
 }
 
-/*randImg
-{
-  --val: img/bg3.jpg;
-}*/
-
 .main 
 {
-  /*--randd: calc(random(3));*/
-  /*--path: "img/bg" + var(--randd) + ".jpg";*/
   width: 100%;
   max-width: 1920px;
   height: 650px;
   margin: 0 auto;
   background-image: url("img/bg3.jpg");
-  /*background-image: src(var(--val));*/
   background-size: cover;
   background-position: center;
 }

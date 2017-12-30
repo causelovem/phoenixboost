@@ -15,14 +15,13 @@ function goToBlockByID(id)
 function processOrder(id)
 {
     if (id == "buttonRank")
-        countRankPrice()
+        countRankPrice();
     else
     if (id == "buttonPlacement")
-        countPlacementsPrice()
+        countPlacementsPrice();
     else
     if (id == "buttonDecay")
-        countAntiDecayPrice()
-
+        countAntiDecayPrice();
 
     $('.transparentLayer').css("display", "block");
     $('.cw1').css("display", "block");
@@ -93,9 +92,7 @@ function countRankPrice()
     boostPrice *= coef;
 
     if (soloDuo == "duo")
-    {
-        boostPrice = boostPrice * 1.5;
-    }
+        boostPrice *= 1.5;
 
     if (currency == "usd")
     {
