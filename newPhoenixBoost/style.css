@@ -304,7 +304,7 @@ body
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .contactWindow
@@ -361,6 +361,7 @@ body
 .transparentLayer {display: none;}
 .cw1 {display: none;}
 .cw2 {display: none;}
+.cw3 {display: none;}
 
 .inputOutBlock
 {
@@ -393,7 +394,7 @@ textarea
 textarea:focus
 {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(193,167,119,0.9);
+    box-shadow: 0 0 0 3px rgba(193,167,119,0.9);
 }
 
 input    
@@ -408,7 +409,7 @@ input
 input:focus 
 {
     outline: none;
-    box-shadow: 0 2px 0 0 rgba(193,167,119,0.9);
+    box-shadow: 0 3px 0 0 rgba(193,167,119,0.9);
 }
 
 .cw2 .cWindowText
@@ -771,3 +772,35 @@ input:focus
   transition: 0.2s all;
 }
 
+.cw3
+{
+  width: 700px;
+  left: calc(50% - 350px);
+  height: 600px;
+  top: calc(50vh - 300px);
+}
+
+.faqText
+{
+  width: 600px;
+  height: 520px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: absolute;
+  padding-bottom: 20px;
+  bottom: 0px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.question
+{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.answer
+{
+  padding-bottom: 5px;
+  padding-left: 15px; 
+}

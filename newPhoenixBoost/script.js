@@ -34,16 +34,16 @@ function checkEmail()
 {
     if ($('#inpEmail').val() == '')
     {
-        // $('#checkEmail').css("display", "none");
-        // $('#inpEmail').css("box-shadow", "none");
-        alert("Фу не вводить емэил");
+        $('#inpEmail').css("box-shadow", "0 5px 0 0 #C33C3C");
     }
     else
     if ($('#inpEmail').val().search(pattern) != 0)
     {
-        // $('#checkEmailValidation').css("display", "none");
-        // $('#inpEmail').css("box-shadow", "none");
-        alert("Фу вводить не правильный емэил");
+        $('#inpEmail').css("box-shadow", "0 5px 0 0 #C33C3C");
+    }
+    else
+    {
+        $('#inpEmail').css("box-shadow", "0 5px 0 0 #26C281");
     }
 }
 
@@ -51,10 +51,13 @@ function checkFullName()
 {
     if ($('#inpName').val() == '')
     {
-        // $('#checkFullName').css("display", "none");
-        // $('#inpName').css("box-shadow", "none");
-        alert("Фу не вводить имя");
+        $('#inpName').css("box-shadow", "0 5px 0 0 #C33C3C");
     }
+    else
+    {
+        $('#inpName').css("box-shadow", "0 5px 0 0 #26C281");
+    }
+
 }
 /*******/
 
@@ -511,10 +514,21 @@ $(document).ready(function()
 
 $(document).ready(function()
 {
+    $('.nb4').click(function()
+    {
+        $('.transparentLayer').css("display", "block");
+        $('.cw3').css("display", "block");
+    });
+});
+
+$(document).ready(function()
+{
     $('.closeButton').click(function()
     {
         $('.transparentLayer').css("display", "none");
         $('.cw1').css("display", "none");
+        $('.cw2').css("display", "none");
+        $('.cw3').css("display", "none");
     });
 });
 
@@ -524,6 +538,8 @@ $(document).ready(function()
     {
         $('.transparentLayer').css("display", "none");
         $('.cw1').css("display", "none");
+        $('.cw2').css("display", "none");
+        $('.cw3').css("display", "none");
     });
 });
 
