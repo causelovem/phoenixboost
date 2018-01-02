@@ -207,7 +207,7 @@ body
   margin-bottom: 25px;
 }
 
-.button 
+.button
 {
   cursor: pointer;
   width: 160px;
@@ -217,6 +217,15 @@ body
   line-height: 32px;
   color: white;
   background-color: #C33C3C;
+}
+
+#submitButton
+{
+	display: block;
+	height: 40px;
+	width: 170px;
+	line-height: 27px;
+	box-shadow: none;
 }
 
 .button:hover
