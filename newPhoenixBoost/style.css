@@ -124,12 +124,12 @@ body
   float: left;
 }
 
-.nb1
+.titleMain
 {
   float: left;
 }
 
-.navButton, .nb1
+.navButton, .titleMain
 {
   line-height: 60px;
   display: block;
@@ -351,7 +351,7 @@ body
 
 .inpb2{height: 150px;}
 
-.inpBlock .text 
+.inpBlock .text
 {
     line-height: 40px;
     text-align: right;
@@ -359,9 +359,9 @@ body
 }
 
 .transparentLayer {display: none;}
-.cw1 {display: none;}
-.cw2 {display: none;}
-.cw3 {display: none;}
+.orderBoard {display: none;}
+.submitBoard {display: none;}
+.faq {display: none;}
 
 .inputOutBlock
 {
@@ -397,7 +397,7 @@ textarea:focus
     box-shadow: 0 0 0 3px rgba(193,167,119,0.9);
 }
 
-input    
+input
 {
     width: 100%;
     margin-top: 2px;
@@ -412,7 +412,7 @@ input:focus
     box-shadow: 0 3px 0 0 rgba(193,167,119,0.9);
 }
 
-.cw2 .cWindowText
+.submitBoard .cWindowText
 {
 	padding-bottom: 30px;
 }
@@ -423,12 +423,12 @@ input:focus
 	margin-bottom: 5px;
 }
 
-.cw2 .inpBlock
+.submitBoard .inpBlock
 {
 	margin-bottom: 0;
 }
 
-.cw2 .inputOutBlock
+.submitBoard .inputOutBlock
 {
 	padding-top: 10px;
 }
@@ -772,7 +772,7 @@ input:focus
   transition: 0.2s all;
 }
 
-.cw3
+.faq
 {
   width: 700px;
   left: calc(50% - 350px);

@@ -11,10 +11,10 @@
     <body>
         <div class="nav bold title">
             <img src="img/icon.png">
-            <div class="nb1">PHOENIX BOOST</div>
-            <div class="navButton nb4">FAQ<div class="hoverLine"></div></div>
-            <div class="navButton nb3">КОНТАКТЫ<div class="hoverLine"></div></div>
-            <div class="navButton nb2">TWITCH<div class="hoverLine"></div></div>
+            <div class="titleMain">PHOENIX BOOST</div>
+            <div class="navButton faqButton">FAQ<div class="hoverLine"></div></div>
+            <div class="navButton contactButton">КОНТАКТЫ<div class="hoverLine"></div></div>
+            <div class="navButton twitchButton">TWITCH<div class="hoverLine"></div></div>
         </div>
         <div class="main">
             <div class="inMain">
@@ -66,6 +66,7 @@
             </div>
         </div>
 
+        <input class="inpData" id="invisibleBoostType" type="hidden" name="boostType" form="sendForm" value="rank boost">
         <div class="contentBlock rankBoost">
             <div class="blockTitle bold">RANK BOOST</div>
             <div class="content">
@@ -213,7 +214,7 @@
 
 
         <div class="transparentLayer"></div>
-        <div class="contactWindow cw1">
+        <div class="contactWindow orderBoard">
             <div class="closeButton"><img src="img/closeButton.png"></div>
             <div class="text cWindowText">
                 Тут ещё немного. Типа, че как вообще.
@@ -235,44 +236,45 @@
                 <div class="inpBlock inpb2">
                     <div class="text bold title">Сообщение:</div>
                     <div class="inputOutBlock">
-                        <textarea id="inpMessage" class="inpData" name="message"></textarea>
+                        <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
                     </div>
                 </div>
             </form>
 
-            <div class="button centerButton medium title">ОТ ДУШИ</div>
+            <div class="button centerButton medium title" id="purchaseButton">ОТ ДУШИ</div>
         </div>
-        <div class="contactWindow cw2">
+        <div class="contactWindow submitBoard">
             <div class="closeButton"><img src="img/closeButton.png"></div>
 
             <div class="text cWindowText">
                 Проверь инфу.<br>
                 Если всё по кайфу, то пойдём бустить тебя.
             </div>
-            <div class="boostInfoText bold text">Буст с 1 до 5000 за 7999€</div>
+            <div class="boostInfoText bold text" id="submitOrderDetails">Буст с 1 до 5000 за 7999€</div>
             <div class="inpBlock inpb1">
                 <div class="text bold title">E-mail:</div>
-                <div class="inputOutBlock title">
+                <div class="inputOutBlock title" id="submitEmail">
                     email@email.ru
                 </div>
             </div>
             <div class="inpBlock inpb1">
                 <div class="text bold title">Имя:</div>
-                <div class="inputOutBlock title">
+                <div class="inputOutBlock title" id="submitName">
                     Имя Имя Имя
                 </div>
             </div>
             <div class="inpBlock inpb2">
                 <div class="text bold title">Сообщение:</div>
-                <div class="inputOutBlock title">
+                <div class="inputOutBlock title" id="submitMessage">
                     Соо бщение Сооб щение Сообщ ение Сообщ ение Сообщ ение Сообщ ение Соо бщение Сооб щение Сообщ ение Сообщ ение Сообщ ение Сообщ ение Соо бщение Сообщение Сообщ ение
                 </div>
             </div>
             <div class="backButton medium text">БЛИН, ЩА</div>
-            <div class="button centerButton medium title">ПО КАЙФУ</div>
+            <!-- <div class="button centerButton medium title">ПО КАЙФУ</div> -->
+            <input class="button centerButton medium title" id="submitButton" type="button" value="ПО КАЙФУ" form="sendForm" onclick="document.forms['sendForm'].submit();">
         </div>
 
-        <div class="contactWindow cw3">
+        <div class="contactWindow faq">
             <div class="closeButton"><img src="img/closeButton.png"></div>
             <div class="blockTitle bold">FAQ</div>
             <div class="faqText text">
