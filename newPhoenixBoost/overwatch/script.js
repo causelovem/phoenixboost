@@ -226,6 +226,9 @@ function displayPic(sr)
             soloDuo = "solo"
             document.getElementById('invisibleSoloDuo').value = "Solo";
             alert('Sorry, the duo boost service is available only up to 3500SR');
+            $('.chosen').css("top", "0");
+            $('.duo').css("opacity", "0.6");
+            $('.solo').css("opacity", "1");
             curSR = 3450;
             disSR = 3500;
             getRank(curSR, "left");
@@ -260,6 +263,9 @@ function displayPic(sr)
             soloDuo = "solo"
             document.getElementById('invisibleSoloDuo').value = "Solo";
             alert('Sorry, the duo boost service is available only up to 3500SR');
+            $('.chosen').css("top", "0");
+            $('.duo').css("opacity", "0.6");
+            $('.solo').css("opacity", "1");
             curSR = 3450;
             disSR = 3500;
             getRank(disSR, "right");
@@ -341,22 +347,40 @@ function mouselogPlacements(event)
         $('#' + placements).css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
         
         if (placements == "placementIcon1")
+        {
             document.getElementById('invisiblePlacementsRank').value = "low rank"
+            document.getElementById('invisiblePrevRank').value = "Yes";
+        }
         else
         if (placements == "placementIcon2")
+        {
             document.getElementById('invisiblePlacementsRank').value = "diamond"
+            document.getElementById('invisiblePrevRank').value = "Yes";
+        }
         else
         if (placements == "placementIcon3")
+        {
             document.getElementById('invisiblePlacementsRank').value = "master"
+            document.getElementById('invisiblePrevRank').value = "Yes";
+        }
         else
         if (placements == "placementIcon4")
+        {
             document.getElementById('invisiblePlacementsRank').value = "grand master"
+            document.getElementById('invisiblePrevRank').value = "Yes";
+        }
         else
         if (placements == "placementIcon5")
+        {
             document.getElementById('invisiblePlacementsRank').value = "fresh diamond"
+            document.getElementById('invisiblePrevRank').value = "No";
+        }
         else
         if (placements == "placementIcon6")
+        {
             document.getElementById('invisiblePlacementsRank').value = "fresh master"
+            document.getElementById('invisiblePrevRank').value = "No";
+        }
     }
 
     countPlacementsPrice();
@@ -465,6 +489,7 @@ countRankPrice();
 
 var placements = "placementIcon2";
 document.getElementById('invisiblePlacementsRank').value = "diamond";
+document.getElementById('invisiblePrevRank').value = "Yes";
 $('#placementIcon2').css("filter", "drop-shadow(-3px -3px 0px #C33C3C) drop-shadow(3px -3px 0px #C33C3C) drop-shadow(-3px 3px 0px #C33C3C) drop-shadow(3px 3px 0px #C33C3C)");
 countPlacementsPrice();
 
@@ -513,6 +538,9 @@ $(document).ready(function()
             soloDuo = "solo"
             document.getElementById('invisibleSoloDuo').value = "Solo";
             alert('Sorry, the duo boost service is available only up to 3500SR');
+            $('.chosen').css("top", "0");
+            $('.duo').css("opacity", "0.6");
+            $('.solo').css("opacity", "1");
             displayRightPic(3500);
         }
         else
@@ -539,12 +567,22 @@ $(document).ready(function()
 
 $(document).ready(function()
 {
+    $('.contactButton').click(function()
+    {
+        $('.transparentLayer').css("display", "block");
+        $('.contacts2').css("display", "block");
+    });
+});
+
+$(document).ready(function()
+{
     $('.closeButton').click(function()
     {
         $('.transparentLayer').css("display", "none");
         $('.orderBoard').css("display", "none");
         $('.submitBoard').css("display", "none");
         $('.faq').css("display", "none");
+        $('.contacts2').css("display", "none");
     });
 });
 
@@ -556,6 +594,7 @@ $(document).ready(function()
         $('.orderBoard').css("display", "none");
         $('.submitBoard').css("display", "none");
         $('.faq').css("display", "none");
+        $('.contacts2').css("display", "none");
     });
 });
 

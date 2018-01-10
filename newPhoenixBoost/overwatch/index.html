@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Phoenix Boost</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/icon.png" type="image/png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="nav bold title">
+            <img src="img/icon.png">
+            <div class="titleMain">PHOENIX BOOST</div>
+            <div class="navButton faqButton">FAQ<div class="hoverLine"></div></div>
+            <div class="navButton contactButton">КОНТАКТЫ<div class="hoverLine"></div></div>
+            <a href="http://www.phoenixboost.com/twitch/"><div class="navButton twitchButton">TWITCH<div class="hoverLine"></div></div></a>
+        </div>
+        <div class="main">
+            <div class="inMain">
+                <div class="overwatch bold">OVERWATCH</div>
+                <div class="inMainText regular text">
+                    Мы тебя тут так офигенно забустим, прям охренеешь.<br>
+                    И друзья твои тоже охренеют. И ты такой, смотрите,<br>
+                    какой я крутой. И они такие, блин, какой ты крутой.<br>
+                    И все такие, блин, какой он крутой.
+                </div>
+                <div class="button medium title" id="moreButton" onclick="goToBlockByID(id)" href=".service">ПОГНАЛИ</div>
+            </div>
+        </div>
+        <div class="contentBlock service">
+            <div class="blockTitle bold">СМОТРИ, ЧТО МОЖЕМ</div>
+            <div class="content">
+            	<div class="servBlock33">
+					<div class="serviceBlock" id="serviceRank" onclick="goToBlockByID(id)" href=".rankBoost">
+	                    <div class="hoverLineGrey"></div>
+	                    <div class="hoverLine hoverLineTop"></div>
+	                    <div class="hoverLine"></div>
+	                    <div class="blockTitle medium">RANK BOOST</div>
+	                    <img src="img/servIcon1.png">
+	                </div> 
+            	</div>
+            	<div class="servBlock33">
+	                <div class="serviceBlock" id="servicePlacem" onclick="goToBlockByID(id)" href=".placements">
+	                    <div class="hoverLineGrey"></div>
+	                    <div class="hoverLine hoverLineTop"></div>
+	                    <div class="hoverLine"></div>
+	                    <div class="blockTitle medium">PLACEMENTS</div>
+	                    <img src="img/servIcon2.png">
+	                </div>                	
+            	</div>
+            	<div class="servBlock33">
+	                <div class="serviceBlock" id="serviceDecay" onclick="goToBlockByID(id)" href=".antidecay">
+	                    <div class="hoverLineGrey"></div>
+	                    <div class="hoverLine hoverLineTop"></div>
+	                    <div class="hoverLine"></div>
+	                    <div class="blockTitle medium">ANTI-DECAY</div>
+	                    <img src="img/servIcon3.png">
+	                </div>              	
+            	</div>
+            </div>
+        </div>
+
+        <input class="inpData" id="invisibleBoostType" type="hidden" name="boostType" form="sendForm" value="rank boost">
+        <div class="contentBlock rankBoost">
+            <div class="blockTitle bold">RANK BOOST</div>
+            <div class="content">
+                <div class="centerText text regular">
+                    В общем, ты тут такой выбираешь свой уровень и на какой хочешь, чтобы тебя забустили, и всё.
+                </div>
+                <div class="rankBoostBlock">
+                    <div class="curRank">
+                        <div class="rankText title medium">Current rank</div>
+                        <div class="rankImg">
+                            <img src="img/ranks/8.png" id="leftRank8">
+                            <img src="img/ranks/7.png" id="leftRank7">
+                            <img src="img/ranks/6.png" id="leftRank6">
+                            <img src="img/ranks/5.png" id="leftRank5">
+                            <img src="img/ranks/4.png" id="leftRank4">
+                            <img src="img/ranks/3.png" id="leftRank3">
+                            <img src="img/ranks/2.png" id="leftRank2">
+                            <img src="img/ranks/1.png" id="leftRank1">
+                        </div>
+
+                        <div class="arrows">
+                            <div class="arrowUp" id="leftUp">
+                                <img class="arrowUpImg" src="img/arrowUp.png">
+                                <img class="arrowUpImg hArrowUp" src="img/hArrowUp.png">
+                            </div>
+                            <div class="arrowDown" id="leftDown">
+                                <img class="arrowDownImg" src="img/arrowDown.png">
+                                <img class="arrowDownImg hArrowDown" src="img/hArrowDown.png">                           
+                            </div>
+                        </div>
+
+                        <input class="inpRank" id="curSR" name="curRank" type="text" onchange="displayLeftPic(this.value)" maxlength="4" placeholder="1" form="sendForm">
+
+                    </div>
+
+                    <div class="soloDuo">
+                        <div class="chosen"></div>
+                        <div class="solo title medium">SOLO</div>
+                        <div class="duo title medium">DUO</div>
+                    </div>
+                    <input class="inpData" id="invisibleSoloDuo" type="hidden" name="soloDuo" form="sendForm" value="Solo">
+
+                    <div class="disRank">
+                        <div class="rankText title medium">Desired rank</div>
+                        <div class="rankImg">
+                            <img src="img/ranks/8.png" id="rightRank8">
+                            <img src="img/ranks/7.png" id="rightRank7">
+                            <img src="img/ranks/6.png" id="rightRank6">
+                            <img src="img/ranks/5.png" id="rightRank5">
+                            <img src="img/ranks/4.png" id="rightRank4">
+                            <img src="img/ranks/3.png" id="rightRank3">
+                            <img src="img/ranks/2.png" id="rightRank2">
+                            <img src="img/ranks/1.png" id="rightRank1">
+                        </div>
+
+                        <div class="arrows">
+                            <div class="arrowUp" id="rightUp">
+                                <img class="arrowUpImg" src="img/arrowUp.png">
+                                <img class="arrowUpImg hArrowUp" src="img/hArrowUp.png">
+                            </div>
+                            <div class="arrowDown" id="rightDown">
+                                <img class="arrowDownImg" src="img/arrowDown.png">
+                                <img class="arrowDownImg hArrowDown" src="img/hArrowDown.png">                           
+                            </div>
+                        </div>
+
+                        <input class="inpRank" id="disSR" name="disRank" type="text" onchange="displayRightPic(this.value)" maxlength="4" placeholder="50" form="sendForm">
+
+                    </div>
+
+                    <div class="price medium" id="boostPrice">1$</div>
+
+                    <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
+                </div>
+
+                <div class="button centerButton medium title" id="buttonRank" onclick="processOrder(id)">НОРМАЛЬНО</div>
+            </div>
+        </div>
+
+        <div class="contentBlock placements">
+            <div class="blockTitle bold">PLACEMENTS</div>
+            <div class="content">
+                <div class="centerText text regular">
+                    Это какая-то сложная хрень, я опять забыл, что это такое. Миша кучу раз рассказывал, но как-то не лезет.
+                </div>
+
+                <div class="placementsBlock">
+
+                    <div class="placements4block">
+                        <div class="placementsText medium text">У меня был ранг в прошлом сезоне</div>
+                        <img src="img/ranks/7.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon4">
+                        <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon3">
+                        <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon2">
+                        <img src="img/ranks/1-4.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon1">
+                    </div>
+
+                    <div class="placements1block"></div>
+
+                    <div class="placements2block">
+                        <div class="placementsText medium text">Вообще не было</div>
+                        <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon6">
+                        <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon5">
+                    </div>
+                    <div class="price medium" id="placementsPrice">20$</div>
+                    <div class="price bold" id="per5games">за 10 игр</div>
+
+                    <input class="inpData" id="invisiblePlacementsRank" type="hidden" name="placementsRank" form="sendForm" value="diamond">
+
+                    <input class="inpData" id="invisiblePrevRank" type="hidden" name="prevRank" form="sendForm" value="Yes">
+               </div>
+                <div class="button centerButton medium title" id="buttonPlacement" onclick="processOrder(id)">НОРМАЛЬНО</div>
+            </div>
+        </div>
+
+        <div class="contentBlock antidecay">
+            <div class="blockTitle bold">ANTI-DECAY</div>
+            <div class="content">
+                <div class="centerText text regular">
+                    Тут типа тоже что-то полезное. Вроде, чтобы быть в сети, чтобы быть в сети. Вообще, хрен знает.
+                </div>
+
+                <div class="antiDecayBlock">     
+                    <img src="img/ranks/7.png" onmouseover="mouselogDecay(event)" onmouseout="mouselogDecay(event)" onclick="mouselogDecay(event)" class="antiDecayImg" id="antiDecayImg3">        
+                    <img src="img/ranks/6.png" onmouseover="mouselogDecay(event)" onmouseout="mouselogDecay(event)" onclick="mouselogDecay(event)" class="antiDecayImg" id="antiDecayImg2">        
+                    <img src="img/ranks/5.png" onmouseover="mouselogDecay(event)" onmouseout="mouselogDecay(event)" onclick="mouselogDecay(event)" class="antiDecayImg" id="antiDecayImg1">
+                    <div class="price medium" id="antiDecayPrice">25$</div>
+                    <div class="price bold" id="per5games">за 5 игр</div>
+
+                    <input class="inpData" id="invisibleAntiDecayRank" type="hidden" name="antiDecayRank" form="sendForm" value="master">
+                </div>
+
+                <div class="button centerButton medium title" id="buttonDecay" onclick="processOrder(id)">НОРМАЛЬНО</div>
+            </div>
+        </div>
+
+        <div class="contentBlock footer">
+            <div class="content">
+                <div class="contacts text">
+                    <div class="bold">E-mail:&nbsp;</div>
+                    <div class="regular">support@phoenixboost.com</div>
+                    <div class="bold">Skype:&nbsp;</div>
+                    <div class="regular">phoenixboost support</div>
+                </div>
+            </div>
+            <div class="rights text bold">© 2017-2018 Phoenixboost. All rights reserved.</div>
+        </div>
+
+
+        <div class="transparentLayer"></div>
+        <div class="contactWindow orderBoard">
+            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div class="text cWindowText">
+                Тут ещё немного. Типа, че как вообще.
+            </div>
+
+            <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
+                <div class="inpBlock inpb1">
+                    <div class="text bold title">*E-mail:</div>
+                    <div class="inputOutBlock">
+                        <input id="inpEmail" class="inpData" type="email" name="email" onchange="checkEmail(this.value)">
+                    </div>
+                </div>
+                <div class="inpBlock inpb1">
+                    <div class="text bold title">*Имя:</div>
+                    <div class="inputOutBlock">
+                        <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
+                    </div>
+                </div>
+                <div class="inpBlock inpb2">
+                    <div class="text bold title">Сообщение:</div>
+                    <div class="inputOutBlock">
+                        <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
+                    </div>
+                </div>
+            </form>
+
+            <div class="button centerButton medium title" id="purchaseButton">ОТ ДУШИ</div>
+        </div>
+        <div class="contactWindow submitBoard">
+            <div class="closeButton"><img src="img/closeButton.png"></div>
+
+            <div class="text cWindowText">
+                Проверь инфу.<br>
+                Если всё по кайфу, то пойдём бустить тебя.
+            </div>
+            <div class="boostInfoText bold text" id="submitOrderDetails">Буст с 1 до 5000 за 7999€</div>
+            <div class="inpBlock inpb1">
+                <div class="text bold title">E-mail:</div>
+                <div class="inputOutBlock title" id="submitEmail">
+                    email@email.ru
+                </div>
+            </div>
+            <div class="inpBlock inpb1">
+                <div class="text bold title">Имя:</div>
+                <div class="inputOutBlock title" id="submitName">
+                    Имя Имя Имя
+                </div>
+            </div>
+            <div class="inpBlock inpb2">
+                <div class="text bold title">Сообщение:</div>
+                <div class="inputOutBlock title" id="submitMessage">
+                    Соо бщение Сооб щение Сообщ ение Сообщ ение Сообщ ение Сообщ ение Соо бщение Сооб щение Сообщ ение Сообщ ение Сообщ ение Сообщ ение Соо бщение Сообщение Сообщ ение
+                </div>
+            </div>
+            <div class="backButton medium text">БЛИН, ЩА</div>
+            <!-- <div class="button centerButton medium title">ПО КАЙФУ</div> -->
+            <input class="button centerButton medium title" id="submitButton" type="button" value="ПО КАЙФУ" form="sendForm" onclick="document.forms['sendForm'].submit();">
+        </div>
+
+        <div class="contactWindow faq">
+            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div class="blockTitle bold">FAQ</div>
+            <div class="faqText text">
+                <div class="question medium title"> Is it safe?</div>
+                <div class="answer"> Yes, it is completely safe: we don't use bots or any other program. We require the information that is needed just to log in. Never tell anyone your secret question!</div>                                     
+                <div class="question medium title"> How much time will my boost require to be complete?</div>
+                <div class="answer"> It takes approximately 3-5 hours to finish a boost. </div>                               
+                <div class="question medium title"> How and when can I pay?</div>
+                <div class="answer"> We don't want you to pay and wait for your boost. So you pay only when the booster contacts you. You can pay in any of the following ways: PayPal, Yandex.Money, QIWI</div>                                  
+                <div class="question medium title"> Will the booster communicate with my friends?</div>
+                <div class="answer"> No, the booster will not communicate with your friends. Also the booster will not add any person to your friend list. If it is a major issue, we can swap regions so your friends list is clear and they can't see you online. </div>                               
+                <div class="question medium title"> Can I play other games on my Battle.net?</div>
+                <div class="answer">You shouldn't log in as it can disconnect the booster. However, if you see that the booster is offline, you can go ahead and play even Overwatch (except ladder).</div>                               
+                <div class="question medium title"> On what servers is the service available?</div>
+                <div class="answer">Service is available on all servers.</div>                           
+                <div class="question medium title"> On what platform is the service available?</div>
+                <div class="answer">Service is available only  on PC.</div>                        
+                <div class="question medium title"> How do I contact you if my questions haven't been answered?</div>
+                <div class="answer">Fell free to contact us in any of the following ways: email support@phoenixboost.com or skype phoenixboost support.</div>                    
+            </div>
+        </div>
+
+        <div class="contactWindow contacts2">
+            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div class="blockTitle bold">КОНТАКТЫ</div>
+            <div class="contactsText text">
+
+                <div class="question medium title">E-mail</div>
+                <div class="answer">support@phoenixboost.com</div>                                     
+                <div class="question medium title">Skype</div>
+                <div class="answer">phoenixboost support</div>   
+
+                <div class="question medium title">How to pay?</div>
+                <div class="answer">PayPal, Yandex.Money, QIWI<br>We will provide you with all payment information after confirming the order.</div>                                  
+                <div class="answer"><br><br>If you find some bugs contact us, please, <br>via email support@phoenixboost.com</div>                               
+                  
+            </div>
+        </div>
+
+       <script src="script.js"></script> 
+    </body>
+</html>

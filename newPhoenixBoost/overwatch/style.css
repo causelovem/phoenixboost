@@ -1,19 +1,19 @@
 @font-face 
 {
-    font-family: Roboto_Bold;
-    src: url(fonts/AvenirNext-DemiBold.ttf);
+    font-family: AvenirNext_Bold;
+    src: url(../fonts/AvenirNext-DemiBold.ttf);
 }
 
 @font-face 
 {
-    font-family: Roboto_Medium;
-    src: url(fonts/AvenirNext-Medium.ttf);
+    font-family: AvenirNext_Medium;
+    src: url(../fonts/AvenirNext-Medium.ttf);
 }
 
 @font-face 
 {
-    font-family: Roboto_Regular;
-    src: url(fonts/AvenirNext-Regular.ttf);
+    font-family: AvenirNext_Regular;
+    src: url(../fonts/AvenirNext-Regular.ttf);
 }
 
 /* style reset */
@@ -77,19 +77,19 @@ div::selection, img::selection, input::selection
 body
 {
   cursor: default;
-  font-family: Roboto_Regular;
+  font-family: AvenirNext_Regular;
   color: #3A3A3A;
   overflow-x: hidden;
 }
 
 .bold 
-{font-family: Roboto_Bold;}
+{font-family: AvenirNext_Bold;}
 
 .regular 
-{font-family: Roboto_Regular;}
+{font-family: AvenirNext_Regular;}
 
 .medium 
-{font-family: Roboto_Medium;}
+{font-family: AvenirNext_Medium;}
 
 .title
 {font-size: 20px;}
@@ -138,6 +138,7 @@ body
 
 .navButton
 {
+  color: #3A3A3A;
   float: right;
   display: block;
   width: auto;
@@ -243,8 +244,9 @@ body
 
 .service .content
 {
-  width: 1080px;
-  height: 400px;
+  max-width: 1080px;
+  width: 100%;
+  height: 250px;
   margin: 0 auto;
   z-index: 0;
 }
@@ -254,18 +256,26 @@ body
   content: " ";
   position: absolute;
   width: 100vw;
-  height: 320px;
+  height: 170px;
   top: 40px;
   left: calc(540px - 50vw);
   z-index: 1;
   background-color: #EFE9DC;
 }
 
+.servBlock33
+{
+	width: 33.3%;
+	height: 100%;
+	float: left;
+}
+
 .serviceBlock
 {
-  float: left;
-  margin: 0 10px;
-  width: calc(33.33% - 20px);
+  margin: 0 auto;
+
+  max-width: 300px;
+  width: 100%;
   height: inherit;
   z-index: 2;
   background-color: #F4f4f4;
@@ -285,13 +295,13 @@ body
     height: 5px;
     background-color: #E2E2E2;
     position: absolute;
-    top: 395px; 
+    bottom: -245px; 
 } 
 
 .serviceBlock img 
 {
   display: block;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 40px;
   width: 80%;
   margin: 0 auto;
@@ -371,6 +381,7 @@ body
 .orderBoard {display: none;}
 .submitBoard {display: none;}
 .faq {display: none;}
+.contacts2 {display: none;}
 
 .inputOutBlock
 {
@@ -387,7 +398,7 @@ body
     height: calc(100% - 5px);
     resize: none;
     margin-top: 5px;
-    font-family: Roboto_Regular;
+    font-family: AvenirNext_Regular;
     font-size: 18px;
 }
 
@@ -502,7 +513,7 @@ input:focus
 
 .footer .content
 {
-  width: 1080px;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   top: 20px;
@@ -516,6 +527,7 @@ input:focus
 
 .footer .text .bold
 {
+  padding-left: calc(50% - 540px + 20px);
   float: left;
 }
 
@@ -789,6 +801,14 @@ input:focus
   top: calc(50vh - 300px);
 }
 
+.contacts2
+{
+  width: 500px;
+  left: calc(50% - 250px);
+  height: 400px;
+  top: calc(50vh - 200px);
+}
+
 .faqText
 {
   width: 600px;
@@ -802,6 +822,26 @@ input:focus
   overflow-x: hidden;
 }
 
+.contactsText
+{
+  width: 400px;
+  height: 320px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: absolute;
+  padding-bottom: 20px;
+  bottom: 0px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contactsText div 
+{
+	width: 100%;
+	text-align: center;
+	padding-left: 0;
+}
+
 .question
 {
   margin-top: 15px;
@@ -812,4 +852,18 @@ input:focus
 {
   padding-bottom: 5px;
   padding-left: 15px; 
+}
+
+
+@media (max-width: 1080px) 
+{
+  .service .content:before 
+  {
+    width: 100%;
+    left: 0;
+  }
+  .footer .text .bold
+  {
+    padding-left: 20px;
+  }
 }
