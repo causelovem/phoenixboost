@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Phoenix Boost</title>
+        <meta name="description" content="Cheap, fast and reliable Overwatch boosting service with professional team.">
+        <meta name="keywords" content="boosting, service, overwatch, rank, placement, phoenixboost, anti-decay, twitch, stream, fair prices, fast, reliable">
+        <title>Overwatch boosting service | Fair prices. Fast. Reliable. | PhoenixBoost</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="img/icon.png" type="image/png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,23 +15,22 @@
             <img src="img/icon.png">
             <div class="titleMain">PHOENIX BOOST</div>
             <div class="navButton faqButton">FAQ<div class="hoverLine"></div></div>
-            <div class="navButton contactButton">КОНТАКТЫ<div class="hoverLine"></div></div>
+            <div class="navButton contactButton">CONTACTS<div class="hoverLine"></div></div>
             <a href="http://www.phoenixboost.com/twitch/"><div class="navButton twitchButton">TWITCH<div class="hoverLine"></div></div></a>
         </div>
         <div class="main">
             <div class="inMain">
                 <div class="overwatch bold">OVERWATCH</div>
                 <div class="inMainText regular text">
-                    Мы тебя тут так офигенно забустим, прям охренеешь.<br>
-                    И друзья твои тоже охренеют. И ты такой, смотрите,<br>
-                    какой я крутой. И они такие, блин, какой ты крутой.<br>
-                    И все такие, блин, какой он крутой.
+                    If you are looking for a professional Overwatch boosting team you are <nobr>in the right place!</nobr>
+                    Simply make an order and take your time to do your own business while we do your boost.<br>
+                    Fair prices. Fast. Reliable.
                 </div>
-                <div class="button medium title" id="moreButton" onclick="goToBlockByID(id)" href=".service">ПОГНАЛИ</div>
+                <div class="button medium title" id="moreButton" onclick="goToBlockByID(id)" href=".service">LET'S GO!</div>
             </div>
         </div>
         <div class="contentBlock service">
-            <div class="blockTitle bold">СМОТРИ, ЧТО МОЖЕМ</div>
+            <div class="blockTitle bold">SERVICES</div>
             <div class="content">
             	<div class="servBlock33">
 					<div class="serviceBlock" id="serviceRank" onclick="goToBlockByID(id)" href=".rankBoost">
@@ -66,7 +67,7 @@
             <div class="blockTitle bold">RANK BOOST</div>
             <div class="content">
                 <div class="centerText text regular">
-                    В общем, ты тут такой выбираешь свой уровень и на какой хочешь, чтобы тебя забустили, и всё.
+                    Choose your current rank <br> and rank you want to get after the boost.
                 </div>
                 <div class="rankBoostBlock">
                     <div class="curRank">
@@ -137,7 +138,7 @@
                     <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
                 </div>
 
-                <div class="button centerButton medium title" id="buttonRank" onclick="processOrder(id)">НОРМАЛЬНО</div>
+                <div class="button centerButton medium title" id="buttonRank" onclick="processOrder(id)">ORDER</div>
             </div>
         </div>
 
@@ -145,13 +146,13 @@
             <div class="blockTitle bold">PLACEMENTS</div>
             <div class="content">
                 <div class="centerText text regular">
-                    Это какая-то сложная хрень, я опять забыл, что это такое. Миша кучу раз рассказывал, но как-то не лезет.
+                    Choose which rank you had last season <br> or which rank you want to get on new account.
                 </div>
 
                 <div class="placementsBlock">
 
                     <div class="placements4block">
-                        <div class="placementsText medium text">У меня был ранг в прошлом сезоне</div>
+                        <div class="placementsText medium text">I had rank last season</div>
                         <img src="img/ranks/7.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon4">
                         <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon3">
                         <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon2">
@@ -161,18 +162,18 @@
                     <div class="placements1block"></div>
 
                     <div class="placements2block">
-                        <div class="placementsText medium text">Вообще не было</div>
+                        <div class="placementsText medium text">Fresh account</div>
                         <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon6">
                         <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon5">
                     </div>
                     <div class="price medium" id="placementsPrice">20$</div>
-                    <div class="price bold" id="per5games">за 10 игр</div>
+                    <div class="price bold" id="per5games">per 10 games</div>
 
                     <input class="inpData" id="invisiblePlacementsRank" type="hidden" name="placementsRank" form="sendForm" value="diamond">
 
                     <input class="inpData" id="invisiblePrevRank" type="hidden" name="prevRank" form="sendForm" value="Yes">
                </div>
-                <div class="button centerButton medium title" id="buttonPlacement" onclick="processOrder(id)">НОРМАЛЬНО</div>
+                <div class="button centerButton medium title" id="buttonPlacement" onclick="processOrder(id)">ORDER</div>
             </div>
         </div>
 
@@ -180,7 +181,7 @@
             <div class="blockTitle bold">ANTI-DECAY</div>
             <div class="content">
                 <div class="centerText text regular">
-                    Тут типа тоже что-то полезное. Вроде, чтобы быть в сети, чтобы быть в сети. Вообще, хрен знает.
+                    On what rank do you want to stop decay?
                 </div>
 
                 <div class="antiDecayBlock">     
@@ -188,12 +189,12 @@
                     <img src="img/ranks/6.png" onmouseover="mouselogDecay(event)" onmouseout="mouselogDecay(event)" onclick="mouselogDecay(event)" class="antiDecayImg" id="antiDecayImg2">        
                     <img src="img/ranks/5.png" onmouseover="mouselogDecay(event)" onmouseout="mouselogDecay(event)" onclick="mouselogDecay(event)" class="antiDecayImg" id="antiDecayImg1">
                     <div class="price medium" id="antiDecayPrice">25$</div>
-                    <div class="price bold" id="per5games">за 5 игр</div>
+                    <div class="price bold" id="per5games">per 5 games</div>
 
                     <input class="inpData" id="invisibleAntiDecayRank" type="hidden" name="antiDecayRank" form="sendForm" value="master">
                 </div>
 
-                <div class="button centerButton medium title" id="buttonDecay" onclick="processOrder(id)">НОРМАЛЬНО</div>
+                <div class="button centerButton medium title" id="buttonDecay" onclick="processOrder(id)">ORDER</div>
             </div>
         </div>
 
@@ -203,7 +204,7 @@
                     <div class="bold">E-mail:&nbsp;</div>
                     <div class="regular">support@phoenixboost.com</div>
                     <div class="bold">Skype:&nbsp;</div>
-                    <div class="regular">phoenixboost support</div>
+                    <div class="regular">phoenixboost support (live:support_49862)</div>
                 </div>
             </div>
             <div class="rights text bold">© 2017-2018 Phoenixboost. All rights reserved.</div>
@@ -214,7 +215,7 @@
         <div class="contactWindow orderBoard">
             <div class="closeButton"><img src="img/closeButton.png"></div>
             <div class="text cWindowText">
-                Тут ещё немного. Типа, че как вообще.
+                Fill in the form, please.
             </div>
 
             <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
@@ -225,29 +226,29 @@
                     </div>
                 </div>
                 <div class="inpBlock inpb1">
-                    <div class="text bold title">*Имя:</div>
+                    <div class="text bold title">*Full name:</div>
                     <div class="inputOutBlock">
                         <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
                     </div>
                 </div>
                 <div class="inpBlock inpb2">
-                    <div class="text bold title">Сообщение:</div>
+                    <div class="text bold title">Message:</div>
                     <div class="inputOutBlock">
                         <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
                     </div>
                 </div>
             </form>
 
-            <div class="button centerButton medium title" id="purchaseButton">ОТ ДУШИ</div>
+            <div class="button centerButton medium title" id="purchaseButton">PURCHASE</div>
         </div>
         <div class="contactWindow submitBoard">
             <div class="closeButton"><img src="img/closeButton.png"></div>
 
             <div class="text cWindowText">
-                Проверь инфу.<br>
-                Если всё по кайфу, то пойдём бустить тебя.
+                Check if everything is correct <br>
+                and just submit the order!
             </div>
-            <div class="boostInfoText bold text" id="submitOrderDetails">Буст с 1 до 5000 за 7999€</div>
+            <div class="boostInfoText bold text" id="submitOrderDetails">Order details</div>
             <div class="inpBlock inpb1">
                 <div class="text bold title">E-mail:</div>
                 <div class="inputOutBlock title" id="submitEmail">
@@ -255,20 +256,19 @@
                 </div>
             </div>
             <div class="inpBlock inpb1">
-                <div class="text bold title">Имя:</div>
+                <div class="text bold title">Full name:</div>
                 <div class="inputOutBlock title" id="submitName">
-                    Имя Имя Имя
+                    Name Name
                 </div>
             </div>
             <div class="inpBlock inpb2">
-                <div class="text bold title">Сообщение:</div>
+                <div class="text bold title">Message:</div>
                 <div class="inputOutBlock title" id="submitMessage">
-                    Соо бщение Сооб щение Сообщ ение Сообщ ение Сообщ ение Сообщ ение Соо бщение Сооб щение Сообщ ение Сообщ ение Сообщ ение Сообщ ение Соо бщение Сообщение Сообщ ение
+                    Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message
                 </div>
             </div>
-            <div class="backButton medium text">БЛИН, ЩА</div>
-            <!-- <div class="button centerButton medium title">ПО КАЙФУ</div> -->
-            <input class="button centerButton medium title" id="submitButton" type="button" value="ПО КАЙФУ" form="sendForm" onclick="document.forms['sendForm'].submit();">
+            <div class="backButton medium text">BACK</div>
+            <input class="button centerButton medium title" id="submitButton" type="button" value="SUBMIT" form="sendForm" onclick="document.forms['sendForm'].submit();">
         </div>
 
         <div class="contactWindow faq">
@@ -276,38 +276,37 @@
             <div class="blockTitle bold">FAQ</div>
             <div class="faqText text">
                 <div class="question medium title"> Is it safe?</div>
-                <div class="answer"> Yes, it is completely safe: we don't use bots or any other program. We require the information that is needed just to log in. Never tell anyone your secret question!</div>                                     
+                <div class="answer"> Yes, it is completely safe: we don't use bots, cheats or any other program. We require the information that is needed just to log in. Never tell anyone your secret question!</div>                                     
                 <div class="question medium title"> How much time will my boost require to be complete?</div>
-                <div class="answer"> It takes approximately 3-5 hours to finish a boost. </div>                               
+                <div class="answer"> It takes approximately 5-9 hours to finish a boost. </div>                               
                 <div class="question medium title"> How and when can I pay?</div>
                 <div class="answer"> We don't want you to pay and wait for your boost. So you pay only when the booster contacts you. You can pay in any of the following ways: PayPal, Yandex.Money, QIWI</div>                                  
                 <div class="question medium title"> Will the booster communicate with my friends?</div>
-                <div class="answer"> No, the booster will not communicate with your friends. Also the booster will not add any person to your friend list. If it is a major issue, we can swap regions so your friends list is clear and they can't see you online. </div>                               
+                <div class="answer"> No, the booster will not communicate with your friends. If it is a major issue, we can turn on offline mood or swap regions so your friends list is clear and they can't see you online. </div>                               
                 <div class="question medium title"> Can I play other games on my Battle.net?</div>
                 <div class="answer">You shouldn't log in as it can disconnect the booster. However, if you see that the booster is offline, you can go ahead and play even Overwatch (except ladder).</div>                               
                 <div class="question medium title"> On what servers is the service available?</div>
                 <div class="answer">Service is available on all servers.</div>                           
                 <div class="question medium title"> On what platform is the service available?</div>
-                <div class="answer">Service is available only  on PC.</div>                        
+                <div class="answer">Service is available only on PC.</div>                        
                 <div class="question medium title"> How do I contact you if my questions haven't been answered?</div>
-                <div class="answer">Fell free to contact us in any of the following ways: email support@phoenixboost.com or skype phoenixboost support.</div>                    
+                <div class="answer">Fell free to contact us in any of the following ways: email support@phoenixboost.com or skype phoenixboost support (live:support_49862).</div>                    
             </div>
         </div>
 
         <div class="contactWindow contacts2">
             <div class="closeButton"><img src="img/closeButton.png"></div>
-            <div class="blockTitle bold">КОНТАКТЫ</div>
+            <div class="blockTitle bold">CONTACTS</div>
             <div class="contactsText text">
 
                 <div class="question medium title">E-mail</div>
                 <div class="answer">support@phoenixboost.com</div>                                     
                 <div class="question medium title">Skype</div>
-                <div class="answer">phoenixboost support</div>   
+                <div class="answer">phoenixboost support (live:support_49862)</div>   
 
                 <div class="question medium title">How to pay?</div>
                 <div class="answer">PayPal, Yandex.Money, QIWI<br>We will provide you with all payment information after confirming the order.</div>                                  
-                <div class="answer"><br><br>If you find some bugs contact us, please, <br>via email support@phoenixboost.com</div>                               
-                  
+                <div class="answer"><br><br>If you find some bugs contact us, please, <br>via email support@phoenixboost.com</div>
             </div>
         </div>
 
