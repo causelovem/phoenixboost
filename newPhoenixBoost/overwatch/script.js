@@ -1,6 +1,12 @@
 /*BUTTONS TO GO*/
 function goToBlockByID(id)
 {
+    if (document.body.clientWidth < 800)
+    {
+        $('.menu').css("width", "0");
+        $('.transparentLayer').css("display", "none");
+    }
+
     var scroll_el = $('#' + id).attr('href');
     if ($(scroll_el).length != 0) 
     {
@@ -9,7 +15,6 @@ function goToBlockByID(id)
     return false;
 }
 /*******/
-
 
 /*PROCESS ORDER*/
 function processOrder(id)
@@ -41,20 +46,45 @@ function processOrder(id)
 /*CHECKING EMAIL AND NAME*/
 function checkEmail()
 {
-    if ($('#inpEmail').val() == '')
+
+    if (document.body.clientWidth > 799)
     {
-        $('#inpEmail').css("box-shadow", "0 5px 0 0 #C33C3C");
-        return 1;
+        if ($('#inpEmail').val() == '')
+        {
+            $('#inpEmail').css("box-shadow", "0 5px 0 0 #C33C3C");
+            return 1;
+        }
+        else
+        if ($('#inpEmail').val().search(pattern) != 0)
+        {
+            $('#inpEmail').css("box-shadow", "0 5px 0 0 #C33C3C");
+            return 1;
+        }
+        else
+        {
+            $('#inpEmail').css("box-shadow", "0 5px 0 0 #26C281");
+        }
     }
     else
-    if ($('#inpEmail').val().search(pattern) != 0)
     {
-        $('#inpEmail').css("box-shadow", "0 5px 0 0 #C33C3C");
-        return 1;
-    }
-    else
-    {
-        $('#inpEmail').css("box-shadow", "0 5px 0 0 #26C281");
+        if ($('#inpEmail').val() == '')
+        {
+            $('#inpEmail').css("border-bottom", "2px solid #C33C3C");
+            $('#inpEmail').css("margin-bottom", "29px");
+            return 1;
+        }
+        else
+        if ($('#inpEmail').val().search(pattern) != 0)
+        {
+            $('#inpEmail').css("border-bottom", "2px solid #C33C3C");
+            $('#inpEmail').css("margin-bottom", "29px");
+            return 1;
+        }
+        else
+        {
+            $('#inpEmail').css("border-bottom", "1px solid #rgba(0,0,0,0.2");
+            $('#inpEmail').css("margin-bottom", "30px");
+        }
     }
 
     return 0;
@@ -62,14 +92,31 @@ function checkEmail()
 
 function checkFullName()
 {
-    if ($('#inpName').val() == '')
+    if (document.body.clientWidth > 799)
     {
-        $('#inpName').css("box-shadow", "0 5px 0 0 #C33C3C");
-        return 1;
+        if ($('#inpName').val() == '')
+        {
+            $('#inpName').css("box-shadow", "0 5px 0 0 #C33C3C");
+            return 1;
+        }
+        else
+        {
+            $('#inpName').css("box-shadow", "0 5px 0 0 #26C281");
+        }
     }
     else
     {
-        $('#inpName').css("box-shadow", "0 5px 0 0 #26C281");
+        if ($('#inpName').val() == '')
+        {
+            $('#inpName').css("border-bottom", "2px solid #C33C3C");
+            $('#inpName').css("margin-bottom", "29px");
+            return 1;
+        }
+        else
+        {
+            $('#inpName').css("border-bottom", "2px solid #rgba(0,0,0,0.2)");
+            $('#inpName').css("margin-bottom", "30px");
+        }  
     }
 
     return 0;
@@ -456,8 +503,25 @@ function mouselogDecay(event)
 /*******/
 
 
-var img = Math.floor(Math.random() * 4) + 1;
-$('.main').css("background-image", "url('img/bg" + img + ".jpg')");
+if (document.body.clientWidth > 799)
+{
+    var img = Math.floor(Math.random() * 4) + 1;
+    $('.main').css("background-image", "url('img/bg" + img + ".jpg')");
+}
+else
+{
+    var img = Math.floor(Math.random() * 4) + 1;
+    $('.main').css("background-image", "url('img/bg" + img + "_mobile.jpg')");
+
+    var mcb = $('.mobCloseButton');
+    for (var i = 0; i < mcb.length; i++) 
+    {
+        mcb[i].innerHTML = '<img src="img/menuCloseButton.png">';
+    }
+
+    $('#purchaseButton').removeClass('centerButton');
+    $('#submitButton').removeClass('centerButton');
+}
 
 
 for (var i = 2; i < 9; i++)
@@ -506,6 +570,24 @@ document.getElementById('invisibleBoostType').value = "rank boost";
 
 // document.getElementById('faq').scrollTop = 0;
 // document.getElementById('contacts').scrollTop = 0;
+
+$(document).ready(function()
+{
+    $('.burgerIcon').click(function()
+    {
+        $('.menu').css("width", "100%");
+        $('.transparentLayer').css("display", "block");
+    });
+});
+
+$(document).ready(function()
+{
+    $('#menuClose').click(function()
+    {
+        $('.menu').css("width", "0");
+        $('.transparentLayer').css("display", "none");
+    });
+});
 
 
 $(document).ready(function(){ $('#leftUp').click(function() { displayLeftPic(Number(curSR) + 50); });});
@@ -560,6 +642,14 @@ $(document).ready(function()
 {
     $('.faqButton').click(function()
     {
+        if (document.body.clientWidth <= 800)
+        {
+            $('.menu').css("width", "0");
+            $('.transparentLayer').css("display", "none");
+        }
+
+                                                                               // $('body').addClass('fixed');
+        //document.body.style.overflow = 'hidden';
         $('.transparentLayer').css("display", "block");
         $('.faq').css("display", "block");
     });
@@ -569,6 +659,12 @@ $(document).ready(function()
 {
     $('.contactButton').click(function()
     {
+        if (document.body.clientWidth <= 800)
+        {
+            $('.menu').css("width", "0");
+            $('.transparentLayer').css("display", "none");
+        }
+
         $('.transparentLayer').css("display", "block");
         $('.contacts2').css("display", "block");
     });
@@ -583,6 +679,8 @@ $(document).ready(function()
         $('.submitBoard').css("display", "none");
         $('.faq').css("display", "none");
         $('.contacts2').css("display", "none");
+        //document.body.style.overflow = 'scroll';
+                                                                               // $('body').removeClass('fixed');
     });
 });
 
@@ -590,11 +688,13 @@ $(document).ready(function()
 {
     $('.transparentLayer').click(function()
     {
-        $('.transparentLayer').css("display", "none");
         $('.orderBoard').css("display", "none");
         $('.submitBoard').css("display", "none");
         $('.faq').css("display", "none");
         $('.contacts2').css("display", "none");
+        $('.menu').css("width", "0");
+
+        $('.transparentLayer').css("display", "none");
     });
 });
 

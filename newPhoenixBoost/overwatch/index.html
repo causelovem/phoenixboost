@@ -3,17 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Cheap, fast and reliable Overwatch boosting service with professional team.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="boosting, service, overwatch, rank, placement, phoenixboost, anti-decay, twitch, stream, fair prices, fast, reliable">
         <title>Overwatch boosting service | Fair prices. Fast. Reliable. | PhoenixBoost</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="img/icon.png" type="image/png">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
 
     <body>
         <div class="nav bold title">
-            <img src="img/icon.png">
+            <img class="logo" src="img/icon.png">
             <div class="titleMain">PHOENIX BOOST</div>
+            <img class="burgerIcon" src="img/burgerIcon.png" id="burgerButton">
             <div class="navButton faqButton">FAQ<div class="hoverLine"></div></div>
             <div class="navButton contactButton">CONTACTS<div class="hoverLine"></div></div>
             <a href="http://www.phoenixboost.com/twitch/"><div class="navButton twitchButton">TWITCH<div class="hoverLine"></div></div></a>
@@ -23,7 +24,7 @@
                 <div class="overwatch bold">OVERWATCH</div>
                 <div class="inMainText regular text">
                     If you are looking for a professional Overwatch boosting team you are <nobr>in the right place!</nobr>
-                    Simply make an order and take your time to do your own business while we do your boost.<br>
+                    Simply make an order and take your time to do your own business while we do <nobr>your boost.</nobr><br>
                     Fair prices. Fast. Reliable.
                 </div>
                 <div class="button medium title" id="moreButton" onclick="goToBlockByID(id)" href=".service">LET'S GO!</div>
@@ -95,7 +96,6 @@
                         </div>
 
                         <input class="inpRank" id="curSR" name="curRank" type="text" onchange="displayLeftPic(this.value)" maxlength="4" placeholder="1" form="sendForm">
-
                     </div>
 
                     <div class="soloDuo">
@@ -130,7 +130,6 @@
                         </div>
 
                         <input class="inpRank" id="disSR" name="disRank" type="text" onchange="displayRightPic(this.value)" maxlength="4" placeholder="50" form="sendForm">
-
                     </div>
 
                     <div class="price medium" id="boostPrice">1$</div>
@@ -146,7 +145,7 @@
             <div class="blockTitle bold">PLACEMENTS</div>
             <div class="content">
                 <div class="centerText text regular">
-                    Choose which rank you had last season <br> or which rank you want to get on new account.
+                    Choose which rank you had <nobr>last season</nobr> or which rank you want to get on <nobr>new account</nobr>.
                 </div>
 
                 <div class="placementsBlock">
@@ -157,22 +156,25 @@
                         <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon3">
                         <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon2">
                         <img src="img/ranks/1-4.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon1">
-                    </div>
+                    </div> 
+
 
                     <div class="placements1block"></div>
+
 
                     <div class="placements2block">
                         <div class="placementsText medium text">Fresh account</div>
                         <img src="img/ranks/6.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon6">
                         <img src="img/ranks/5.png" onmouseover="mouselogPlacements(event)" onmouseout="mouselogPlacements(event)" onclick="mouselogPlacements(event)" id="placementIcon5">
                     </div>
+
                     <div class="price medium" id="placementsPrice">20$</div>
                     <div class="price bold" id="per5games">per 10 games</div>
-
+ 
                     <input class="inpData" id="invisiblePlacementsRank" type="hidden" name="placementsRank" form="sendForm" value="diamond">
 
                     <input class="inpData" id="invisiblePrevRank" type="hidden" name="prevRank" form="sendForm" value="Yes">
-               </div>
+                </div>
                 <div class="button centerButton medium title" id="buttonPlacement" onclick="processOrder(id)">ORDER</div>
             </div>
         </div>
@@ -198,7 +200,7 @@
             </div>
         </div>
 
-        <div class="contentBlock footer">
+        <div class="contentBlock footer desktopFooter">
             <div class="content">
                 <div class="contacts text">
                     <div class="bold">E-mail:&nbsp;</div>
@@ -210,42 +212,54 @@
             <div class="rights text bold">© 2017-2018 Phoenixboost. All rights reserved.</div>
         </div>
 
+        <div class="contentBlock footer mobileFooter text">
+            <div class="bold"><br>E-mail:&nbsp;</div>
+            <div class="regular">support@phoenixboost.com</div>
+            <div class="bold"><br>Skype:&nbsp;</div>
+            <div class="regular">phoenixboost support (live:support_49862)</div>
+            <div class="rights bold"><br>© 2017-2018 Phoenixboost.<br>All rights reserved.</div>
+        </div>
 
         <div class="transparentLayer"></div>
+
         <div class="contactWindow orderBoard">
-            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
             <div class="text cWindowText">
                 Fill in the form, please.
             </div>
+                  
+            <div class="fuck">      
+ 	            <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
+	                <div class="inpBlock inpb1">
+	                    <div class="text bold title">*E-mail:</div>
+	                    <div class="inputOutBlock">
+	                        <input id="inpEmail" class="inpData" type="email" name="email" onchange="checkEmail(this.value)">
+	                    </div>
+	                </div>
+	                <div class="inpBlock inpb1">
+	                    <div class="text bold title">*Full name:</div>
+	                    <div class="inputOutBlock">
+	                        <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
+	                    </div>
+	                </div>
+	                <div class="inpBlock inpb2">
+	                    <div class="text bold title">Message:</div>
+	                    <div class="inputOutBlock">
+	                        <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
+	                    </div>
+	                </div>
+	            </form>
 
-            <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
-                <div class="inpBlock inpb1">
-                    <div class="text bold title">*E-mail:</div>
-                    <div class="inputOutBlock">
-                        <input id="inpEmail" class="inpData" type="email" name="email" onchange="checkEmail(this.value)">
-                    </div>
-                </div>
-                <div class="inpBlock inpb1">
-                    <div class="text bold title">*Full name:</div>
-                    <div class="inputOutBlock">
-                        <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
-                    </div>
-                </div>
-                <div class="inpBlock inpb2">
-                    <div class="text bold title">Message:</div>
-                    <div class="inputOutBlock">
-                        <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
-                    </div>
-                </div>
-            </form>
-
-            <div class="button centerButton medium title" id="purchaseButton">PURCHASE</div>
+	            <div class="button centerButton medium title" id="purchaseButton">PURCHASE</div>
+       		 
+       		 </div>
         </div>
+
         <div class="contactWindow submitBoard">
-            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
 
             <div class="text cWindowText">
-                Check if everything is correct <br>
+                Check if everything is correct<br>
                 and just submit the order!
             </div>
             <div class="boostInfoText bold text" id="submitOrderDetails">Order details</div>
@@ -272,7 +286,7 @@
         </div>
 
         <div class="contactWindow faq">
-            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
             <div class="blockTitle bold">FAQ</div>
             <div class="faqText text">
                 <div class="question medium title"> Is it safe?</div>
@@ -288,14 +302,14 @@
                 <div class="question medium title"> On what servers is the service available?</div>
                 <div class="answer">Service is available on all servers.</div>                           
                 <div class="question medium title"> On what platform is the service available?</div>
-                <div class="answer">Service is available only on PC.</div>                        
+                <div class="answer">Service is available only on PC.</div>                                           
                 <div class="question medium title"> How do I contact you if my questions haven't been answered?</div>
                 <div class="answer">Fell free to contact us in any of the following ways: email support@phoenixboost.com or skype phoenixboost support (live:support_49862).</div>                    
             </div>
         </div>
 
         <div class="contactWindow contacts2">
-            <div class="closeButton"><img src="img/closeButton.png"></div>
+            <div  class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
             <div class="blockTitle bold">CONTACTS</div>
             <div class="contactsText text">
 
@@ -310,6 +324,17 @@
             </div>
         </div>
 
-       <script src="script.js"></script> 
+        <div class="menu bold">
+            <img src="img/menuCloseButton.png" id="menuClose">
+            <div id="menuRank" onclick="goToBlockByID(id)" href=".rankBoost"><nobr>RANK BOOST</nobr></div>
+            <div id="menuPlacem" onclick="goToBlockByID(id)" href=".placements">PLACEMENTS</div>
+            <div id="menuDecay" onclick="goToBlockByID(id)" href=".antidecay"><nobr>ANTI-DECAY</nobr></div>
+            <div><a href="http://www.phoenixboost.com/twitch/">TWITCH</a></div>
+            <div class="contactButton">CONTACTS</div>
+            <div class="faqButton">FAQ</div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script> 
     </body>
 </html>
