@@ -908,7 +908,7 @@ body
     display: none;
   }
 
-  .fuck
+  .formDiv
   {
   	width: 100%;
   	height: calc(100% - 99px);
@@ -1460,7 +1460,7 @@ body
   	height: calc(100% - 70px);
   	position: absolute;
   	bottom: 0;
-  	overflow: scroll;
+  	overflow-y: scroll;
   }
 
   .contactsText
@@ -1536,7 +1536,7 @@ body
   	margin-bottom: 100px;
   }
 
-  .fuck
+  .formDiv
   {
   	height: calc(100vh - 70px);
   	width: 100%;

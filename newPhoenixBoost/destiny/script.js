@@ -83,6 +83,22 @@ function checkFullName()
 /*******/
 
 
+if (document.body.clientWidth > 799)
+{
+
+}
+else
+{
+    var mcb = $('.mobCloseButton');
+    for (var i = 0; i < mcb.length; i++) 
+    {
+        mcb[i].innerHTML = '<img src="img/menuCloseButton.png">';
+    }
+
+    $('#purchaseButton').removeClass('centerButton');
+    $('#submitButton').removeClass('centerButton');
+}
+
 var pattern = /^\s*[\.a-zа-я0-9_-]+@[a-zа-я0-9-]+\.([a-zа-я]{1,6}\.)?[a-zа-я]{2,6}\s*$/i;
 
 var curRank = 1;
