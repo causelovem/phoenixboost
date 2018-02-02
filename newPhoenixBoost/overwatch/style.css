@@ -398,10 +398,7 @@ body
   }
 
   .transparentLayer {display: none;}
-  .orderBoard {display: none;}
-  .submitBoard {display: none;}
-  .faq {display: none;}
-  .contacts2 {display: none;}
+  .contactWindow {display: none;}
 
   .inputOutBlock
   {

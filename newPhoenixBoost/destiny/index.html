@@ -39,7 +39,7 @@
     				<div class="serviceBlock">
                         <!-- <img src="img/pve.png"> -->
 
-                        <div class="servOption regular" id="raids">
+                        <div class="servOption regular" id="raids" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
                                 <img src="img/raidsHover.png">
@@ -50,7 +50,7 @@
                             <div class="blockTitle">Raids</div>
                             <div class="hoverLine"></div>
                         </div>
-                        <div class="servOption" id="nightfall">
+                        <div class="servOption" id="nightfall" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
                                 <img src="img/nightfallHover.png">
@@ -68,7 +68,7 @@
                     <div class="serviceBlock regular">
                         <!-- <img src="img/pvp.png"> -->
 
-                        <div class="servOption" id="">
+                        <div class="servOption" id="powerLvling" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
                                 <img src="img/powerBoostHover.png">
@@ -79,13 +79,13 @@
                             <div class="blockTitle">Power levelling</div>
                             <div class="hoverLine"></div>
                         </div>
-                        <div class="servOption" id="">
+                        <div class="servOption" id="weaponsQuests" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
-                                <img src="img/powerBoostHover.png">
+                                <img src="img/weaponsQuestsHover.png">
                             </div>
                             <div class="servImg">
-                                <img class="servImgHover" src="img/powerBoost.png">
+                                <img class="servImgHover" src="img/weaponsQuests.png">
                             </div>
                             <div class="blockTitle">Weapons quests</div>
                             <div class="hoverLine"></div>
@@ -97,7 +97,7 @@
                     <div class="serviceBlock regular">
                         <!-- <img src="img/pvp.png"> -->
 
-                        <div class="servOption" id="trialsNine">
+                        <div class="servOption" id="trialsNine" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
                                 <img src="img/trialsOfThe9Hover.png">
@@ -108,7 +108,7 @@
                             <div class="blockTitle">Trials <nobr>Of The Nine</nobr></div>
                             <div class="hoverLine"></div>
                         </div>
-                        <div class="servOption" id="ironBanner">
+                        <div class="servOption" id="ironBanner" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
                                 <img src="img/ironBannerHover.png">
@@ -145,6 +145,8 @@
             </div>
         </div>
 
+        <input class="inpData" id="invisibleBoostType" type="hidden" name="boostType" form="sendForm" value="rank boost">
+        <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
 
         <div class="transparentLayer"></div>
         <div class="contactWindow orderBoard">
@@ -204,8 +206,111 @@
             </div>
             <div class="button backButton medium text">BACK</div>
             <input class="button centerButton medium title" id="submitButton" type="button" value="SUBMIT" form="sendForm" onclick="document.forms['sendForm'].submit();">
-            
         </div>
+
+
+        <div class="contactWindow preOrder">
+            <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
+            <div class="text cWindowText" id="boostDescription">
+                Choose the details of boost, please.
+            </div>
+
+            <div class="optionBoard raidsBoard medium">
+                <div class="optOption raidChois">
+                    <div class="chosen"></div>
+                    <div class="leviafan" onclick="slideOption(this)">leviafan</div>
+                    <div class="eaterOfWorlds" onclick="slideOption(this)">eater of worlds</div>
+                </div>
+                <div class="optOption normPrest">
+                    <div class="chosen"></div>
+                    <div class="normal" onclick="slideOption(this)">normal</div>
+                    <div class="prestige" onclick="slideOption(this)">prestige</div>
+                </div>
+                <!-- <div class="optOption soloDuo">
+                    <div class="chosen"></div>
+                    <div class="solo">solo</div>
+                    <div class="duo">duo</div>
+                </div> -->
+                <div class="optOption heroCount">
+                    <div class="chosen"></div>
+                    <div class="one" onclick="slideOption(this)">1</div>
+                    <div class="two" onclick="slideOption(this)">2</div>
+                    <div class="three" onclick="slideOption(this)">3</div>
+                </div>
+            </div>
+
+            <div class="optionBoard nightFallBoard medium">
+                <div class="optOption normPrest">
+                    <div class="chosen"></div>
+                    <div class="normal" onclick="slideOption(this)">normal</div>
+                    <div class="prestige" onclick="slideOption(this)">prestige</div>
+                </div>
+                <div class="optOption soloDuo">
+                    <div class="chosen"></div>
+                    <div class="solo" onclick="slideOption(this)">solo</div>
+                    <div class="duo" onclick="slideOption(this)">duo</div>
+                </div>
+                <div class="optOption heroCount">
+                    <div class="chosen"></div>
+                    <div class="one" onclick="slideOption(this)">1</div>
+                    <div class="two" onclick="slideOption(this)">2</div>
+                    <div class="three" onclick="slideOption(this)">3</div>
+                </div>
+            </div>
+
+            <div class="optionBoard lvlBoard medium">
+                <div class="inpBox">
+                    <div class="title">from</div>
+
+                    <input id="curLvl" name="curLvl" type="text" onchange="checkLvl(this)" maxlength="3" placeholder="1" form="sendForm">
+                </div>
+                <div class="lvlArrow"></div>
+                <div class="inpBox">
+                    <div class="title">to</div>
+
+                    <input id="disLvl" name="disLvl" type="text" onchange="checkLvl(this)" maxlength="3" placeholder="200" form="sendForm">
+                </div>
+            </div>
+
+            <div class="optionBoard nineBoard medium">
+                <div class="optOption heroCount">
+                    <div class="chosen"></div>
+                    <div class="one" onclick="slideOption(this)">1</div>
+                    <div class="two" onclick="slideOption(this)">2</div>
+                    <div class="three" onclick="slideOption(this)">3</div>
+                </div>
+            </div>
+
+            <div class="optionBoard ironBannerBoard medium">
+                <div id="ironMinus" onclick="slideOption(this)"></div>
+                <div id="ironPlus" onclick="slideOption(this)"></div>
+                <div id="ironToken"></div>
+                <div class="bold" id="tokenNumbers">20 tokens</div>
+            </div>
+
+            <div class="optionBoard weaponQuestsBoard medium">
+                <div class="chosenWeapon" id="chosenWeaponmidaMini"></div>
+                <div class="chosenWeapon" id="chosenWeaponmidaMulty"></div>
+                <div class="chosenWeapon" id="chosenWeaponratKing"></div>
+                
+                <div class="weaponBlock" id="midaMini" onclick="slideOption(this)">
+                    <img src="img/g1.png">
+                    <div class="text">Mida Mini-Tool</div>
+                </div>
+                <div class="weaponBlock" id="midaMulty" onclick="slideOption(this)">
+                    <img src="img/g2.png">
+                    <div class="text">Mida Multy-Tool</div>
+                </div>
+                <div class="weaponBlock" id="ratKing" onclick="slideOption(this)">
+                    <img src="img/g3.png">
+                    <div class="text">Rat King</div>
+                </div>
+            </div>
+
+            <div class="price medium" id="boostPrice">1$</div> 
+            <div class="button centerButton medium title" id="proceedButton">PROCEED</div>
+        </div>
+
 
         <div class="contactWindow faq">
             <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>

@@ -296,7 +296,7 @@ body
   {
     height: 56px;
     width: 100%;
-    position: absolute;
+    position: relative;
     z-index: 2;
   }
 
@@ -315,7 +315,7 @@ body
     padding-left: 3px;
   }
 
-  .burgerIcon
+  #burgerButton
   {
     right: 10px;
     top: 16px;
