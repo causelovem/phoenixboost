@@ -680,11 +680,8 @@ body
 
   .preOrder
   {
-    /*font-size: 18px;*/
     font-size: 20px;
-    /*height: 320px;*/
     height: 370px;
-    /*top: calc(50vh - 165px);*/
     top: calc(50vh - 185px);
   }
 
@@ -698,9 +695,6 @@ body
     width: 400px;
     height: 155px;
     margin: 0 auto;
-
-
-    /*background-color: red;*/
   }
 
   .optOption
@@ -859,7 +853,7 @@ body
 
   .nineBoard .heroCount
   {
-    margin-top: 60px;
+    padding-top: 60px; 
   }
 
   #tokenNumbers
@@ -902,19 +896,31 @@ body
     background-size: cover;
   }
 
+  .weaponQuestsBoard
+  {
+    width: 500px;
+  }
+
   .weaponBlock
   {
-    /*height: inherit;*/
-    height: 130px;
-    width: 133.33px;
+    height: 140px;
+    width: 160px;
     float: left;
 
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  #ratKing
+  {
+    margin-right: 0;
   }
 
   .weaponBlock img
   {
-    width: 100%;
+    width: 140px;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 
   .weaponBlock .text
@@ -931,12 +937,11 @@ body
   .chosenWeapon
   {
     position: absolute;
-    width: 133.33px;
+    width: 160px;
     border-radius: 10px;
     background-color: #B69D70;
-    /*height: inherit;*/
-    top: 15px;
-    height: 130px;
+    top: 10px;
+    height: 140px;
   }
 
   #chosenWeaponmidaMini
@@ -947,15 +952,14 @@ body
 
   #chosenWeaponmidaMulty
   {
-    left: 133.33px;
+    left: 170px;
   }
 
   #chosenWeaponratKing
   {
-    left: 266.66px;
+    left: 340px;
     display: none;
   }
-
 
  /* ------------------------------- */
  /* ------------------------------- */
@@ -966,6 +970,12 @@ body
   {
     display: none;
   }
+
+  .formDiv
+  {
+    width: 100%;
+    height: calc(100% - 99px);
+  }
 }
 
 @media (max-width: 799px)
@@ -974,6 +984,16 @@ body
   {
     display: none;
   }
+
+  .transparentLayer {display: none;}
+  .contactWindow {display: none;}
+
+  .raidsBoard {display: none;}
+  .nightFallBoard {display: none;}
+  .lvlBoard {display: none;}
+  .nineBoard {display: none;}
+  .ironBannerBoard {display: none;}
+  .weaponQuestsBoard {display: none;}
 
   .nav
   {
@@ -1235,6 +1255,376 @@ body
   {
     margin-bottom: 8px;
   }
+
+  #purchaseButton, #submitButton, #proceedButton
+  {
+    display: block;
+    height: 40px;
+    width: 170px;
+    line-height: 42px;
+
+    background-color: #B59D70;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+
+    border: 1px solid #B59D70;
+    color: #222;
+  }
+
+  #submitButton
+  {
+    line-height: 27px;
+  }
+
+  #purchaseButton:hover, #proceedButton:hover, #submitButton:hover
+  {
+    background-color: #F4CB6F;
+  }
+
+  #proceedButton
+  {
+    margin: 20px auto 0 auto;
+  }
+
+  .preOrder
+  {
+    font-size: 20px;
+  }
+
+  .cWindowText
+  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .preOrder .cWindowText
+  {
+    padding-bottom: 24px;
+  }
+
+  .optionBoard
+  {
+    width: 100vw;
+    height: 155px;
+    margin: 0 auto;
+  }
+
+  .optOption
+  {
+    height: 35px;
+    margin: 0 auto 25px auto;
+  }
+
+  .chosen
+  {
+    position: absolute;
+    left: 0;
+    border-radius: 50px;
+    background-color: #B69D70;
+    height: inherit;
+  }
+
+  .optionBoard .optOption div
+  {
+    float: left;
+    text-align: center;
+    line-height: 35px;
+  }
+
+  .raidChois
+  {
+    width: 260px;
+  }
+
+  .leviafan
+  {
+    width: 100px;
+  }
+
+  .eaterOfWorlds
+  {
+    width: 160px;
+  }
+
+  .raidChois .chosen
+  {
+    width: 100px;
+  }
+
+  .normPrest
+  {
+    width: 200px;
+  }
+
+  .normal, .prestige
+  {
+    width: 100px;
+  }
+
+  .normPrest .chosen
+  {
+    width: 100px;
+  }
+
+  .soloDuo
+  {
+    width: 140px;
+  }
+
+  .solo, .duo
+  {
+    width: 70px;
+  }
+
+  .soloDuo .chosen
+  {
+    width: 70px;
+  }
+
+  .heroCount
+  {
+    width: 180px;
+  }
+
+  .one, .two, .three
+  {
+    width: 60px;
+  }
+
+  .heroCount .chosen
+  {
+    width: 60px;
+  }
+
+  .price
+  {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .inpBox
+  {
+    position: absolute;
+    height: 70px;
+    width: 100px;
+    top: calc(50% - 35px);
+  }
+
+  .inpBox .title
+  {
+    width: inherit;
+    text-align: center;
+  }
+
+  .lvlBoard .inpBox:nth-child(1)
+  {
+    left: 50px;
+  }
+
+  .lvlBoard .inpBox:nth-child(3)
+  {
+    right: 50px;
+  }
+
+  .inpBox input
+  {
+    margin: 10px 0;
+    padding: 2px 0;
+    width: inherit;
+    text-align: center;
+    background-color: white;
+    color: #222;
+
+    height: 25px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+    transition: 0.2s all;
+  }
+
+  .inpBox input:focus
+  {
+    outline: none;
+    box-shadow: 0 0 0 2px #B59D70;
+  }
+
+  .lvlArrow
+  {
+    position: absolute;
+    height: 27px;
+    width: 50px;
+    left: calc(50% - 25px);
+    top: calc(50% - 4px);
+
+    background-image: url(img/levelArrow.png);
+    background-size: cover;
+  }
+
+  .nineBoard .heroCount
+  {
+    padding-top: 60px;
+  }
+
+  #tokenNumbers
+  {
+    position: absolute;
+    width: inherit;
+    text-align: center;
+    bottom: 0;
+  }
+
+  #ironMinus, #ironPlus
+  {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50px;
+  }
+
+  #ironMinus
+  {
+    left: 80px;
+    background-image: url(img/ironBannerMinus.png);
+    background-size: cover;
+  }
+
+  #ironPlus
+  {
+    right: 80px;
+    background-image: url(img/ironBannerPlus.png);
+    background-size: cover;
+  }
+
+  #ironToken
+  {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    left: calc(50% - 65px);
+    background-image: url(img/ironBanner.png);
+    background-size: cover;
+  }
+
+  .weaponQuestsBoard
+  {
+    height: 440px;
+  }
+
+  .weaponBlock
+  {
+    height: 140px;
+    width: 160px;
+
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  #ratKing
+  {
+    margin-bottom: 0;
+  }
+
+  .weaponBlock img
+  {
+    width: 140px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .weaponBlock .text
+  {
+    font-size: 17px;
+    line-height: 20px;
+
+    position: absolute;
+    bottom: 10px;
+    width: inherit;
+    text-align: center;
+  }
+
+  .chosenWeapon
+  {
+    position: absolute;
+    width: 160px;
+    height: 140px;
+    border-radius: 10px;
+    background-color: #B69D70;
+    left: calc(50% - 80px);
+  }
+
+  #chosenWeaponmidaMini
+  {
+    top: 0;
+    display: none;
+  }
+
+  #chosenWeaponmidaMulty
+  {
+    top: 150px;
+  }
+
+  #chosenWeaponratKing
+  {
+    top: 300px;
+    display: none;
+  }
+
+
+
+  .orderBoard input, .orderBoard textarea
+  {
+    font-family: AvenirNext_Regular;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 0;
+    margin: 0;
+    margin-top: 8px;
+    line-height: 22px;
+  }
+
+  .orderBoard textarea
+  {
+    resize: none;
+    overflow: scroll;
+    height: 80px;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #inpMessage, #inpName, #inpEmail
+  {
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #inpName, #inpEmail
+  {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+  }
+
+  .orderBoard .button
+  {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .formDiv
+  {
+    height: calc(100vh - 70px);
+    width: 100%;
+    text-align: center;
+    overflow: scroll;
+  }
+
 
 
 

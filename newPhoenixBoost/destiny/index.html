@@ -155,28 +155,30 @@
                 Fill in the form, please.
             </div>
 
-            <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
-                <div class="inpBlock inpb1">
-                    <div class="text bold title">*E-mail:</div>
-                    <div class="inputOutBlock">
-                        <input id="inpEmail" class="inpData" type="email" name="email" onchange="checkEmail(this.value)">
+            <div class="formDiv">
+                <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
+                    <div class="inpBlock inpb1">
+                        <div class="text bold title">*E-mail:</div>
+                        <div class="inputOutBlock">
+                            <input id="inpEmail" class="inpData" type="email" name="email" onchange="checkEmail(this.value)">
+                        </div>
                     </div>
-                </div>
-                <div class="inpBlock inpb1">
-                    <div class="text bold title">*Full name:</div>
-                    <div class="inputOutBlock">
-                        <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
+                    <div class="inpBlock inpb1">
+                        <div class="text bold title">*Full name:</div>
+                        <div class="inputOutBlock">
+                            <input id="inpName" class="inpData" type="text" name="fullName" onchange="checkFullName(this.value)">
+                        </div>
                     </div>
-                </div>
-                <div class="inpBlock inpb2">
-                    <div class="text bold title">Message:</div>
-                    <div class="inputOutBlock">
-                        <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
+                    <div class="inpBlock inpb2">
+                        <div class="text bold title">Message:</div>
+                        <div class="inputOutBlock">
+                            <textarea id="inpMessage" class="inpData" name="message" type="text" rows="2"></textarea>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
 
-            <div class="button centerButton medium title" id="purchaseButton">PURCHASE</div>
+                <div class="button centerButton medium title" id="purchaseButton">PURCHASE</div>
+            </div>
         </div>
         <div class="contactWindow submitBoard">
             <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
@@ -292,7 +294,7 @@
                 <div class="chosenWeapon" id="chosenWeaponmidaMini"></div>
                 <div class="chosenWeapon" id="chosenWeaponmidaMulty"></div>
                 <div class="chosenWeapon" id="chosenWeaponratKing"></div>
-                
+
                 <div class="weaponBlock" id="midaMini" onclick="slideOption(this)">
                     <img src="img/g1.png">
                     <div class="text">Mida Mini-Tool</div>

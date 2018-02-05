@@ -453,6 +453,7 @@ else
         mcb[i].innerHTML = '<img src="img/menuCloseButton.png">';
     }
 
+    $('#proceedButton').removeClass('centerButton');
     $('#purchaseButton').removeClass('centerButton');
     $('#submitButton').removeClass('centerButton');
 }
