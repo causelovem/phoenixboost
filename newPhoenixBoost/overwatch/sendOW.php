@@ -50,6 +50,8 @@ $antiDecayRank = trim($antiDecayRank);
 
 $to = "support@phoenixboost.com"; /*ПОЧТА САЙТА!!!*/
 
+$subject = "[PhoenixBoost Overwatch Boost]";
+
 $msg .= "Full Name: $fullName\r\n";
 $msg .= "E-mail: $email\r\n";
 $msg .= "Message: $message\r\n\r\n";
@@ -60,8 +62,6 @@ $customerMsg .= "Order information:\r\n\r\n";
 
 if ($boostType == 'rank boost')
 {
-    $subject = "[PhoenixBoost Overwatch Rank Boost]";
-
     $msg .= "Rank boost\r\n";
     $msg .= "Current rank: $curRank\r\n";
     $msg .= "Desired rank: $disRank\r\n";
@@ -75,8 +75,6 @@ if ($boostType == 'rank boost')
 else
 if ($boostType == 'placements')
 {
-    $subject = "[PhoenixBoost Overwatch Placements]";
-
     $msg .= "Placements\r\n";
     $msg .= "Last rank: $prevRank\r\n";
     $msg .= "Placements rank: $placementsRank\r\n";
@@ -88,8 +86,6 @@ if ($boostType == 'placements')
 else
 if ($boostType == 'anti-decay')
 {
-    $subject = "[PhoenixBoost Overwatch Anti-decay]";
-
     $msg .= "Anti-decay\r\n";
     $msg .= "Current rank: $antiDecayRank\r\n";
 

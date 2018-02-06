@@ -13,8 +13,12 @@
     <body>
         <div class="main">
             <div class="nav bold title">
-                <img class="logo" src="img/icon.png">
-                <div class="titleMain">PHOENIX BOOST</div>
+                <a href="http://www.phoenixboost.com">
+                    <img class="logo" src="img/icon.png">
+                </a>
+                <a href="http://www.phoenixboost.com">
+                    <div class="titleMain">PHOENIX BOOST</div>
+                </a>
                 <img class="burgerIcon" src="img/burgerIcon.png" id="burgerButton">
                 <div class="navButton faqButton"><div class="hoverLine hoverLineTop"></div>FAQ<div class="hoverLine"></div></div>
                 <div class="navButton contactButton"><div class="hoverLine hoverLineTop"></div>CONTACTS<div class="hoverLine"></div></div>
@@ -68,7 +72,7 @@
                     <div class="serviceBlock regular">
                         <!-- <img src="img/pvp.png"> -->
 
-                        <div class="servOption" id="powerLvling" onclick="processOrder(id)">
+                        <div class="servOption" id="powerLvlling" onclick="processOrder(id)">
                             <div class="hoverLine hoverLineTop"></div>
                             <div class="servImg">
                                 <img src="img/powerBoostHover.png">
@@ -105,7 +109,7 @@
                             <div class="servImg">
                                 <img class="servImgHover" src="img/trialsOfThe9.png">
                             </div>
-                            <div class="blockTitle">Trials <nobr>Of The Nine</nobr></div>
+                            <div class="blockTitle">Trials <nobr>of the Nine</nobr></div>
                             <div class="hoverLine"></div>
                         </div>
                         <div class="servOption" id="ironBanner" onclick="processOrder(id)">
@@ -148,6 +152,10 @@
         <input class="inpData" id="invisibleBoostType" type="hidden" name="boostType" form="sendForm" value="rank boost">
         <input class="inpData" id="invisiblePrice" type="hidden" name="price" form="sendForm" value="1 in dollars">
 
+        <input class="inpData" id="invisibleSoloDuo" type="hidden" name="soloDuo" form="sendForm" value="Solo">
+        <input class="inpData" id="invisibleDifficulty" type="hidden" name="difficulty" form="sendForm" value="Normal">
+        <input class="inpData" id="invisibleHeroCount" type="hidden" name="heroCount" form="sendForm" value="Normal">
+
         <div class="transparentLayer"></div>
         <div class="contactWindow orderBoard">
             <div class="mobCloseButton closeButton"><img src="img/closeButton.png"></div>
@@ -156,7 +164,7 @@
             </div>
 
             <div class="formDiv">
-                <form id="sendForm" method="post" name="sendForm" action="sendOW.php" onsubmit="return false;">
+                <form id="sendForm" method="post" name="sendForm" action="sendD2.php" onsubmit="return false;">
                     <div class="inpBlock inpb1">
                         <div class="text bold title">*E-mail:</div>
                         <div class="inputOutBlock">
@@ -206,7 +214,7 @@
                     Message Message Message Message Message Message Message Message Message Message Message Message Message Message Message
                 </div>
             </div>
-            <div class="button backButton medium text">BACK</div>
+            <div class="backButton medium text">BACK</div>
             <input class="button centerButton medium title" id="submitButton" type="button" value="SUBMIT" form="sendForm" onclick="document.forms['sendForm'].submit();">
         </div>
 
@@ -355,12 +363,12 @@
 
         <div class="menu bold">
             <img src="img/menuCloseButton.png" id="menuClose">
-            <div id="menuRank" onclick="goToBlockByID(id)" href=".rankBoost"><nobr>RAIDS</nobr></div>
-            <div id="menuRank" onclick="goToBlockByID(id)" href=".rankBoost"><nobr>NIGHTFALL</nobr></div>
-            <div id="menuDecay" onclick="goToBlockByID(id)" href=".antidecay"><nobr>POWER LEVELLING</nobr></div>
-            <div id="menuDecay" onclick="goToBlockByID(id)" href=".antidecay"><nobr>WEAPONS QUESTS</nobr></div>
-            <div id="menuRank" onclick="goToBlockByID(id)" href=".rankBoost"><nobr>TRIALS OF THE NINE</nobr></div>
-            <div id="menuPlacem" onclick="goToBlockByID(id)" href=".placements"><nobr>IRON BANNER</nobr></div>
+            <div id="menuraids" onclick="menuButtons(id)" href=".rankBoost"><nobr>RAIDS</nobr></div>
+            <div id="menunightfall" onclick="menuButtons(id)" href=".rankBoost"><nobr>NIGHTFALL</nobr></div>
+            <div id="menupowerLvlling" onclick="menuButtons(id)" href=".antidecay"><nobr>POWER LEVELLING</nobr></div>
+            <div id="menuweaponsQuests" onclick="menuButtons(id)" href=".antidecay"><nobr>WEAPONS QUESTS</nobr></div>
+            <div id="menutrialsNine" onclick="menuButtons(id)" href=".rankBoost"><nobr>TRIALS OF THE NINE</nobr></div>
+            <div id="menuironBanner" onclick="menuButtons(id)" href=".placements"><nobr>IRON BANNER</nobr></div>
             <div><a href="http://www.phoenixboost.com/twitch/">TWITCH</a></div>
             <div class="contactButton">CONTACTS</div>
             <div class="faqButton">FAQ</div>

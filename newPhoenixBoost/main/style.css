@@ -1,0 +1,542 @@
+@font-face 
+{
+    font-family: AvenirNext_Bold;
+    src: url(../fonts/AvenirNext-DemiBold.ttf);
+}
+
+@font-face 
+{
+    font-family: AvenirNext_Medium;
+    src: url(../fonts/AvenirNext-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: AvenirNext_Regular;
+    src: url(../fonts/AvenirNext-Regular.ttf);
+}
+
+/* style reset */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+  list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+/*-------------*/
+
+div
+{
+  position: relative;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+div::-moz-selection, img::-moz-selection, input::-moz-selection, nobr::-moz-selection
+{
+  background: #222222;
+  color: white;
+}
+
+div::selection, img::selection, input::selection, nobr::selection
+{
+  background: #222222;
+  color: white;
+}
+
+a
+{
+  text-decoration: none;
+  color: white;
+}
+
+body
+{
+  cursor: default;
+  font-family: AvenirNext_Regular;
+  color: white;
+  overflow-x: hidden;
+}
+
+.faq ,.contacts{color: #222222;}
+.bold{font-family: AvenirNext_Bold;}
+.regular{font-family: AvenirNext_Regular;}
+.medium{font-family: AvenirNext_Medium;}
+.title{font-size: 20px;}
+.faq, .contacts, .transparentLayer{display: none;}
+
+.text 
+{
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.hoverLine
+{
+  position: absolute;
+  width: 0%;
+  left: 50%;
+  background-color: white;
+  height: 5px;
+  z-index: 3;
+  bottom: 0;
+}
+
+.navButton:hover .hoverLine, .serviceBlock:hover .hoverLine
+{
+  width: 100%;
+  left: 0%;
+  background-color: #C48B4A;
+}
+
+@media (min-width: 800px) 
+{
+  .nav
+  {
+    width: calc(100% - 40px);
+    height: 60px;
+    left: 20px;
+    z-index: 2;
+    position: absolute;
+  }
+}
+
+@media (min-width: 1080px) 
+{
+  .nav
+  {
+    max-width: 1080px;
+    width: calc(100% - 40px);
+    height: 60px;
+    left: calc(50% - 540px);
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 800px) 
+{
+  .blockTitle
+  {
+    overflow: hidden;
+    font-size: 24px;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  .nav img
+  {
+    height: inherit;
+    float: left;
+  }
+
+  .titleMain{float: left;}
+
+  .navButton, .titleMain
+  {
+    line-height: 60px;
+    display: block;
+    padding: 0 10px;
+  }
+
+  .navButton
+  {
+    float: right;
+    display: block;
+    width: auto;
+    height: inherit;
+    z-index: 2;
+  }
+
+  .navButton:hover
+  {
+    color: #C48B4A;
+  }
+
+  .main 
+  {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-color: black;
+  }
+
+  .main:before
+  {
+    content: " ";
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .game
+  {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hoverDiv 
+  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 11;
+  }
+
+  .overwatch{background-image: url("img/bgOverwatch.jpg");} 
+  .destiny{background-image: url("img/bgDestiny2.jpg");} 
+  .blackDesert{background-image: url("img/bgBlackDesert.jpg");} 
+
+  .gameLogo
+  {
+    width: 60%;
+    position: absolute;
+    display: block;
+    top: calc(50vh - 100px);
+    left: 20%;
+    z-index: 10;
+    transition: 0.2s all;
+  }
+
+  .transparentLayer
+  {
+      position: fixed;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      -webkit-transition: 0.3s all;
+      -o-transition: 0.3s all;
+      transition: 0.3s all;
+  }
+
+  .contactWindow
+  {
+      position: fixed;
+      z-index: 10;
+      width: 650px;
+      height: 490px;
+      background-color: white;
+      border: 5px solid #C1A777;
+      left: calc(50vw - 330px);
+      top: calc(50vh - 250px);
+  }
+
+  .closeButton
+  {
+      background-color: rgba(255, 255, 255, 1);
+      right: -55px;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -5px;
+      border: 5px solid #C1A777;
+      border-radius: 100px;
+  }
+
+  .closeButton:hover {background-color: rgba(255, 255, 255, 0);}
+  .closeButton img {width: inherit;}
+
+  .cWindowText
+  {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 44px;
+      line-height: 25px;
+  }
+
+  .faq
+  {
+    width: 700px;
+    left: calc(50% - 350px);
+    height: 600px;
+    top: calc(50vh - 300px);
+  }
+
+  .contacts
+  {
+    width: 500px;
+    left: calc(50% - 250px);
+    height: 400px;
+    top: calc(50vh - 200px);
+  }
+
+  .faqText
+  {
+    width: 600px;
+    height: 520px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 0px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .contactsText
+  {
+    width: 400px;
+    height: 320px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .contactsText div 
+  {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .question
+  {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .answer
+  {
+    padding-bottom: 5px;
+    padding-left: 15px; 
+  }
+
+ /* ------------------------------- */
+ /* ------------------------------- */
+ /* ------------------------------- */
+ /* ------------------------------- */
+
+  .burgerIcon, .menu, .mobileFooter
+  {
+    display: none;
+  }
+}
+
+@media (max-width: 799px) 
+{
+  .navButton, .contactWindow, .desktopFooter
+  {
+    display: none;
+  }
+
+  .nav
+  {
+    height: 56px;
+    width: 100%;
+    position: absolute;
+    z-index: 6;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0));
+  }
+
+  .logo
+  {
+    float: left;
+    height: 50px;
+    padding-left: 3px;
+    padding-top: 3px;
+    display: block;
+  }
+
+  .titleMain
+  {
+    line-height: 56px;
+    padding-left: 3px;
+  }
+
+  .burgerIcon
+  {
+    right: 10px;
+    top: 16px;
+    height: 24px;
+    position: absolute;
+  }
+
+  .main
+  {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .game
+  {
+    //height: 33.33%;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .overwatch
+  {
+    height: calc(34% + 20px);
+    background-image: url("img/bgOverwatchMobile.jpg");
+  } 
+  .destiny
+  {
+    height: calc(33% - 10px);
+    background-image: url("img/bgDestiny2Mobile.jpg");
+  } 
+  .blackDesert
+  {
+    height: calc(33% - 10px);
+    background-image: url("img/bgBlackDesertMobile.jpg");
+    background-position: center;
+  } 
+  .hoverDiv{display: none;}
+
+  .gameLogo
+  {
+    width: 50%;
+    position: absolute;
+    display: block;
+    bottom: 20%;
+    left: 25%;
+    z-index: 10;
+  }
+
+  #moreButton{margin: 0 auto;}
+
+  .menu
+  {
+    position: fixed;
+    right: 0;
+    z-index: 12;
+    top: 0;
+    width: 0;
+    max-width: 450px;
+    height: 100%;
+    background-color: #222222;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    overflow: hidden;
+  }
+
+  #menuClose, .closeButton
+  {
+    height: 35px;
+    width: 35px;
+    left: 12px;
+    top: 12px;
+    z-index: 12;
+    position: absolute;
+  }
+
+  .closeButton img
+  {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu div
+  {
+    width: calc(100% - 70px);
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 17px;
+    padding-bottom: 5px;
+    line-height: 30px;
+    font-size: 25px;
+  }
+
+  .transparentLayer
+  {
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+  .contactWindow
+  {
+    z-index: 13;
+    display: none;
+    background-color: #222222;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .contactWindow .blockTitle{display: none;}
+
+  .faqText, .contactsText
+  {
+
+    width: calc(100% - 20px);
+    left: 10px;
+    height: calc(100% - 70px);
+    position: absolute;
+    bottom: 0;
+    overflow-y: scroll;
+  }
+
+  .contactsText{text-align: center;}
+  .faqText .answer, .contactsText .answer{margin-bottom: 15px;}
+  .faqText .question, .contactsText .question{margin-bottom: 8px;}
+}

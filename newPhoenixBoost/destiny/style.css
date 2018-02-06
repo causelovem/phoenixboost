@@ -213,9 +213,9 @@ body
     padding-top: 5px;
   }
 
-  .nav img
+  .nav a img
   {
-    height: inherit;
+    height: 60px;
     float: left;
   }
 
@@ -404,14 +404,14 @@ body
 
   .contactWindow
   {
-      position: fixed;
-      z-index: 10;
-      width: 650px;
-      height: 490px;
-      background-color: #222;
-      border: 5px solid #B69D70;
-      left: calc(50vw - 330px);
-      top: calc(50vh - 250px);
+    position: fixed;
+    z-index: 10;
+    width: 650px;
+    height: 490px;
+    background-color: #222;
+    border: 5px solid #B69D70;
+    left: calc(50vw - 330px);
+    top: calc(50vh - 250px);
   }
 
   .closeButton
@@ -682,7 +682,7 @@ body
   {
     font-size: 20px;
     height: 370px;
-    top: calc(50vh - 185px);
+    top: calc(50% - 185px);
   }
 
   .preOrder .cWindowText
@@ -947,18 +947,19 @@ body
   #chosenWeaponmidaMini
   {
     left: 0;
-    display: none;
+    opacity: 0;
   }
 
   #chosenWeaponmidaMulty
   {
     left: 170px;
+    opacity: 1;
   }
 
   #chosenWeaponratKing
   {
     left: 340px;
-    display: none;
+    opacity: 0;
   }
 
  /* ------------------------------- */
@@ -1289,6 +1290,7 @@ body
   .preOrder
   {
     font-size: 20px;
+    overflow-y: scroll;
   }
 
   .cWindowText
@@ -1299,6 +1301,13 @@ body
     margin: 0 auto;
     line-height: 20px;
     text-align: center;
+  }
+
+  .inpBlock
+  {
+    font-size: 15px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
   }
 
   .preOrder .cWindowText
@@ -1424,12 +1433,12 @@ body
 
   .lvlBoard .inpBox:nth-child(1)
   {
-    left: 50px;
+    left: 40px;
   }
 
   .lvlBoard .inpBox:nth-child(3)
   {
-    right: 50px;
+    right: 40px;
   }
 
   .inpBox input
@@ -1489,14 +1498,14 @@ body
 
   #ironMinus
   {
-    left: 80px;
+    left: 70px;
     background-image: url(img/ironBannerMinus.png);
     background-size: cover;
   }
 
   #ironPlus
   {
-    right: 80px;
+    right: 70px;
     background-image: url(img/ironBannerPlus.png);
     background-size: cover;
   }
@@ -1513,13 +1522,14 @@ body
 
   .weaponQuestsBoard
   {
-    height: 440px;
+    height: calc(100vh - 250px);
+    width: 100vw;
   }
 
   .weaponBlock
   {
-    height: 140px;
-    width: 160px;
+    height: calc(33.3% - 7px);
+    width: 70%;
 
     margin: 0 auto;
     margin-bottom: 10px;
@@ -1532,9 +1542,10 @@ body
 
   .weaponBlock img
   {
-    width: 140px;
-    margin-left: 10px;
-    margin-top: 10px;
+    display: block;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 3px;
   }
 
   .weaponBlock .text
@@ -1543,49 +1554,49 @@ body
     line-height: 20px;
 
     position: absolute;
-    bottom: 10px;
-    width: inherit;
+    bottom: 5px;
+    width: 100%;
     text-align: center;
   }
 
   .chosenWeapon
   {
     position: absolute;
-    width: 160px;
-    height: 140px;
+    height: calc(33.3% - 7px);
+    width: 70%;
     border-radius: 10px;
     background-color: #B69D70;
-    left: calc(50% - 80px);
+    left: 15%;
   }
 
   #chosenWeaponmidaMini
   {
     top: 0;
-    display: none;
+    opacity: 0;
   }
 
   #chosenWeaponmidaMulty
   {
-    top: 150px;
+    top: calc(33.3% + 3px);
+    opacity: 1;
   }
 
   #chosenWeaponratKing
   {
-    top: 300px;
-    display: none;
+    top: calc(66.6% + 6px);
+    opacity: 0;
   }
-
-
 
   .orderBoard input, .orderBoard textarea
   {
     font-family: AvenirNext_Regular;
-    width: 100%;
+    width: 92%;
     font-size: 20px;
     border-radius: 0;
     margin: 0;
     margin-top: 8px;
     line-height: 22px;
+    padding: 2px 5px;
   }
 
   .orderBoard textarea
@@ -1626,8 +1637,74 @@ body
   }
 
 
+  .submitBoard
+  {
+    overflow: scroll;
+  }
+
+  .boostInfoText
+  {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .submitBoard .inpBlock
+  {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .submitBoard .inputOutBlock
+  {
+    padding-top: 5px;
+  }
+
+  .backButton 
+  {
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    border: 3px solid #B69D70;
+    text-align: center;
+    line-height: 30px;
+    color: #B69D70;
+    background-color: #222;
+
+    position: relative;
+    float: left;
+    margin-top: 30px;
+    margin-left: calc(33.3% - 86px);
+    margin-bottom: 60px;
+  }
+
+  .backButton:hover
+  {
+    background-color: #B59D70;
+    color: #222;
+  }
+
+  #submitButton
+  {
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    width: 126px;
+    line-height: 26px;
+    text-align: center;
+
+    background-color: #B59D70;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+
+    border: 1px solid #B59D70;
+    color: #222;
 
 
+    margin-top: 30px;
+    position: relative;
+    /*margin-left: calc(33.3% - 86px);*/
+    margin-bottom: 60px;
+  }
 
   .footer
   {

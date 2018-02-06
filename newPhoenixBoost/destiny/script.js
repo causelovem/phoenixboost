@@ -15,6 +15,14 @@ function goToBlockByID(id)
     }
     return false;
 }
+
+function menuButtons(id)
+{
+    $('.menu').css("width", "0");
+    $('.transparentLayer').css("display", "none");
+
+    processOrder(id.slice(4));
+}
 /*******/
 
 /*PROCESS ORDER*/
@@ -50,9 +58,9 @@ function processOrder(id)
         document.getElementById('invisibleBoostType').value = "nightfall";
     }
     else
-    if (id == "powerLvling")
+    if (id == "powerLvlling")
     {
-        boostStruc.type = 'powerLvling';
+        boostStruc.type = 'powerLvlling';
         boostStruc.difficulty = '1-200';
         boostStruc.soloDuo = 'solo';
         boostStruc.heroCount = '1';
@@ -64,7 +72,7 @@ function processOrder(id)
 
         $('.preOrder').css("display", "block");
         $('.lvlBoard').css("display", "block");
-        document.getElementById('invisibleBoostType').value = "powerLvling";
+        document.getElementById('invisibleBoostType').value = "powerLvlling";
     }
     else
     if (id == "weaponsQuests")
@@ -104,7 +112,7 @@ function processOrder(id)
         boostStruc.soloDuo = 'solo';
         boostStruc.heroCount = '1';
 
-        document.getElementById('boostDescription').innerHTML = "Choose number of packs of tokens (1 pack = 20 tokens).";
+        document.getElementById('boostDescription').innerHTML = "Choose number of packs of tokens <nobr>(1 pack = 20 tokens).</nobr>";
         document.getElementById('tokenNumbers').innerHTML = "20 tokens";
 
         $('.preOrder').css("display", "block");
@@ -230,8 +238,10 @@ function setDefauld()
 
     $('#midaMini').css("color", "#FFF");
     $('#ratKing').css("color", "#FFF");
-    $('#chosenWeaponmidaMini').css("display", "none");
-    $('#chosenWeaponratKing').css("display", "none");
+    $('#chosenWeaponmidaMini').css("opacity", "0");
+    $('#chosenWeaponratKing').css("opacity", "0");
+    $('#chosenWeaponmidaMulty').css("opacity", "1");
+
 
     $('#midaMulty').css("color", "#222");
 }
@@ -322,14 +332,14 @@ function slideOption(el)
         if (ind == -1)
         {
             boostStruc.difficulty += weap +  " ";
-            $('#chosenWeapon' + weap).css("display", "block");
+            $('#chosenWeapon' + weap).css("opacity", "1");
         
             $('#' + weap).css("color", "#222");
         }
         else
         {
             boostStruc.difficulty = boostStruc.difficulty.replace(weap, "");
-            $('#chosenWeapon' + weap).css("display", "none");
+            $('#chosenWeapon' + weap).css("opacity", "0");
         
             $('#' + weap).css("color", "#FFF");
         }
@@ -379,7 +389,7 @@ function calcPrice()
         if (boostStruc.heroCount == '3') price *= 2.7;
     }
     else
-    if (boostStruc.type == "powerLvling")
+    if (boostStruc.type == "powerLvlling")
     {
         let delim = boostStruc.difficulty.indexOf('-');
 
@@ -440,6 +450,7 @@ function calcPrice()
     boostStruc.price = String(price);
 }
 /*******/
+
 
 if (document.body.clientWidth > 799)
 {
@@ -594,72 +605,34 @@ $(document).ready(function()
         if ((checkEmail()) || (checkFullName()))
             return;
 
+        let boostInfo;
         if (document.getElementById('invisibleBoostType').value == "leviafan")
         {
-            let boostInfo;
             if (boostStruc.heroCount == '1')
                 boostInfo = "Your boost at Leviafan raid (" + boostStruc.difficulty + ") for " + boostStruc.heroCount + " hero costs " + Number(boostStruc.price).toFixed(0);
             else
                 boostInfo = "Your boost at Leviafan raid (" + boostStruc.difficulty + ") for " + boostStruc.heroCount + " hero costs " + Number(boostStruc.price).toFixed(0);
-            
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
         }
         else
         if (document.getElementById('invisibleBoostType').value == "eaterOfWorlds")
         {
-            let boostInfo;
             if (boostStruc.heroCount == '1')
                 boostInfo = "Your boost at Eater of worlds raid (" + boostStruc.difficulty + ") for " + boostStruc.heroCount + " hero costs " + Number(boostStruc.price).toFixed(0);
             else
                 boostInfo = "Your boost at Eater of worlds raid (" + boostStruc.difficulty + ") for " + boostStruc.heroCount + " hero costs " + Number(boostStruc.price).toFixed(0);
-                
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
         }
         else
         if (document.getElementById('invisibleBoostType').value == "nightfall")
         {
-            let boostInfo;
             if (boostStruc.heroCount == '1')
                 boostInfo = "Your boost at Nightfall (" + boostStruc.difficulty + ") for " + boostStruc.heroCount + " hero (" + boostStruc.soloDuo + ") costs " + Number(boostStruc.price).toFixed(0);
             else
                 boostInfo = "Your boost at Nightfall (" + boostStruc.difficulty + ") for " + boostStruc.heroCount + " heroes (" + boostStruc.soloDuo + ") costs " + Number(boostStruc.price).toFixed(0);
-                
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
         }
         else
-        if (document.getElementById('invisibleBoostType').value == "powerLvling")
+        if (document.getElementById('invisibleBoostType').value == "powerLvlling")
         {
-            let boostInfo = "Your boost from " + Number(curLvl) + " to " + Number(disLvl) + " costs " + Number(boostStruc.price).toFixed(0);
-            
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
+            boostInfo = "Your boost from " + Number(curLvl) + " to " + Number(disLvl) + " costs " + Number(boostStruc.price).toFixed(0);
         }
         else
         if (document.getElementById('invisibleBoostType').value == "weaponsQuests")
@@ -676,58 +649,46 @@ $(document).ready(function()
             if (weap.lastIndexOf(", ") == weap.length - 2)
                 weap = weap.slice(0, -2);
 
-            let boostInfo = "Your quest for weapon (" + weap + ") costs " + Number(boostStruc.price).toFixed(0);
-            
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
+            document.getElementById('invisibleDifficulty').value = weap;
+
+            boostInfo = "Your quest for weapon (" + weap + ") costs " + Number(boostStruc.price).toFixed(0);
         }
         else
         if (document.getElementById('invisibleBoostType').value == "trialsNine")
         {
-            let boostInfo;
             if (boostStruc.heroCount == '1')
                 boostInfo = "Your boost at Trials of Nine for " + boostStruc.heroCount + " hero costs " + Number(boostStruc.price).toFixed(0);
             else
                 boostInfo = "Your boost at Trials of Nine for " + boostStruc.heroCount + " heroes costs " + Number(boostStruc.price).toFixed(0);
-    
-            
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
         }
         else
         if (document.getElementById('invisibleBoostType').value == "ironBanner")
         {
-            let boostInfo = "Your boost for " + boostStruc.difficulty + " Iron Banner tokens costs " + Number(boostStruc.price).toFixed(0);
-
-            if (currency == "usd")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
-            else
-            if (currency == "eur")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
-            else
-            if (currency == "rub")
-                document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
+            boostInfo = "Your boost for " + boostStruc.difficulty + " Iron Banner tokens costs " + Number(boostStruc.price).toFixed(0);
         }
 
         document.getElementById('submitEmail').innerHTML = $('#inpEmail').val();
         document.getElementById('submitName').innerHTML = $('#inpName').val();
         document.getElementById('submitMessage').innerHTML = $('#inpMessage').val();
 
+        if (currency == "usd")
+            document.getElementById('submitOrderDetails').innerHTML = boostInfo + "$";
+        else
+        if (currency == "eur")
+            document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&euro;";
+        else
+        if (currency == "rub")
+            document.getElementById('submitOrderDetails').innerHTML = boostInfo + "&#8381;";
+
+
         $('.orderBoard').css("display", "none");
         $('.submitBoard').css("display", "block");
+
+        document.getElementById('invisibleSoloDuo').value = boostStruc.soloDuo.slice(0, 1).toUpperCase() + boostStruc.soloDuo.slice(1);
+        document.getElementById('invisibleHeroCount').value = boostStruc.heroCount;
+
+        if (document.getElementById('invisibleBoostType').value != "weaponsQuests")
+            document.getElementById('invisibleDifficulty').value = boostStruc.difficulty;
     });
 });
-
 
