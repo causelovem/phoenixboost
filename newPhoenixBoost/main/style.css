@@ -96,7 +96,7 @@ body
   overflow-x: hidden;
 }
 
-.faq ,.contacts{color: #222222;}
+.faq, .contacts{color: #FFF;}
 .bold{font-family: AvenirNext_Bold;}
 .regular{font-family: AvenirNext_Regular;}
 .medium{font-family: AvenirNext_Medium;}
@@ -246,6 +246,8 @@ body
     top: calc(50vh - 100px);
     left: 20%;
     z-index: 10;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
   }
 
@@ -269,7 +271,7 @@ body
       z-index: 10;
       width: 650px;
       height: 490px;
-      background-color: white;
+      background-color: #222;
       border: 5px solid #C1A777;
       left: calc(50vw - 330px);
       top: calc(50vh - 250px);
@@ -277,7 +279,7 @@ body
 
   .closeButton
   {
-      background-color: rgba(255, 255, 255, 1);
+      background-color: #222;
       right: -55px;
       width: 30px;
       height: 30px;
@@ -383,6 +385,9 @@ body
     width: 100%;
     position: absolute;
     z-index: 6;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), color-stop(rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0));
+    background: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0));
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0));
   }
 

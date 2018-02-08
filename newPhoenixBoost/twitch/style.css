@@ -132,9 +132,9 @@ body
   margin: 0 auto;
 }
 
-.nav img
+.nav a img
 {
-  height: inherit;
+  height: 60px;
   float: left;
 }
 

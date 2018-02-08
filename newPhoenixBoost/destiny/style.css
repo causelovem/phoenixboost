@@ -94,6 +94,10 @@ body
   font-family: AvenirNext_Regular;
   color: #FFF;
   overflow-x: hidden;
+
+  background-image: url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .bold 
@@ -137,6 +141,8 @@ body
   border: 1px solid rgba(255, 255, 255, 0);
   top: -5px;
   left: -5px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
 }
 
@@ -251,9 +257,9 @@ body
     width: 100%;
     height: 650px;
     margin: 0 auto;
-    background-image: url("img/bg.jpg");
+    /*background-image: url("img/bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
   }
 
   .inMain
@@ -306,12 +312,12 @@ body
     background-color: #F4CB6F;
   }
 
-  .service
+  /*.service
   {
     background-image: url("img/bg2.jpg");
     background-size: cover;
     background-position: center;
-  }
+  }*/
 
   .service .content
   {
@@ -379,6 +385,8 @@ body
     height: 75%;
     width: auto;
     margin: 0 auto;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
     transition: 0.5s all;
   }
 
@@ -399,6 +407,8 @@ body
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
   }
 
@@ -829,14 +839,18 @@ body
     height: 25px;
     font-size: 20px;
     border: none;
-    box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+    -webkit-box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+            box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
   }
 
   .inpBox input:focus
   {
     outline: none;
-    box-shadow: 0 0 0 2px #B59D70;
+    -webkit-box-shadow: 0 0 0 2px #B59D70;
+            box-shadow: 0 0 0 2px #B59D70;
   }
 
   .lvlArrow
@@ -944,13 +958,13 @@ body
     height: 140px;
   }
 
-  #chosenWeaponmidaMini
+  #chosenWeaponsturmDrang
   {
     left: 0;
     opacity: 0;
   }
 
-  #chosenWeaponmidaMulty
+  #chosenWeaponmidaMiniMulty
   {
     left: 170px;
     opacity: 1;
@@ -1072,6 +1086,8 @@ body
     max-width: 450px;
     height: 100%;
     background-color: #222;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
     overflow: hidden;
   }
@@ -1115,6 +1131,8 @@ body
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
   }
 
@@ -1210,6 +1228,8 @@ body
     height: 60%;
     width: auto;
     margin: 0 auto;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
     transition: 0.5s all;
   }
 
@@ -1453,14 +1473,18 @@ body
     height: 25px;
     font-size: 20px;
     border: none;
-    box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+    -webkit-box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+            box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
   }
 
   .inpBox input:focus
   {
     outline: none;
-    box-shadow: 0 0 0 2px #B59D70;
+    -webkit-box-shadow: 0 0 0 2px #B59D70;
+            box-shadow: 0 0 0 2px #B59D70;
   }
 
   .lvlArrow
@@ -1569,13 +1593,13 @@ body
     left: 15%;
   }
 
-  #chosenWeaponmidaMini
+  #chosenWeaponsturmDrang
   {
     top: 0;
     opacity: 0;
   }
 
-  #chosenWeaponmidaMulty
+  #chosenWeaponmidaMiniMulty
   {
     top: calc(33.3% + 3px);
     opacity: 1;

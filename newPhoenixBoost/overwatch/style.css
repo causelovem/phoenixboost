@@ -907,8 +907,8 @@ body
 
   .formDiv
   {
-  	width: 100%;
-  	height: calc(100% - 99px);
+    width: 100%;
+    height: calc(100% - 99px);
   }
 }
 
@@ -917,13 +917,13 @@ body
 /*
   div::-moz-selection, img::-moz-selection, input::-moz-selection, nobr::-moz-selection
   {
-  	background-color: red;
+    background-color: red;
     color: #3A3A3A; 
   }
 
   div::selection, img::selection, input::selection, nobr::selection
   {
-  	background: red;
+    background: red;
     color: #3A3A3A;
   }*/
 
@@ -1031,9 +1031,9 @@ body
 
   .closeButton img
   {
-  	display: block;
-  	width: 100%;
-  	height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .menu div
@@ -1441,108 +1441,108 @@ body
 
   .contactWindow
   {
-  	z-index: 10;
-  	display: none;
-  	background-color: white;
-  	position: fixed;
-  	top: 0;
-  	width: 100vw;
-  	height: 100vh;
+    z-index: 10;
+    display: none;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
   }
 
   .faqText, .contactsText
   {
-  	width: calc(100% - 20px);
-  	left: 10px;
-  	height: calc(100% - 70px);
-  	position: absolute;
-  	bottom: 0;
-  	overflow-y: scroll;
+    width: calc(100% - 20px);
+    left: 10px;
+    height: calc(100% - 70px);
+    position: absolute;
+    bottom: 0;
+    overflow-y: scroll;
   }
 
   .contactsText
   {
-  	text-align: center;
+    text-align: center;
   }
 
   .faqText .answer, .contactsText .answer
   {
-  	margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .faqText .question, .contactsText .question
   {
-  	margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 
   .cWindowText
   {
-  	padding-top: 20px;
-  	padding-bottom: 20px;
-  	width: calc(100% - 100px);
-  	margin: 0 auto;
-  	line-height: 20px;
-  	text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    line-height: 20px;
+    text-align: center;
   }
 
   .inpBlock
   {
-  	font-size: 15px;
-  	width: calc(100% - 20px);
-  	margin: 0 auto;
+    font-size: 15px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
   }
 
   .orderBoard input, .orderBoard textarea
   {
-  	font-family: AvenirNext_Regular;
-  	width: 100%;
-  	font-size: 20px;
-  	border-radius: 0;
-  	margin: 0;
-  	margin-top: 8px;
-  	line-height: 22px;
+    font-family: AvenirNext_Regular;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 0;
+    margin: 0;
+    margin-top: 8px;
+    line-height: 22px;
   }
 
   .orderBoard textarea
   {
-  	resize: none;
-  	overflow: scroll;
-  	height: 80px;
-  	border: 1px solid rgba(0,0,0,0.2);
+    resize: none;
+    overflow: scroll;
+    height: 80px;
+    border: 1px solid rgba(0,0,0,0.2);
   }
 
   #inpMessage, #inpName, #inpEmail
   {
-  	font-size: 18px;
-  	border: 1px solid rgba(0,0,0,0.2);
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,0.2);
   }
 
   #inpName, #inpEmail
   {
-  	border: none;
-  	border-bottom: 1px solid rgba(0,0,0,0.2);
-  	margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 30px;
   }
 
   .orderBoard .button
   {
-  	position: relative;
-  	margin: 0 auto;
-  	margin-top: 20px;
-  	margin-bottom: 100px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
   }
 
   .formDiv
   {
-  	height: calc(100vh - 70px);
-  	width: 100%;
-  	text-align: center;
-  	overflow: scroll;
+    height: calc(100vh - 70px);
+    width: 100%;
+    text-align: center;
+    overflow: scroll;
   }
 
   .submitBoard
   {
-  	overflow: scroll;
+    overflow: scroll;
   }
 
   .boostInfoText
@@ -1553,7 +1553,7 @@ body
 
   .submitBoard .inpBlock
   {
-  	margin-top: 20px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
 

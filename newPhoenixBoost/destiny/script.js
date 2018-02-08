@@ -78,13 +78,13 @@ function processOrder(id)
     if (id == "weaponsQuests")
     {
         boostStruc.type = 'weaponsQuests';
-        boostStruc.difficulty = 'midaMulty ';
+        boostStruc.difficulty = 'midaMiniMulty ';
         boostStruc.soloDuo = 'solo';
         boostStruc.heroCount = '1';
 
         document.getElementById('boostDescription').innerHTML = "Choose what weapons you want to get.";
 
-        $('#chosenWeaponmidaMulty').css("display", "block");
+        $('#chosenWeaponmidaMiniMulty').css("display", "block");
 
         $('.preOrder').css("display", "block");
         $('.weaponQuestsBoard').css("display", "block");
@@ -236,14 +236,14 @@ function setDefauld()
 
     $('.raidChois .chosen').css("width", "100px");
 
-    $('#midaMini').css("color", "#FFF");
+    $('#sturmDrang').css("color", "#FFF");
     $('#ratKing').css("color", "#FFF");
-    $('#chosenWeaponmidaMini').css("opacity", "0");
+    $('#chosenWeaponsturmDrang').css("opacity", "0");
     $('#chosenWeaponratKing').css("opacity", "0");
-    $('#chosenWeaponmidaMulty').css("opacity", "1");
+    $('#chosenWeaponmidaMiniMulty').css("opacity", "1");
 
 
-    $('#midaMulty').css("color", "#222");
+    $('#midaMiniMulty').css("color", "#222");
 }
 
 function slideOption(el)
@@ -324,7 +324,7 @@ function slideOption(el)
         document.getElementById('tokenNumbers').innerHTML =  boostStruc.difficulty + " tokens";
     }
     else
-    if ((el.id == "midaMini") || (el.id == "midaMulty") || (el.id == "ratKing"))
+    if ((el.id == "sturmDrang") || (el.id == "midaMiniMulty") || (el.id == "ratKing"))
     {
         let weap = String(el.id);
         let ind = boostStruc.difficulty.indexOf(weap);
@@ -346,7 +346,7 @@ function slideOption(el)
     }
 
 
-    if ((el.id != "midaMini") && (el.id != "midaMulty") && (el.id != "ratKing"))
+    if ((el.id != "sturmDrang") && (el.id != "midaMiniMulty") && (el.id != "ratKing"))
     {
         $('.' + el.parentNode.classList[1] + ' div').css("color", "#FFF");
         $('.' + el.classList[0]).css("color", "#222");
@@ -364,12 +364,12 @@ function calcPrice()
 
     if ((boostStruc.type == "leviafan") || (boostStruc.type == "eaterOfWorlds"))
     {
-        price = 20;
+        price = 30;
 
         if (boostStruc.difficulty == 'prestige')
             price *= 1.5;
 
-        if (boostStruc.heroCount == '2') price *= 1.8;
+        if (boostStruc.heroCount == '2') price *= 1.85;
         else
         if (boostStruc.heroCount == '3') price *= 2.7;
     }
@@ -384,7 +384,7 @@ function calcPrice()
         if (boostStruc.soloDuo == 'duo')
             price *= 1.5;
 
-        if (boostStruc.heroCount == '2') price *= 1.8;
+        if (boostStruc.heroCount == '2') price *= 1.85;
         else
         if (boostStruc.heroCount == '3') price *= 2.7;
     }
@@ -400,45 +400,45 @@ function calcPrice()
             
             for (var i = start; i < end; i++)
             {
-                if (Number(i) <= 200) price += 1;
+                if (Number(i) <= 200) price += 0.275;
                 else
-                if (Number(i) <= 240) price += 2;
+                if (Number(i) <= 240) price += 0.625;
                 else
-                if (Number(i) <= 260) price += 3;
+                if (Number(i) <= 260) price += 1.5;
                 else
-                if (Number(i) <= 290) price += 4;
+                if (Number(i) <= 290) price += 2;
                 else
                 if (Number(i) <= 300) price += 5;
                 else
-                if (Number(i) <= 320) price += 6;
+                if (Number(i) <= 320) price += 7;
                 else
-                if (Number(i) <= 330) price += 7;
+                if (Number(i) <= 330) price += 9;
             }
         }
     }
     else
     if (boostStruc.type == "weaponsQuests")
     {
-        if (boostStruc.difficulty.indexOf("midaMini") != -1)
-            price += 10;
-        if (boostStruc.difficulty.indexOf("midaMulty") != -1)
-            price += 20;
+        if (boostStruc.difficulty.indexOf("sturmDrang") != -1)
+            price += 60;
+        if (boostStruc.difficulty.indexOf("midaMiniMulty") != -1)
+            price += 50;
         if (boostStruc.difficulty.indexOf("ratKing") != -1)
-            price += 15;
+            price += 55;
     }
     else
     if (boostStruc.type == "trialsNine")
     {
-        price = 20;
+        price = 30;
 
-        if (boostStruc.heroCount == '2') price *= 1.8;
+        if (boostStruc.heroCount == '2') price *= 1.85;
         else
         if (boostStruc.heroCount == '3') price *= 2.7;
     }
     else
     if (boostStruc.type == "ironBanner")
     {
-        price = 0.5 * Number(boostStruc.difficulty);
+        price = 0.75 * Number(boostStruc.difficulty);
 
     }
 
@@ -639,10 +639,10 @@ $(document).ready(function()
         {
             let weap = "";
 
-            if (boostStruc.difficulty.indexOf("midaMini") != -1)
-                weap += "Mida Mini-Tool, ";
-            if (boostStruc.difficulty.indexOf("midaMulty") != -1)
-                weap += "Mida Multy-Tool, ";
+            if (boostStruc.difficulty.indexOf("sturmDrang") != -1)
+                weap += "Sturm & Drang, ";
+            if (boostStruc.difficulty.indexOf("midaMiniMulty") != -1)
+                weap += "Mida Mini & Multy-Tool, ";
             if (boostStruc.difficulty.indexOf("ratKing") != -1)
                 weap += "Rat King";
 
