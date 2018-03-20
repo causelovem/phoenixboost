@@ -1,0 +1,1632 @@
+@font-face 
+{
+    font-family: AvenirNext_Bold;
+    src: url(../fonts/AvenirNext-DemiBold.ttf);
+}
+
+@font-face 
+{
+    font-family: AvenirNext_Medium;
+    src: url(../fonts/AvenirNext-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: AvenirNext_Regular;
+    src: url(../fonts/AvenirNext-Regular.ttf);
+}
+
+/* style reset */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+  list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+/*-------------*/
+
+div
+{
+  position: relative;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+div::-moz-selection, img::-moz-selection, input::-moz-selection, nobr::-moz-selection
+{
+  background: #C33C3C;
+  color: white;
+}
+
+div::selection, img::selection, input::selection, nobr::selection
+{
+  background: #C33C3C;
+  color: white;
+}
+
+a
+{
+  text-decoration: none;
+  color: #3A3A3A;
+}
+
+body
+{
+  cursor: default;
+  font-family: AvenirNext_Regular;
+  color: #3A3A3A;
+  overflow-x: hidden;
+}
+
+.bold 
+{font-family: AvenirNext_Bold;}
+
+.regular 
+{font-family: AvenirNext_Regular;}
+
+.medium 
+{font-family: AvenirNext_Medium;}
+
+.title
+{font-size: 20px;}
+
+.text 
+{
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.button
+{
+  cursor: pointer;
+  width: 160px;
+  height: 30px;
+  border: 5px solid #C33C3C;
+  text-align: center;
+  line-height: 32px;
+  color: white;
+  background-color: #C33C3C;
+}
+
+.button:hover
+{
+  background-color: white;
+  color: #C33C3C;
+}
+
+.centerButton
+{
+  position: absolute;
+  left: calc(50% - 85px);
+  bottom: 30px;
+}
+
+.hoverLine
+{
+  position: absolute;
+  width: 0%;
+  left: 50%;
+  background-color: white;
+  height: 5px;
+  z-index: 3;
+  bottom: 0;
+}
+
+.hoverLineTop
+{
+  top: 0;
+}
+
+.hoverLineGrey
+{
+  width: 100%;
+  height: 5px;
+  background-color: #E2E2E2;
+}
+
+.hoverLineGrey:after
+{
+  content: " ";
+  width: 100%;
+  height: 5px;
+  background-color: #E2E2E2;
+  position: absolute;
+  bottom: -245px; 
+} 
+
+.navButton:hover .hoverLine, .serviceBlock:hover .hoverLine
+{
+  width: 100%;
+  left: 0%;
+  background-color: #C33C3C;
+}
+
+@media (min-width: 800px) 
+{
+  .blockTitle
+  {
+    overflow: hidden;
+    font-size: 24px;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  .nav
+  {
+    max-width: 1080px;
+    width: calc(100% - 40px);
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .nav a img
+  {
+    height: 60px;
+    float: left;
+  }
+
+  .titleMain
+  {
+    float: left;
+  }
+
+  .navButton, .titleMain
+  {
+    line-height: 60px;
+    display: block;
+    padding: 0 10px;
+  }
+
+  .navButton
+  {
+    color: #3A3A3A;
+    float: right;
+    display: block;
+    width: auto;
+    height: inherit;
+    z-index: 2;
+  }
+
+  .navButton:hover
+  {
+    color: #C33C3C;
+  }
+
+  .main 
+  {
+    width: 100%;
+    max-width: 1920px;
+    height: 650px;
+    margin: 0 auto;
+    background-image: url("img/bg3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .inMain
+  {
+    max-width: 1080px;
+    width: calc(100% - 40px);
+    height: inherit;
+    margin: 0 auto;
+  }
+
+  .overwatch
+  {
+    padding-top: 180px;
+    font-size: 70px; 
+    line-height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .inMainText
+  {
+    width: 50%;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  #submitButton
+  {
+    display: block;
+    height: 40px;
+    width: 170px;
+    line-height: 27px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .service .content
+  {
+    max-width: 1080px;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    z-index: 0;
+  }
+
+  .service .content:before 
+  {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 170px;
+    top: 40px;
+    left: calc(540px - 50vw);
+    z-index: 1;
+    background-color: #EFE9DC;
+  }
+
+  .servBlock33
+  {
+    width: 33.3%;
+    height: 100%;
+    float: left;
+  }
+
+  .serviceBlock
+  {
+    margin: 0 auto;
+
+    max-width: 300px;
+    width: 100%;
+    height: inherit;
+    z-index: 2;
+    background-color: #F4f4f4;
+  }
+
+  .serviceBlock img 
+  {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .serviceBlock .text
+  {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .transparentLayer
+  {
+      position: fixed;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      -webkit-transition: 0.3s all;
+      -o-transition: 0.3s all;
+      transition: 0.3s all;
+  }
+
+  .contactWindow
+  {
+      position: fixed;
+      z-index: 10;
+      width: 650px;
+      height: 490px;
+      background-color: white;
+      border: 5px solid #C1A777;
+      left: calc(50vw - 330px);
+      top: calc(50vh - 250px);
+  }
+
+  .closeButton
+  {
+      background-color: rgba(255, 255, 255, 1);
+      right: -55px;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -5px;
+      border: 5px solid #C1A777;
+      border-radius: 100px;
+  }
+
+  .closeButton:hover {background-color: rgba(255, 255, 255, 0);}
+  .closeButton img {width: inherit;}
+
+  .cWindowText
+  {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 44px;
+      line-height: 25px;
+  }
+
+  .inpBlock
+  {
+      height: 34px;
+      width: 100%;
+      margin-bottom: 36px;
+  }
+
+  .inpb2{height: 150px;}
+
+  .inpBlock .text
+  {
+      line-height: 40px;
+      text-align: right;
+      right: 500px;
+  }
+
+  .transparentLayer {display: none;}
+  .contactWindow {display: none;}
+
+  .inputOutBlock
+  {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      height: 100%;
+      width: 460px;
+  }
+
+  .inpData
+  {
+      text-align: left;
+      height: calc(100% - 5px);
+      resize: none;
+      margin-top: 5px;
+      font-family: AvenirNext_Regular;
+      font-size: 18px;
+  }
+
+  textarea
+  {
+      width: calc(100% - 4px);
+      -webkit-transition: 0.2s all;
+      -o-transition: 0.2s all;
+      transition: 0.2s all;
+      border: none;
+      resize: none;
+      padding-top: 3px;
+      -webkit-box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+              box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+  }
+
+  textarea:focus
+  {
+      outline: none;
+      -webkit-box-shadow: 0 0 0 3px rgba(193,167,119,0.9);
+              box-shadow: 0 0 0 3px rgba(193,167,119,0.9);
+  }
+
+  input
+  {
+      width: 100%;
+      margin-top: 2px;
+      -webkit-transition: 0.2s all;
+      -o-transition: 0.2s all;
+      transition: 0.2s all;
+      border: none;
+      -webkit-box-shadow: 0 1px 0 0 rgba(1,1,1,0.2);
+              box-shadow: 0 1px 0 0 rgba(1,1,1,0.2);
+  }
+
+  input:focus 
+  {
+      outline: none;
+      -webkit-box-shadow: 0 3px 0 0 rgba(193,167,119,0.9);
+              box-shadow: 0 3px 0 0 rgba(193,167,119,0.9);
+  }
+
+  .submitBoard .cWindowText
+  {
+    padding-bottom: 30px;
+  }
+
+  .boostInfoText
+  {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .submitBoard .inpBlock
+  {
+    margin-bottom: 0;
+  }
+
+  .submitBoard .inputOutBlock
+  {
+    padding-top: 10px;
+  }
+
+  .backButton 
+  {
+    cursor: pointer;
+    width: 120px;
+    height: 24px;
+    border: 3px solid #C1A777;
+    text-align: center;
+    line-height: 26px;
+    color: #C1A777;
+    background-color: white;
+
+    position: absolute;
+    bottom: 35px;
+    left: 55px;
+  }
+
+  .backButton:hover
+  {
+    background-color: #C1A777;
+    color: white;
+  }
+
+  .contentBlock
+  {
+    padding-top: 20px;
+  }
+
+  .service
+  {
+    padding-top: 0;
+  }
+
+  .rankBoost .content
+  {
+    height: 370px;
+    width: 100%;
+  }
+
+  .centerText
+  {
+    text-align: center;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer
+  {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    width: 100%;
+    height: 130px;
+    background-color: #EFE9DC;
+  }
+
+  .footer .content
+  {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    top: 20px;
+  }
+
+  .footer .text div
+  {
+    display: block;
+    padding-top: 8px;
+  }
+
+  .footer .text .bold
+  {
+    padding-left: calc(50% - 540px + 20px);
+    float: left;
+  }
+
+  .rights
+  {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+  }
+
+  .rankBoostBlock
+  {
+    width: 500px;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .curRank, .disRank
+  {
+    width: 160px;
+    height: 100%;
+    position: absolute;
+  }
+
+  .disRank
+  {
+    right: 0;
+  }
+
+  .content .price
+  {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    font-size: 20px;
+  }
+
+  .rankText
+  {
+    text-align: center;
+  }
+
+  .rankImg img 
+  {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 120px;
+  }
+
+  .inpRank
+  {
+    width: 100px;
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 50px);
+    text-align: center;
+    font-size: 20px;
+    height: 25px;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    -webkit-box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+            box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+  }
+
+  .inpRank:focus 
+  {
+    outline: none;
+    -webkit-box-shadow: 0 0 0 2px rgba(193,167,119,0.9);
+            box-shadow: 0 0 0 2px rgba(193,167,119,0.9);
+  }
+
+  .arrows
+  {
+    height: 60px;
+    position: absolute;
+    width: 20px;
+    right: 0px;
+    top: 60px;
+  }
+
+  .arrowUp
+  {
+    width: 100%;
+    height: 20px;
+  }
+
+  .arrowUpImg
+  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.15s all;
+    -o-transition: 0.15s all;
+    transition: 0.15s all;
+  }
+
+  .arrowUp:hover .hArrowUp
+  {
+    height: 0%;
+  }
+
+  .arrowDown
+  {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .arrowDownImg
+  {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.15s all;
+    -o-transition: 0.15s all;
+    transition: 0.15s all;
+  }
+
+  .arrowDown:hover .hArrowDown
+  {
+    height: 0%;
+  }
+
+  .disRank .arrows
+  {
+    left: 0;
+  }
+
+  .soloDuo
+  {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 40px);
+  }
+
+  .soloDuo div
+  {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .duo:hover, .solo:hover
+  {
+    opacity: 1;
+  }
+
+  .duo
+  {
+    bottom: 0;
+    opacity: 0.6;
+  }
+
+  .chosen
+  {
+    border-radius: 2px;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    background-color: rgba(193,167,119,0.9);
+    top: 0;
+  }
+
+  .antidecay .content
+  {
+    height: 335px;
+    width: 100%;
+  }
+
+  .antiDecayBlock
+  {
+    width: 360px;
+    height: 170px;
+    position: absolute;
+    left: calc(50% - 180px);
+    top: 60px;
+  }
+
+  .antiDecayImg
+  {
+    width: 120px;
+    display: block;
+    float: right;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+
+  #per5games
+  {
+    bottom: -13px;
+    font-size: 18px;
+  }
+
+  .placements .content
+  {
+    width: 100%;
+    height: 370px;
+  }
+
+  .placements
+  {
+    background-color: #EFE9DC;
+  }
+
+  .placementsBlock
+  {
+    height: 205px;
+    width: 800px;
+    position: absolute;
+    left: calc(50% - 400px);
+    top: 60px; 
+  }
+
+  .placements1block
+  {
+    height: 100%;
+    width: 80px;
+    float: left;
+  }
+
+  .placements4block
+  {
+    height: 100%;
+    width: 480px;
+    float: left;
+  }
+
+  .placements2block
+  {
+    height: 100%;
+    width: 240px;
+    float: left;
+  }
+
+  .placements1block:after
+  {
+    content: " ";
+    height: 75%;
+    width: 1px;
+    position: absolute;
+    background-color: #3A3A3A;
+    left: calc(50% - 0.5px);
+  }
+
+  .placementsText
+  {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+  }
+
+  .placements img 
+  {
+    width: 120px;
+    display: block;
+    float: right;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+
+  .faq
+  {
+    width: 700px;
+    left: calc(50% - 350px);
+    height: 600px;
+    top: calc(50vh - 300px);
+  }
+
+  .contacts2
+  {
+    width: 500px;
+    left: calc(50% - 250px);
+    height: 400px;
+    top: calc(50vh - 200px);
+  }
+
+  .faqText
+  {
+    width: 600px;
+    height: 520px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 0px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .contactsText
+  {
+    width: 400px;
+    height: 320px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .contactsText div 
+  {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .question
+  {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .answer
+  {
+    padding-bottom: 5px;
+    padding-left: 15px; 
+  }
+
+ /* ------------------------------- */
+ /* ------------------------------- */
+ /* ------------------------------- */
+ /* ------------------------------- */
+
+  .burgerIcon, .menu, .mobileFooter
+  {
+    display: none;
+  }
+
+  .formDiv
+  {
+    width: 100%;
+    height: calc(100% - 99px);
+  }
+}
+
+@media (max-width: 799px) 
+{
+/*
+  div::-moz-selection, img::-moz-selection, input::-moz-selection, nobr::-moz-selection
+  {
+    background-color: red;
+    color: #3A3A3A; 
+  }
+
+  div::selection, img::selection, input::selection, nobr::selection
+  {
+    background: red;
+    color: #3A3A3A;
+  }*/
+
+  .navButton, .contactWindow, .desktopFooter
+  {
+    display: none;
+  }
+
+  .nav
+  {
+    height: 56px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .logo
+  {
+    float: left;
+    height: 50px;
+    padding-left: 3px;
+    padding-top: 3px;
+    display: block;
+  }
+
+  .titleMain
+  {
+    line-height: 56px;
+    padding-left: 3px;
+  }
+
+  .burgerIcon
+  {
+    right: 10px;
+    top: 16px;
+    height: 24px;
+    position: absolute;
+  }
+
+  .main
+  {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("img/bg3_mobile.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .inMain
+  {
+    width: inherit;
+    height: inherit;
+  }
+
+  .overwatch
+  {
+    text-align: center;
+    width: 100%;
+    padding-top: 29vh; 
+    padding-bottom: 20px;
+    font-size: 40px;
+  }
+
+  .inMainText
+  {
+    max-width: 440px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+    line-height: 24px;
+  }
+
+  #moreButton
+  {
+    margin: 0 auto;
+  }
+
+  .menu
+  {
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    top: 0;
+    width: 0;
+    max-width: 450px;
+    height: 100%;
+    background-color: #EFE9DC;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    overflow: hidden;
+  }
+
+  #menuClose, .closeButton
+  {
+    height: 35px;
+    width: 35px;
+    left: 12px;
+    top: 12px;
+    z-index: 12;
+    position: absolute;
+  }
+
+  .closeButton img
+  {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu div
+  {
+    width: calc(100% - 70px);
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 17px;
+    padding-bottom: 5px;
+    line-height: 30px;
+    font-size: 25px;
+  }
+
+  .transparentLayer
+  {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+
+  .service
+  {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .blockTitle
+  {
+    text-align: center;
+    font-size: 26px;
+    line-height: 60px;
+  }
+
+  .serviceBlock
+  {
+    width: 80%;
+    height: calc(33vh - 40px);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #F4f4f4;
+  }
+
+  .serviceBlock .blockTitle
+  {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .hoverLineGrey:after
+  {
+    bottom: calc(-33vh + 45px);
+  } 
+
+  .serviceBlock img
+  {
+    display: block;
+    margin: 0 auto;
+    height: calc(33vh - 100px);
+  }
+
+  .rankBoost
+  {
+    display: block;
+  }
+
+  .rankBoost .content
+  {
+    height: 440px;
+    width: 100%;
+  }
+
+  .centerText
+  {
+    text-align: center;
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .rankBoostBlock
+  {
+    width: 100%;
+    max-width: 350px;
+    height: 285px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .curRank, .disRank
+  {
+    width: 160px;
+    height: 100%;
+    position: absolute;
+  }
+
+  .disRank
+  {
+    right: 0;
+  }
+
+  .content .price
+  {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    font-size: 20px;
+  }
+
+  .rankText
+  {
+    text-align: center;
+  }
+
+  .curRank .rankImg img 
+  {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 140px;
+  }
+
+  .disRank .rankImg img 
+  {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 140px;
+  }
+
+  .inpRank
+  {
+    width: 100px;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 135px;
+    text-align: center;
+    font-size: 20px;
+    height: 25px;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    -webkit-box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+            box-shadow: 0 0 0 1px rgba(1,1,1,0.2);
+  }
+
+  #curSR
+  {
+    left: calc(50% - 40px);
+  }
+
+  #disSR
+  {
+    left: calc(50% - 60px);
+  }
+
+  .inpRank:focus 
+  {
+    outline: none;
+    -webkit-box-shadow: 0 0 0 2px rgba(193,167,119,0.9);
+            box-shadow: 0 0 0 2px rgba(193,167,119,0.9);
+  }
+
+  .arrows
+  {
+    height: 78px;
+    position: absolute;
+    width: 26px;
+    left: 9px;
+    top: 40px;
+  }
+
+  .disRank .arrows
+  {
+    left: auto;
+    right: 9px;
+  }
+
+  .arrowUp
+  {
+    width: 100%;
+    height: 26px;
+  }
+
+  .arrowUpImg
+  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.15s all;
+    -o-transition: 0.15s all;
+    transition: 0.15s all;
+  }
+
+  .arrowUp:hover .hArrowUp
+  {
+    height: 0%;
+  }
+
+  .arrowDown
+  {
+    width: 100%;
+    height: 26px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .arrowDownImg
+  {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.15s all;
+    -o-transition: 0.15s all;
+    transition: 0.15s all;
+  }
+
+  .arrowDown:hover .hArrowDown
+  {
+    height: 0%;
+  }
+
+  .soloDuo
+  {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 185px;
+    left: calc(50% - 40px);
+  }
+
+  .soloDuo div
+  {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .duo:hover, .solo:hover
+  {
+    opacity: 1;
+  }
+
+  .duo
+  {
+    bottom: 0;
+    opacity: 0.6;
+  }
+
+  .chosen
+  {
+    border-radius: 2px;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    background-color: rgba(193,167,119,0.9);
+    top: 0;
+  }
+
+  .placements
+  {
+    display: block;
+    width: 100%;
+    background-color: #EFE9DC;
+  }
+
+  .placements .content
+  {
+    width: 100%;
+    height: 460px;
+  }
+
+  .placements .button
+  {
+    position: absolute;
+  }
+
+  .placementsBlock
+  {
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .placementsText
+  {
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .placements4block
+  {
+    width: 100%;
+    max-width: 400px;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .placements img
+  {
+    display: block;
+    width: 25%;
+    float: right;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+
+  .placements1block
+  {
+    width: 200px;
+    height: 1px;
+    display: block;
+    background-color: #3A3A3A;
+    margin: 0 auto;
+  }
+
+  .placements2block
+  {
+    width: 50%;
+    max-width: 200px;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .placements2block img 
+  {
+    width: 50%;
+  }
+
+  #placementsPrice, #antiDecayPrice
+  {
+    position: absolute;
+    text-align: center;
+    bottom: -10px;
+  }
+
+  #per5games
+  {
+    position: absolute;
+    text-align: center;
+    bottom: -40px;
+  }
+
+  .antidecay
+  {
+    display: block;
+  }
+
+  .antidecay .content
+  {
+    height: 280px;
+    width: 100%;
+  }
+
+  .antiDecayBlock
+  {
+    width: 100%;
+    max-width: 300px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .antiDecayImg
+  {
+    width: 33.3%;
+    display: block;
+    float: right;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+
+  .footer
+  {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    width: 100%;
+    height: 210px;
+    background-color: #EFE9DC;
+  }
+
+  .contactWindow
+  {
+    z-index: 10;
+    display: none;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .faqText, .contactsText
+  {
+    width: calc(100% - 20px);
+    left: 10px;
+    height: calc(100% - 70px);
+    position: absolute;
+    bottom: 0;
+    overflow-y: scroll;
+  }
+
+  .contactsText
+  {
+    text-align: center;
+  }
+
+  .faqText .answer, .contactsText .answer
+  {
+    margin-bottom: 15px;
+  }
+
+  .faqText .question, .contactsText .question
+  {
+    margin-bottom: 8px;
+  }
+
+  .cWindowText
+  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .inpBlock
+  {
+    font-size: 15px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
+
+  .orderBoard input, .orderBoard textarea
+  {
+    font-family: AvenirNext_Regular;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 0;
+    margin: 0;
+    margin-top: 8px;
+    line-height: 22px;
+  }
+
+  .orderBoard textarea
+  {
+    resize: none;
+    overflow: scroll;
+    height: 80px;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #inpMessage, #inpName, #inpEmail
+  {
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #inpName, #inpEmail
+  {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+  }
+
+  .orderBoard .button
+  {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .formDiv
+  {
+    height: calc(100vh - 70px);
+    width: 100%;
+    text-align: center;
+    overflow: scroll;
+  }
+
+  .submitBoard
+  {
+    overflow: scroll;
+  }
+
+  .boostInfoText
+  {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .submitBoard .inpBlock
+  {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .submitBoard .inputOutBlock
+  {
+    padding-top: 5px;
+  }
+
+  .backButton 
+  {
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    border: 3px solid #C1A777;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    color: #C1A777;
+    background-color: white;
+    font-size: 20px;
+    font-family: AvenirNext_Medium;
+    position: relative;
+    float: left;
+    margin-top: 30px;
+    margin-left: calc(33.3% - 86px);
+    margin-bottom: 60px;
+  }
+
+  .backButton:hover
+  {
+    background-color: #C1A777;
+    color: white;
+  }
+
+  #submitButton
+  {
+    cursor: pointer;
+    width: 126px;
+    height: 36px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 26px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: calc(33.3% - 86px);
+    font-family: AvenirNext_Medium;
+    position: relative;
+    border-radius: none;
+    background-color: #C33C3C;
+    margin-bottom: 60px;
+  }
+}
+
+
+@media only screen and (max-width: 799px) and (orientation: landscape)
+{
+  .main
+  {
+    height: 75vw;
+  }
+}
+
+@media (max-width: 1080px) 
+{
+  .service .content:before 
+  {
+    width: 100%;
+    left: 0;
+  }
+  .footer .text .bold
+  {
+    padding-left: 20px;
+  }
+}

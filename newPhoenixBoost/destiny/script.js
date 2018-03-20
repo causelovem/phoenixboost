@@ -364,10 +364,10 @@ function calcPrice()
 
     if ((boostStruc.type == "leviafan") || (boostStruc.type == "eaterOfWorlds"))
     {
-        price = 30;
+        price = 25;
 
         if (boostStruc.difficulty == 'prestige')
-            price *= 1.5;
+            price *= 1.6;
 
         if (boostStruc.heroCount == '2') price *= 1.85;
         else
@@ -376,10 +376,10 @@ function calcPrice()
     else
     if (boostStruc.type == "nightfall")
     {
-        price = 20;
+        price = 15;
 
         if (boostStruc.difficulty == 'prestige')
-            price *= 1.5;
+            price *= 1.67;
 
         if (boostStruc.soloDuo == 'duo')
             price *= 1.5;
@@ -400,19 +400,19 @@ function calcPrice()
             
             for (var i = start; i < end; i++)
             {
-                if (Number(i) <= 200) price += 0.275;
+                if (Number(i) <= 200) price += 0.25;
                 else
-                if (Number(i) <= 240) price += 0.625;
+                if (Number(i) <= 240) price += 0.5;
                 else
-                if (Number(i) <= 260) price += 1.5;
+                if (Number(i) <= 260) price += 1.25;
                 else
-                if (Number(i) <= 290) price += 2;
+                if (Number(i) <= 290) price += 1.8;
                 else
-                if (Number(i) <= 300) price += 5;
+                if (Number(i) <= 300) price += 4.5;
                 else
-                if (Number(i) <= 320) price += 7;
+                if (Number(i) <= 320) price += 6.5;
                 else
-                if (Number(i) <= 330) price += 9;
+                if (Number(i) <= 330) price += 8.5;
             }
         }
     }
@@ -420,11 +420,11 @@ function calcPrice()
     if (boostStruc.type == "weaponsQuests")
     {
         if (boostStruc.difficulty.indexOf("sturmDrang") != -1)
-            price += 60;
-        if (boostStruc.difficulty.indexOf("midaMiniMulty") != -1)
             price += 50;
+        if (boostStruc.difficulty.indexOf("midaMiniMulty") != -1)
+            price += 40;
         if (boostStruc.difficulty.indexOf("ratKing") != -1)
-            price += 55;
+            price += 45;
     }
     else
     if (boostStruc.type == "trialsNine")
@@ -438,7 +438,7 @@ function calcPrice()
     else
     if (boostStruc.type == "ironBanner")
     {
-        price = 0.75 * Number(boostStruc.difficulty);
+        price = 0.5 * Number(boostStruc.difficulty);
 
     }
 

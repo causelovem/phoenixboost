@@ -97,12 +97,12 @@ $msg .= "Price: $price\r\n";
 
 $customerMsg .= "E-mail: $email\r\n";
 $customerMsg .= "Price: $price\r\n\r\n";
-$customerMsg .= "Please, add us on Skype or Discord, if it's possible.\r\n";
+$customerMsg .= "Please, add us on Skype, if it's possible.\r\n";
 $customerMsg .= "We will contact you as soon as one of the boosters can accept your order!\r\n\r\n\r\n";
 $customerMsg .= "For all questions please contact us:\r\n";
 $customerMsg .= "E-mail: $to\r\n";
-$customerMsg .= "Discord: causelove#6980\r\n";
 $customerMsg .= "Skype: phoenixboost support (live:support_49862)\r\n\r\n";
+// $customerMsg .= "Discord: discord\r\n\r\n"; /*сделать дискорд*/
 $customerMsg .= "Sincerely, Your PhoenixBoost Team!";
 
 $headers = "From: $to\r\n";

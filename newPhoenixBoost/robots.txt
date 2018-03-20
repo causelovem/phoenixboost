@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /overwatchtiger
+sitemap: https://www.phoenixboost.com/sitemap.xml
+Host: https://www.phoenixboost.com
+
+User-agent: Yandex
+Allow: /
+Disallow: /overwatchtiger
+sitemap: https://www.phoenixboost.com/sitemap.xml
+Host: https://www.phoenixboost.com
+
+User-agent: *
+Allow: /
+Disallow: /overwatchtiger
+sitemap: https://www.phoenixboost.com/sitemap.xml
+Host: https://www.phoenixboost.com
