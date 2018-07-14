@@ -141,9 +141,9 @@ function countRankPrice()
         else
         if (Number(i) <= 3499) boostPrice += 0.09;
         else
-        if (Number(i) <= 3749) boostPrice += 0.18;
+        if (Number(i) <= 3749) boostPrice += 0.22;
         else
-        if (Number(i) <= 3999) boostPrice += 0.22;
+        if (Number(i) <= 3999) boostPrice += 0.26;
         else
         if (Number(i) <= 4099) boostPrice += 0.5;
         else
@@ -157,7 +157,7 @@ function countRankPrice()
     boostPrice *= coef;
 
     if (soloDuo == "duo")
-        boostPrice *= 1.5;
+        boostPrice *= 1.75;
 
     if (currency == "usd")
     {
